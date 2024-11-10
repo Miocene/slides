@@ -1,0 +1,39 @@
+.cdemo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.cdemo {
+  width: 30%;
+  margin: 0 !important;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-property: opacity;
+  opacity: 0;
+  border-radius: 40px;
+}
+
+.present .cdemo {
+  opacity: 1;
+}
+
+.cdemo-1 {
+  rotate: 4deg;
+  scale: .9;
+  transition-delay: 200ms;
+}
+
+.cdemo-2 {
+  rotate: 8deg;
+  scale: 1;
+  transition-delay: 400ms;
+}
+
+.cdemo-3 {
+  rotate: -6deg;
+  scale: .8;
+  transition-delay: 300ms;
+}

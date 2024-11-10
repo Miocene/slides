@@ -1,0 +1,15 @@
+.present .example2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 2000px;
+}
+.present .example2 .block {
+  width: min(70%, 500px); aspect-ratio: 1/1;
+  background-color: #202020;
+  animation: example2 5s linear infinite;
+}
+
+@keyframes example2 {
+  to { rotate: y 360deg; }
+}

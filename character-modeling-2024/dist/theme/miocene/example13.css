@@ -1,0 +1,59 @@
+.present .example13 {
+  transform-style: preserve-3d;
+  --size: min(20vh, 20vw);
+  width: var(--slide-width);
+  height: var(--slide-height);
+}
+
+.example13 .cube, .example13 .cube::before, .example13 .cube::after, .example13 .cube *, .example13 .cube *::before, .example13 .cube *::after {
+  content: '';
+  position: absolute;
+  display: block;
+  transform-style: preserve-3d;
+  background: #fea361;
+  box-shadow: inset 0 0 0 2px #1E1E1E;
+  width: var(--size); height: var(--size);
+}
+
+.present .example13 .cube {
+  --cell: calc(var(--size) / 16);
+  top: 50%; left: 50%;
+  transform-origin: center center;
+  animation: example13 3s ease infinite;
+}
+@keyframes example13 {
+  0%, 100% { transform: translate(-50%) rotateX(75deg) rotateZ(0.4turn); }
+  50% { transform: translate(-50%) rotateX(75deg) rotateZ(0.6turn); }
+}
+.present .example13 .cube::before {
+  top: 0; left: 100%;
+  transform-origin: top left;
+  transform: rotateY(-90deg);
+  background: linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 0) calc(var(--cell)* 4) / calc(var(--cell)* 2) calc(var(--cell)* 8) no-repeat, #fea361;
+}
+.present .example13 .cube::after {
+  top: 0; left: 0;
+  transform-origin: top left;
+  transform: rotateY(-90deg);
+  background: linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 0) calc(var(--cell)* 4) / calc(var(--cell)* 2) calc(var(--cell)* 8) no-repeat, #fea361;
+}
+.present .example13 .cube > div {
+  background: linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 13) calc(var(--cell)* 10) / calc(var(--cell)* 1) calc(var(--cell)* 1) no-repeat, 
+                linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 2) calc(var(--cell)* 10) / calc(var(--cell)* 1) calc(var(--cell)* 1) no-repeat, 
+                linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell)* 2) calc(var(--cell)* 7) / calc(var(--cell)* 3) calc(var(--cell)* 4) no-repeat, 
+                linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell)* 11) calc(var(--cell)* 7) / calc(var(--cell)* 3) calc(var(--cell)* 4) no-repeat, 
+                linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell)* 7) calc(var(--cell)* 6) / calc(var(--cell)* 2) calc(var(--cell)* 1) no-repeat, 
+                linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 5) calc(var(--cell)* 2) / calc(var(--cell)* 6) calc(var(--cell)* 4) no-repeat, 
+                linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 4) calc(var(--cell)* 0) / calc(var(--cell)* 8) calc(var(--cell)* 2) no-repeat, 
+                #fea361;
+  transform-origin: top center;
+  transform: rotateX(90deg);
+}
+.present .example13 .cube > div::before {
+  transform: translatez(calc(var(--size) * -1));
+}
+.present .example13 .cube > div::after {
+  top: 100%;
+  transform-origin: top center;
+  transform: rotateX(-90deg);
+}

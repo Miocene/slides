@@ -1,0 +1,27 @@
+.present .example27 {
+  height: var(--slide-height);
+  
+}
+.present .example27 .block {
+  top: 0.5em; left: 50%;
+  font-size: calc(var(--slide-height) / 6);
+  translate: -50%;
+}
+.present .example27 .block div {
+  top: 100%; left: 0;
+  translate: 0 -1em;
+  background-image: radial-gradient(circle at 0.5em 0.5em, red 8px, transparent 0);
+  rotate: 0deg;
+  animation: example27 3s ease infinite;
+}
+.present .example27 .block, .present .example27 .block div {
+  position: absolute;
+  width: 1em; aspect-ratio: 1 / 3;
+  box-shadow: inset 0 0 0 4px #202020;
+  border-radius: 99em;
+  transform-origin: .5em .5em;
+}
+
+@keyframes example27 {
+  50% { rotate: 90deg; }
+}

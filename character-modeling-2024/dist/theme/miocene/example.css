@@ -1,0 +1,11 @@
+.example-grid {
+  height: var(--slide-height);
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  align-items: center;
+}
+
+.example {
+  position: relative;
+  width: 100%; height: 100%;
+}

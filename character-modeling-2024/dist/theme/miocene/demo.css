@@ -1,0 +1,115 @@
+.demo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo {
+  width: 20%;
+  margin: 0 !important;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-property: opacity;
+  opacity: 0;
+}
+
+.present .demo {
+  opacity: 1;
+}
+
+.demo-1 {
+  rotate: 4deg;
+  scale: .9;
+  transition-delay: 1600ms;
+}
+
+.demo-2 {
+  rotate: 8deg;
+  scale: 1;
+  transition-delay: 1400ms;
+}
+
+.demo-3 {
+  rotate: -6deg;
+  scale: .8;
+  transition-delay: 1000ms;
+}
+
+.demo-4 {
+  rotate: 4deg;
+  scale: .9;
+  transition-delay: 300ms;
+}
+
+.demo-5 {
+  rotate: -2deg;
+  scale: .8;
+  transition-delay: 1500ms;
+}
+
+.demo-6 {
+  rotate: 4deg;
+  scale: 1;
+  transition-delay: 1200ms;
+}
+
+.demo-7 {
+  rotate: 0deg;
+  scale: 1.1;
+  transition-delay: 700ms;
+}
+
+.demo-8 {
+  rotate: -4deg;
+  scale: 1;
+  transition-delay: 1100ms;
+}
+
+.demo-9 {
+  rotate: -3deg;
+  scale: .9;
+  transition-delay: 1700ms;
+}
+
+.demo-10 {
+  rotate: -10deg;
+  scale: 1.1;
+  transition-delay: 500ms;
+}
+
+.demo-11 {
+  rotate: -7deg;
+  scale: .8;
+  transition-delay: 800ms;
+}
+
+.demo-12 {
+  rotate: -6deg;
+  scale: 1.1;
+  transition-delay: 600ms;
+}
+
+.demo-13 {
+  rotate: 8deg;
+  scale: 1;
+  transition-delay: 200ms;
+}
+
+.demo-14 {
+  rotate: -1deg;
+  scale: .8;
+  transition-delay: 900ms;
+}
+
+.demo-15 {
+  rotate: 0deg;
+  scale: 1;
+  transition-delay: 1300ms;
+}
+
+.demo-16 {
+  rotate: 3deg;
+  scale: 1.1;
+  transition-delay: 400ms;
+}

@@ -1,0 +1,18 @@
+.present .example25 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.present .example25 .block {
+  width: min(50%, 300px); aspect-ratio: 1/1;
+  background-color: #202020;
+  background-image: radial-gradient(circle at 2px 2px, red 4px, transparent 0);
+  transform-origin: top left;
+  rotate: 0deg;
+  translate: 50%;
+  animation: example25 3s ease infinite;
+}
+
+@keyframes example25 {
+  50% { rotate: 90deg; }
+}

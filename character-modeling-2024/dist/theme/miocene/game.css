@@ -1,0 +1,27 @@
+.game-grid {
+  height: var(--slide-height);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.game {
+  margin: 0 auto !important;
+  width: 50%;
+}
+
+.game-1 {
+  rotate: 5deg;
+}
+
+.game-2 {
+  rotate: -3deg;
+}
+
+.game-3 {
+  rotate: 2deg;
+}
+
+.game-4 {
+  rotate: -5deg;
+}

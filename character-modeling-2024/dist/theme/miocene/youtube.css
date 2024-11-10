@@ -1,0 +1,55 @@
+.youtube-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube {
+  width: 30%;
+  margin: 0 !important;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-property: opacity;
+  opacity: 0;
+}
+
+.present .youtube {
+  opacity: 1;
+}
+
+.youtube-1 {
+  rotate: 4deg;
+  scale: .9;
+  transition-delay: 700ms;
+}
+
+.youtube-2 {
+  rotate: 8deg;
+  scale: 1;
+  transition-delay: 500ms;
+}
+
+.youtube-3 {
+  rotate: -6deg;
+  scale: .8;
+  transition-delay: 300ms;
+}
+
+.youtube-4 {
+  rotate: 4deg;
+  scale: .9;
+  transition-delay: 200ms;
+}
+
+.youtube-5 {
+  rotate: -2deg;
+  scale: .8;
+  transition-delay: 600ms;
+}
+
+.youtube-6 {
+  rotate: 4deg;
+  scale: 1;
+  transition-delay: 400ms;
+}

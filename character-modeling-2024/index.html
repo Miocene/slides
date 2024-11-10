@@ -1,0 +1,3462 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/miocene/miocene.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/color-brewer.css" />
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						# Character Modelling in CSS
+						###### ✣ Julia Miocene, 2024 ✣
+
+						Note:
+						Before we dive in, let's warm up and play a game.
+					</script>
+				</section>
+				
+				<!-- GAME -->
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						## Let’s play a game
+
+						Note:
+						I'm going to show you six images, and your task is to guess which ones were created using pure CSS and which ones were made in a graphic editor. Ready to test your CSS knowledge and your CSS intuition?
+					</script>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img class="game game-1" src="./dist/images/game-1.png" />
+					</div>
+					
+					<aside class="notes">
+						First picture. Raise your hand if you think it was made with CSS. [pause] I assume others think it's not.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<img class="game game-2" src="./dist/images/game-2.png" />
+					
+					<aside class="notes">
+						Second picture. Raise your hand if you think it was made in a graphic editor. [pause]
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<img class="game game-3" src="./dist/images/game-3.png" />
+					
+					<aside class="notes">
+						Third picture. Raise your hand if you think it was made with CSS. [pause]
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<img class="game game-4" src="./dist/images/game-4.png" />
+					
+					<aside class="notes">
+						The last one. Raise your hand if you think it was made in a graphic editor. [pause]
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="game-grid">
+						<img class="game game-1" src="./dist/images/game-1.png" />
+						<img class="game game-2" src="./dist/images/game-2.png" />
+						<img class="game game-3" src="./dist/images/game-3.png" />
+						<img class="game game-4" src="./dist/images/game-4.png" />
+					</div>
+					
+					<aside class="notes">
+						Well, some of you were right. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="game-grid">
+						<img class="game game-1" src="./dist/images/game-1.png" style="opacity: .2;" />
+						<img class="game game-2" src="./dist/images/game-2.png" style="opacity: .2;" />
+						<img class="game game-3" src="./dist/images/game-3.png" style="opacity: .2;" />
+						<img class="game game-4" src="./dist/images/game-4.png" />
+					</div>
+					
+					<aside class="notes">
+						Only one of them is... Well, it wasn't made in a graphic editor, but it's definitely not CSS. It's "The Starry Night" by Van Gogh
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="game-grid">
+						<img class="game game-1" src="./dist/images/game-1.png" />
+						<img class="game game-2" src="./dist/images/game-2.png" />
+						<img class="game game-3" src="./dist/images/game-3.png" />
+						<img class="game game-4" src="./dist/images/game-4.png" style="opacity: .2;" />
+					</div>
+					
+					<aside class="notes">
+						And I created the other five with just CSS.
+					</aside>
+				</section>
+
+				<!-- INTRODUCTION -->
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast" data-auto-animate data-auto-animate-duration="0.2">
+					<script type="text/template">
+						## Hi 👋 I’m Julia Miocene
+
+						Note:
+						So, hello, everyone! I'm Julia Miocene,
+					</script>
+				</section>
+				
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast" data-auto-animate data-auto-animate-duration="0.2">
+					<script type="text/template">
+						## Hi 👋 I’m Julia Miocene
+						- UX Engineer at GitLab, UX Papercuts team
+					</script>
+				</section>
+				
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast" data-auto-animate data-auto-animate-duration="0.2">
+					<script type="text/template">
+						## Hi 👋 I’m Julia Miocene
+						- UX Engineer at GitLab, UX Papercuts team
+						- Google Developer Expert
+					</script>
+				</section>
+				
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast" data-auto-animate data-auto-animate-duration="0.2">
+					<script type="text/template">
+						## Hi 👋 I’m Julia Miocene
+						- UX Engineer at GitLab, UX Papercuts team
+						- Google Developer Expert
+						- Women Techmakers Ambassador
+					</script>
+				</section>
+				
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast" data-auto-animate data-auto-animate-duration="0.2">
+					<script type="text/template">
+						## Hi 👋 I’m Julia Miocene
+						- UX Engineer at GitLab, UX Papercuts team
+						- Google Developer Expert
+						- Women Techmakers Ambassador
+						- Youtuber
+					</script>
+				</section>
+				
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast" data-auto-animate data-auto-animate-duration="0.2">
+					<script type="text/template">
+						## Hi 👋 I’m Julia Miocene
+						- UX Engineer at GitLab, UX Papercuts team
+						- Google Developer Expert
+						- Women Techmakers Ambassador
+						- Youtuber
+						- Pure CSS Artist and Animator
+
+						Note:
+						And today, I'm here to show that nothing is impossible. [pause]
+						
+						My journey in CSS Art began in 2018. I may not have the drawing skills of a traditional artist, but I've always been driven to create characters that can express emotions and movements. This passion has led me to make a diverse range of characters,
+					</script>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="demo-grid">
+						<img class="demo demo-1" src="./dist/images/demo-1.png" />
+						<img class="demo demo-2" src="./dist/images/demo-2.png" />
+						<img class="demo demo-3" src="./dist/images/demo-3.png" />
+						<img class="demo demo-4" src="./dist/images/demo-4.png" />
+						<img class="demo demo-5" src="./dist/images/demo-5.png" />
+						<img class="demo demo-6" src="./dist/images/demo-6.png" />
+						<img class="demo demo-7" src="./dist/images/demo-7.png" />
+						<img class="demo demo-8" src="./dist/images/demo-8.png" />
+						<img class="demo demo-9" src="./dist/images/demo-9.png" />
+						<img class="demo demo-10" src="./dist/images/demo-10.png" />
+						<img class="demo demo-11" src="./dist/images/demo-11.png" />
+						<img class="demo demo-12" src="./dist/images/demo-12.png" />
+						<img class="demo demo-13" src="./dist/images/demo-13.png" />
+						<img class="demo demo-15" src="./dist/images/demo-15.png" />
+						<img class="demo demo-16" src="./dist/images/demo-16.png"/>
+					</div>
+					
+					<aside class="notes">
+						Sponge, lemon, pigeon, mosquito, portrait, noodles, girl, 
+						<br />
+						From a simple Sponge to a complex Girl.
+						<br />
+						As part of my commitment to sharing knowledge, 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="youtube-grid">
+						<img class="youtube youtube-1" src="./dist/images/youtube-1.png" />
+						<img class="youtube youtube-2" src="./dist/images/youtube-2.png" />
+						<img class="youtube youtube-3" src="./dist/images/youtube-3.png" />
+						<img class="youtube youtube-4" src="./dist/images/youtube-4.png" />
+						<img class="youtube youtube-5" src="./dist/images/youtube-5.png" />
+						<img class="youtube youtube-6" src="./dist/images/youtube-6.png" />
+					</div>
+					
+					<aside class="notes">
+						I also create videos about CSS Art.
+					</aside>
+				</section>
+
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						youtube.com/**@julia_miocene**
+
+						Note:
+						Subscribe to my channel if you want to learn how to do CSS Art.
+					</script>
+				</section>
+
+				<!-- CHARACTER -->
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						## What is character?
+						
+						Note:
+						Before we start creating character, let’s define what a character is.
+					</script>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/character-example.png" />
+					</div>
+					
+					<aside class="notes">
+						It could be anything I showed in my old demos—a person, a sponge, a ghost, Susuwatari, anything!
+						<br />
+						The main thing is the emotion it expresses. And for this we can use
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/character-shapes.png" />
+					</div>
+					
+					<aside class="notes">
+						a shape of the characters to show their nature.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/character-motion.webp" />
+					</div>
+					
+					<aside class="notes">
+						Also, we can use motion to express a character’s mood.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/character-face.png" />
+					</div>
+					
+					<aside class="notes">
+						And a face.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="demo-grid">
+						<img class="demo demo-1" src="./dist/images/demo-1.png" />
+						<img class="demo demo-2" src="./dist/images/demo-2.png" />
+						<img class="demo demo-3" src="./dist/images/demo-3.png" />
+						<img class="demo demo-4" src="./dist/images/demo-4.png" />
+						<img class="demo demo-5" src="./dist/images/demo-5.png" />
+						<img class="demo demo-6" src="./dist/images/demo-6.png" />
+						<img class="demo demo-7" src="./dist/images/demo-7.png" />
+						<img class="demo demo-8" src="./dist/images/demo-8.png" />
+						<img class="demo demo-9" src="./dist/images/demo-9.png" />
+						<img class="demo demo-10" src="./dist/images/demo-10.png" />
+						<img class="demo demo-11" src="./dist/images/demo-11.png" />
+						<img class="demo demo-12" src="./dist/images/demo-12.png" />
+						<img class="demo demo-13" src="./dist/images/demo-13.png" />
+						<img class="demo demo-15" src="./dist/images/demo-15.png" />
+						<img class="demo demo-16" src="./dist/images/demo-16.png"/>
+					</div>
+					
+					<aside class="notes">
+						So, I created many different characters. I'm trying to make them more complicated every time, but they're all flat.
+						<br />
+						And last year, I thought: can I create a read 3D character? Am I able to animate such a thing?
+						<br />
+						I modeled this character a few times, even starting over. A few months ago, I almost gave up.
+					</aside>
+				</section>
+				
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						## Creating a 3D character in 5 steps 
+						
+						Note:
+						Today, I'll show you the five steps of modeling a 3D character in CSS, which I discovered during this time. At the end of my talk, you'll tell me if I succeeded. Deal?
+					</script>
+				</section>
+				
+				<!-- 1. OBJECT -->
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						- 1 -
+						## 3D Object
+						
+						Note:
+						Any 3D modeling starts with the basic 3D object. First of all, let’s see what happens if I rotate the regular block on the axis. 
+					</script>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+.square {
+	rotate: y 360deg;
+}
+						</code></pre>
+
+						<div class="example example1"><div class="block"></div></div>
+					</div>
+
+					<aside class="notes">
+						There is a perspective property that helps us see the objects’ depth.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+body {
+	perspective: 2000px;
+}
+.square {
+	rotate: y 360deg;
+}
+						</code></pre>
+
+						<div class="example example2"><div class="block"></div></div>
+					</div>
+					
+					<aside class="notes">
+						But it’s still not 3D. Look what happens if I add another block inside and rotate it, too.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+body {
+	perspective: 4000px;
+}
+.square-big {
+	rotate: y 360deg;
+}
+.square-small {
+	rotate: x 360deg;
+}
+						</code></pre>
+
+						<div class="example example3"><div class="block-s"></div><div class="block-b"></div></div>
+					</div>
+					
+					<aside class="notes">
+						It’s a flat projection of a 3D transformation. And it’s ok if you need to transform only one object. But if you need to place a few objects into one 3D space — it won’t work.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<code>transform-style: flat | preserve-3d;</code>
+					
+					<aside class="notes">
+						However, I need to define a 3D space for our flat CSS. We have a `transform-style` property for this purpose. It defines the way elements are transformed. By default, it's flat. But we need to use a `preserve-3d` value.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+body {
+	transform-style: preserve-3d;
+}
+.square-big {
+	rotate: y 360deg;
+}
+.square-small {
+	rotate: x 360deg;
+}
+						</code></pre>
+
+						<div class="example example4"><div class="block-s"></div><div class="block-b"></div></div>
+					</div>
+					
+					<aside class="notes">
+						When I use the `preserve-3d` value, everything starts working as expected. However, this property isn’t inheritable, and I need to define it for every nested element.
+						<br />
+						Now that we know how to make space work in 3D, we can move to the basic 3D object—the cube. Well, the only 3D object we have in CSS is a flat surface. No cubes, spheres, or any other object. It means we should create objects from scratch, just like cave people.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/cube-sides-1.png" />
+					</div>
+					
+					<aside class="notes">
+						The cube has six faces. 
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/cube-sides-2.png" />
+					</div>
+					
+					<aside class="notes">
+						One div can create three faces: 
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/cube-sides-3.png" />
+					</div>
+					
+					<aside class="notes">
+						one makes the div itself, and for the other two, I can use pseudo-elements. 
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/cube-sides-4.png" />
+					</div>
+					
+					<aside class="notes">
+						So, I need two divs nested with each other.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example5"><div class="cube"><div></div></div></div>
+					
+					<aside class="notes">
+						All the faces are equal—square with a white background and black border. The root element is the bottom face. I place 
+						<br />
+						and rotate others around this bottom face. And I moved the last one to the Z-axis.
+						<br />
+						I should explain how to create a cube in CSS because many people likely don't work with such tools.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<code>transform: rotate() translate() skew() scale() matrix();</code>
+
+					<aside class="notes">
+						In CSS, we only have the transform property to... transform elements. There are a bunch of different functions: skew, scale, matrix, perspective, rotate, and translate. For 3D, we need only rotation and translation.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<pre><code data-trim>rotate: x 90deg;
+translate: 100px 100px 0;
+
+transform: rotateX(90deg) translateX(100px) translateY(100px);</code></pre>
+
+					<aside class="notes">
+						You can use a separate property like translate or rotate. But you should always check how many manipulations you need to do. If there are a few different ones, it's easier to use transform with the list of transformations.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>transform: 
+	translatex(200px) 
+	rotate(90deg)
+	translateX(200px)
+	rotate(90deg)
+	translateX(200px)
+	rotate(90deg)
+	translateX(200px)
+	rotate(90deg);
+						</code></pre>
+
+						<div class="example example6"><div class="block"></div></div>
+					</div>
+					
+					<aside class="notes">
+						You can even repeat them because they will be applied one by one.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+.square::before {
+	rotate: y -90deg;
+}
+						</code></pre>
+
+						<div class="example example7"><div class="cube"></div></div>
+					</div>
+					
+					<aside class="notes">
+						So, I rotate the faces and translate them to the right points.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+.square::before {
+	rotate: y -90deg;
+}
+.square::after {
+	rotate: y -90deg;
+}
+						</code></pre>
+
+						<div class="example example8"><div class="cube"></div></div>
+					</div>
+					
+					<aside class="notes">
+						So, I rotate the faces and translate them to the right points.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+.square::before {
+	rotate: y -90deg;
+}
+.square::after {
+	rotate: y -90deg;
+}
+.square > div {
+	rotate: x 90deg;
+}
+						</code></pre>
+
+						<div class="example example9"><div class="cube"><div></div></div></div>
+					</div>
+					
+					<aside class="notes">
+						Rotate and translate are the only transform functions you need to know when working with 3D.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+.square::before {
+	rotate: y -90deg;
+}
+.square::after {
+	rotate: y -90deg;
+}
+.square > div {
+	rotate: x 90deg;
+}
+.square > div::before {
+	translate: 0 0 200px;
+}
+						</code></pre>
+
+						<div class="example example10"><div class="cube"><div></div></div></div>
+					</div>
+					
+					<aside class="notes">
+						Rotate and translate are the only transform functions you need to know when working with 3D.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+.square::before {
+	rotate: y -90deg;
+}
+.square::after {
+	rotate: y -90deg;
+}
+.square > div {
+	rotate: x 90deg;
+}
+.square > div::before {
+	translate: 0 0 200px;
+}
+.square > div::after {
+	rotate: x -90deg;
+}
+						</code></pre>
+
+						<div class="example example11"><div class="cube"><div></div></div></div>
+					</div>
+					
+					<aside class="notes">
+						Here is the basic 3D object we can start working with.
+						<br />
+						I can use gradients to color one of the faces and create a face!
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example12"><div class="cube"><div></div></div></div>
+					
+					<aside class="notes">
+						I can also color the whole cube and make it animal.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example13"><div class="cube"><div></div></div></div>
+					
+					<aside class="notes">
+						I can create the fox with a few cubes nested inside each other. For this demo, I create cubes like before and translate them around the main cube.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example14">
+						<div class="fox">
+							<div></div>
+							<div class="fox__nose">
+									<div></div>
+							</div>
+							<div class="fox__leg fox__leg1">
+									<div></div>
+							</div>
+							<div class="fox__leg fox__leg2">
+									<div></div>
+							</div>
+							<div class="fox__leg fox__leg3">
+									<div></div>
+							</div>
+							<div class="fox__leg fox__leg4">
+									<div></div>
+							</div>
+							<div class="fox__ear fox__earl">
+									<div></div>
+							</div>
+							<div class="fox__ear fox__earr">
+									<div></div>
+							</div>
+							<div class="fox__tail">
+									<div></div>
+									<div></div>
+							</div>
+					</div>
+				</div>
+					
+					<aside class="notes">
+						I've been creating a fox, but my husband thinks it's a dog. Now, I'm not sure what it is, but I'll continue to call it a fox.
+					</aside>
+				</section>
+
+				<!-- 2. LIGHT SOURCE -->
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						- 2 -
+						## Light source
+
+						Note:
+						The next step is the light source. Since there is no such thing as a light source in CSS, 
+					</script>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/ls-example.png" />
+					</div>
+					
+					<aside class="notes">
+						I need to **imagine** where it could be and manually color the character based on this light source.
+						<br />
+						I tried a few different techniques. Finally, I found the perfect place for a light source for beginners in 3D modeling in CSS — 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/ls-example-2.png" />
+					</div>
+					
+					<aside class="notes">
+						It's on top before the character. This way, the face will be well highlighted, and sides of the character will be highlighted equally.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/ls-example.png" />
+					</div>
+					
+					<aside class="notes">
+						If I move the light source somewhere else or add another light source, it becomes more complicated. If you want to use much more detail, you'll spend a few whole days coloring your character. Just place it in front of your object, at least for the first time.
+						<br />
+						I haven't drawn the light source and guides, but I'll do so now to explain my thought process.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/ls-1.png" />
+					</div>
+					
+					<aside class="notes">
+						Imagine that this red dot is a lamp or a studio softbox.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/ls-2.png" />
+					</div>
+					
+					<aside class="notes">
+						I draw lines from this red dot to the edges of my character.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/ls-3.png" />
+					</div>
+					
+					<aside class="notes">
+						Everything in front will be light and bright. Same for the top part of the character.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/ls-4.png" />
+					</div>
+					
+					<aside class="notes">
+						The sides are highlighted equally, so they will both be medium. You can make the backside darker or not. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/ls-5.png" />
+					</div>
+					
+					<aside class="notes">
+						I imagine that my CSS photo studio has a light reflector behind the character. So, the backside has the same colors as the sides.
+						<br />
+						Everything on the bottom is dark, almost black, because there is no light there. These are the surfaces where the character touches the floor.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/color-1.png" />
+					</div>
+					
+					<aside class="notes">
+						This way, I have 3 shades of each color. It's pretty easy to maintain for a total beginner in 3D CSS modeling. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/color-2.png" />
+					</div>
+					
+					<aside class="notes">
+						I put these colors into custom properties if I create something more complex than a cube.
+						<br />
+						Now, I just need to add shadows. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/shadow-1.png" />
+					</div>
+					
+					<aside class="notes">
+						For this purpose, I draw lines from the red dot to the surface through the edges of my character. This way, I see where the shadow should end. I draw the same shape and blur it.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<code>clip-path: circle() | ellipse() | path() | rect() | xywh() | shape() | polygon();</code>
+					
+					<aside class="notes">
+						For the shadow on the floor, I use `clip-path` for a `before` pseudo-element. `Clip-path` is one of the properties that allows us to mask elements. There are a few functions: circle, ellipse, path, rect, xywh, shape and polygon. 
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+.shadow {
+	clip-path: 
+		polygon(x1 y1, x2 y2, ...);
+}
+						</code></pre>
+
+						<div class="example example15">
+							<div class="fox">
+								<div></div>
+								<div class="fox__nose">
+									<div></div>
+								</div>
+								<div class="fox__leg fox__leg1">
+									<div></div>
+								</div>
+								<div class="fox__leg fox__leg2">
+									<div></div>
+								</div>
+								<div class="fox__leg fox__leg3">
+									<div></div>
+								</div>
+								<div class="fox__leg fox__leg4">
+									<div></div>
+								</div>
+								<div class="fox__ear fox__earl">
+									<div></div>
+								</div>
+								<div class="fox__ear fox__earr">
+									<div></div>
+								</div>
+								<div class="fox__tail">
+									<div></div>
+									<div></div>
+								</div>
+								<div class="fox__shadow"></div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						For the cubic character I need to use polygon function. It requires a list of points. I connect the red dots with the floor through the edges and use these points for the clip path.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+.shadow {
+	clip-path: 
+		polygon(x1 y1, x2 y2, ...);
+	filter: blur(80px);
+}
+						</code></pre>
+
+						<div class="example example16">
+							<div class="fox">
+								<div></div>
+								<div class="fox__nose">
+									<div></div>
+								</div>
+								<div class="fox__leg fox__leg1">
+									<div></div>
+								</div>
+								<div class="fox__leg fox__leg2">
+									<div></div>
+								</div>
+								<div class="fox__leg fox__leg3">
+									<div></div>
+								</div>
+								<div class="fox__leg fox__leg4">
+									<div></div>
+								</div>
+								<div class="fox__ear fox__earl">
+									<div></div>
+								</div>
+								<div class="fox__ear fox__earr">
+									<div></div>
+								</div>
+								<div class="fox__tail">
+									<div></div>
+									<div></div>
+								</div>
+								<div class="fox__shadow"></div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						`Clip-path` masks everything, so I won't get the shadow if I blur it. 
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+.shadow {
+	filter: blur(80px);
+}
+
+.shadow::before {
+	clip-path:
+		polygon(x1 y1, x2 y2, ...);
+}
+						</code></pre>
+
+						<div class="example example17">
+							<div class="fox">
+								<div></div>
+								<div class="fox__nose">
+									<div></div>
+								</div>
+								<div class="fox__leg fox__leg1">
+									<div></div>
+								</div>
+								<div class="fox__leg fox__leg2">
+									<div></div>
+								</div>
+								<div class="fox__leg fox__leg3">
+									<div></div>
+								</div>
+								<div class="fox__leg fox__leg4">
+									<div></div>
+								</div>
+								<div class="fox__ear fox__earl">
+									<div></div>
+								</div>
+								<div class="fox__ear fox__earr">
+									<div></div>
+								</div>
+								<div class="fox__tail">
+									<div></div>
+									<div></div>
+								</div>
+								<div class="fox__shadow"></div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So, I blur the root element. Because `clip-path` masks everything inside this element and doesn't affect the parent block.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example18">
+						<div class="fox">
+							<div></div>
+							<div class="fox__nose">
+								<div></div>
+							</div>
+							<div class="fox__leg fox__leg1">
+								<div></div>
+							</div>
+							<div class="fox__leg fox__leg2">
+								<div></div>
+							</div>
+							<div class="fox__leg fox__leg3">
+								<div></div>
+							</div>
+							<div class="fox__leg fox__leg4">
+								<div></div>
+							</div>
+							<div class="fox__ear fox__earl">
+								<div></div>
+							</div>
+							<div class="fox__ear fox__earr">
+								<div></div>
+							</div>
+							<div class="fox__tail">
+								<div></div>
+								<div></div>
+							</div>
+							<div class="fox__shadow"></div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						I use gradients for the shadows on the character. I could have used separate elements for each shadow, but I'm lazy and like gradients.
+						<br />
+						Are there any people who created websites before the border radius was invented? [pause] Sorry for bringing back these memories.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example19">
+						<div class="fox">
+							<div></div>
+							<div class="fox__nose">
+								<div></div>
+							</div>
+							<div class="fox__leg fox__leg1">
+								<div></div>
+							</div>
+							<div class="fox__leg fox__leg2">
+								<div></div>
+							</div>
+							<div class="fox__leg fox__leg3">
+								<div></div>
+							</div>
+							<div class="fox__leg fox__leg4">
+								<div></div>
+							</div>
+							<div class="fox__ear fox__earl">
+								<div></div>
+							</div>
+							<div class="fox__ear fox__earr">
+								<div></div>
+							</div>
+							<div class="fox__tail">
+								<div></div>
+								<div></div>
+							</div>
+							<div class="fox__shadow"></div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						I use the same trick here: a few gradients to make it feel like a single blurred shape.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<pre><code data-trim>
+background-image: linear-gradient();
+background-position: x y;
+background-size: width height;
+
+background: linear-gradient() x y / width height;
+					</code></pre>
+					
+					<aside class="notes">
+						You can set background position and size by using background-position or background-size properties, or by using the background shorthand.
+						<br />
+						The color of the shadow depends on the light source color, object color, and floor color. The shadow always has the oposite coolness than the light source. 
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/shadow-2.png" />
+					</div>
+					
+					<aside class="notes">
+						So if the light source is warm, the shadow will be cold. 
+						<br />
+						If the light source if cold, the shadow will be warm. You can check it right now.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example20">
+						<div class="fox">
+							<div></div>
+							<div class="fox__nose">
+								<div></div>
+							</div>
+							<div class="fox__leg fox__leg1">
+								<div></div>
+							</div>
+							<div class="fox__leg fox__leg2">
+								<div></div>
+							</div>
+							<div class="fox__leg fox__leg3">
+								<div></div>
+							</div>
+							<div class="fox__leg fox__leg4">
+								<div></div>
+							</div>
+							<div class="fox__ear fox__earl">
+								<div></div>
+							</div>
+							<div class="fox__ear fox__earr">
+								<div></div>
+							</div>
+							<div class="fox__tail">
+								<div></div>
+								<div></div>
+							</div>
+							<div class="fox__shadow"></div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						The color itself will have a mix of the floor color and the object. It's pretty depernds on the materials of both objects and light intensity. But you should just try.
+						<br />
+						If you really want to create a natural shadow, you can use a real lamp and real objects with the same colors, take a photo and analyze the result. Just like in artist school. My knowledge is based on movies; I haven't been to an art school, so it's just my assumption.
+						<br />
+						So here is my fox or dog with the proper light source.
+						<br />
+						Creating the fox is fun, but I wanted to make humans or something like it.
+					</aside>
+				</section>
+				
+				<!-- 3. SKELETON -->
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						- 3 -
+						## Skeleton
+
+						Note:
+						Next, I need to define a skeleton. This is the most important step if you want to animate it further. You can mess up coloring or animation, but you can't mess up creating a skeleton. It's the foundation of the character.
+					</script>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/dummy.png" />
+					</div>
+					
+					<aside class="notes">
+						Have you ever seen this artist's dummy? Many artists use this kind of dummies to draw a realistic body in motion without a real person in front of them.
+						<br />
+						Well, I need to recreate it in HTML. This is the proper structure:
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<pre><code data-trim>
+<div class="human">
+	<div class="neck">
+			<div class="head"></div>
+	</div>
+	<div class="shoulder">
+			<div class="elbow">
+					<div class="hand"></div>
+			</div>
+	</div>
+	<div class="hip">
+			<div class="knee">
+					<div class="feet"></div>
+			</div>
+	</div>
+</div>
+					</code></pre>
+					
+					<aside class="notes">
+						- character is the root element,
+						<br />
+						- inside it, I have the body,
+						<br />
+						- inside it, I have the neck, both shoulders, and both legs,
+						<br />
+						- inside the neck, I have the head
+						<br />
+						- inside the shoulders, I have arms
+						<br />
+						- the nest hands, and so on.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<pre><code data-line-numbers="4,10" data-trim>
+<div class="human">
+	<div class="neck">
+			<div class="head">
+					<div class="hat"></div>
+			</div>
+	</div>
+	<div class="shoulder">
+			<div class="elbow">
+					<div class="hand">
+							<div class="sword"></div>
+					</div>
+			</div>
+	</div>
+	<div class="hip">
+			<div class="knee">
+					<div class="feet"></div>
+			</div>
+	</div>
+</div>
+					</code></pre>
+					
+					<aside class="notes">
+						If I create a character with some props, I place this prop inside the element that holds it. If it's a hat, it should be inside the head element. If it's a sword, it should be placed inside one of the hands.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example21">
+						<div class="bibendum">
+							<div class="bibendum__body"></div>
+							<div class="bibendum__armLeft">
+								<div class="bibendum__shoulder">
+									<div class="bibendum__elbow">
+										<div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__armRight">
+								<div class="bibendum__shoulder">
+									<div class="bibendum__elbow">
+										<div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__head">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+							<div class="bibendum__legLeft">
+								<div class="bibendum__thigh">
+									<div class="bibendum__shin">
+										<div></div>
+										<div class="bibendum__foot"><div></div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__legRight">
+								<div class="bibendum__thigh">
+									<div class="bibendum__shin">
+										<div></div>
+										<div class="bibendum__foot"><div></div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						Look here. Here is the very first character we created today. The root element has a body and head with the hat inside it. Shoulders are also inside the body element, hands inside them. Legs are also inside the body, and feet are inside the legs.
+						<br />
+						I need to do it only because of the joints. Every moving part of our body connects with others with joints. Joints allow us to move.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example22">
+						<div class="bibendum">
+							<div class="bibendum__body"></div>
+							<div class="bibendum__armLeft">
+								<div class="bibendum__shoulder">
+									<div class="bibendum__elbow">
+										<div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__elbow bibendum__elbowRight">
+								<div></div>
+							</div>
+							<div class="bibendum__armRight">
+								<div class="bibendum__shoulder">
+								</div>
+							</div>
+							<div class="bibendum__head">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+							<div class="bibendum__legLeft">
+								<div class="bibendum__thigh">
+									<div class="bibendum__shin">
+										<div></div>
+										<div class="bibendum__foot"><div></div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__legRight">
+								<div class="bibendum__thigh">
+									<div class="bibendum__shin">
+										<div></div>
+										<div class="bibendum__foot"><div></div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						Without the proper nesting and joints, it will look strange. For each millisecond I need to move my object to connect it with another one, it's not mainainable, and it also looks bad.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example23">
+						<div class="bibendum">
+							<div class="bibendum__body"></div>
+							<div class="bibendum__armLeft">
+								<div class="bibendum__shoulder">
+									<div class="bibendum__elbow">
+										<div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__armRight">
+								<div class="bibendum__shoulder">
+									<div class="bibendum__elbow bibendum__elbowRight">
+										<div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__head">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+							<div class="bibendum__legLeft">
+								<div class="bibendum__thigh">
+									<div class="bibendum__shin">
+										<div></div>
+										<div class="bibendum__foot"><div></div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__legRight">
+								<div class="bibendum__thigh">
+									<div class="bibendum__shin">
+										<div></div>
+										<div class="bibendum__foot"><div></div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						When I nest elements properly, I reduce amount of animations. To rotate the shoulder I need just one. In case with no nesting I need to rotate each part separately. Which is... well... a lot of efford to do.
+						<br />
+						I haven't done it for my first demos, and it's so bad! I don't update or delete them because I want to see how I improve my skills and show people how they shouldn't do.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/cyclist.webp" />
+					</div>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/pigeot.webp" />
+					</div>
+					
+					<aside class="notes">
+						So, I need to define the joints.
+						<br />
+						I use `transform-origin` to define an anchor point or a joint. It's easier to explain it on a flat object.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+.square {
+	rotate: 360deg;
+}
+						</code></pre>
+
+						<div class="example example24"><div class="block"></div></div>
+					</div>
+					
+					<aside class="notes">
+						Transform-origin draws a point in the space for the transformations. Any transformation will be applied from this point. By default it's in the center of the object.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+.square {
+	rotate: 90deg;
+}
+						</code></pre>
+
+						<div class="example example25"><div class="block"></div></div>
+					</div>
+					
+					<aside class="notes">
+						Transform-origin draws a point in the space for the transformations. Any transformation will be applied from this point. By default it's in the center of the object.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example26"><div class="block"><div></div></div></div>
+					
+					<aside class="notes">
+						For a smooth animation, I overlap the root element with the nested one to create a circle. 
+						<br />
+						I place the `transform-origin` point in the center of this circle. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example27"><div class="block"><div></div></div></div>
+					
+					<aside class="notes">
+						This way, my object moves naturally. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example28"><div class="block"><div></div></div></div>
+					
+					<aside class="notes">
+						If I put the joint somewhere else, it won't move like a real thing.
+						<br />
+						And one more flat trick. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example29">
+						<div class="block">
+							<div>
+								<div>
+									<div>
+										<div>
+											<div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						If you create a few smaller objects, nest them inside each other,  and connect them with the proper joints, you can make a smooth, sausage-like shape. 
+						<br />
+						And no one would ever believe you it's CSS!
+						<br />
+						We can't overlap our object in 3D to create the same smooth shape — we're still at a beginner level.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/shoulders-knees.png" />
+					</div>
+					
+					<aside class="notes">
+						The perfect point for a shoulder joint of a cubic character would be the top center. You can look at your own arms and legs. It's better to place the anchor point on the side where you can't bend it. So, for an elbow, it will be the outer or back side of the arm, and for the knee, it will be the front side.
+						<br />
+						When working with joints, you should always check how they work. Let's rotate the arms 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example30">
+						<div class="bibendum">
+							<div class="bibendum__body"></div>
+							<div class="bibendum__armLeft">
+								<div class="bibendum__shoulder">
+									<div class="bibendum__elbow">
+										<div></div>
+										<div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__armRight">
+								<div class="bibendum__shoulder">
+									<div class="bibendum__elbow">
+										<div></div>
+										<div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__head">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+							<div class="bibendum__legLeft">
+								<div class="bibendum__thigh">
+									<div class="bibendum__shin">
+										<div></div>
+										<div class="bibendum__foot"><div></div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__legRight">
+								<div class="bibendum__thigh">
+									<div class="bibendum__shin">
+										<div></div>
+										<div class="bibendum__foot"><div></div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						— they look fine. The same goes for the legs 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example31">
+						<div class="bibendum">
+							<div class="bibendum__body"></div>
+							<div class="bibendum__armLeft">
+								<div class="bibendum__shoulder">
+									<div class="bibendum__elbow">
+										<div></div>
+										<div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__armRight">
+								<div class="bibendum__shoulder">
+									<div class="bibendum__elbow">
+										<div></div>
+										<div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__head">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+							<div class="bibendum__legLeft">
+								<div class="bibendum__thigh">
+									<div class="bibendum__shin">
+										<div></div>
+										<div class="bibendum__foot"><div></div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__legRight">
+								<div class="bibendum__thigh">
+									<div class="bibendum__shin">
+										<div></div>
+										<div class="bibendum__foot"><div></div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						— they look good, too.
+						<br />
+						We're halfway through. Yay!
+					</aside>
+				</section>
+
+				<!-- 4. ANIMATION -->
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						- 4 -
+						## Animation
+
+						Note:
+						Now, I can start animating this character.
+						<br />
+						It could look scary, but animating a 3D character is actually easier than any of these. [pause]
+					</script>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="cdemo-grid">
+						<img class="cdemo cdemo-1" src="./dist/images/cdemo-1.webp" />
+						<img class="cdemo cdemo-2" src="./dist/images/cdemo-2.webp" />
+						<img class="cdemo cdemo-3" src="./dist/images/cdemo-3.webp" />
+					</div>
+					
+					<aside class="notes">
+						Here I should animate rotation, translate, sometimes skew, scale, opacity and colors. Too much.
+						<br />
+						The only thing I should animate for a 3D character is the rotation of the joints, which usually rotate on one axis.
+						<br />
+						I use keyframes for animation. I tried to work with the linear function but found it less convenient to choreograph.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<pre><code data-trim>
+@keyframes animation-name {
+	from {
+		transform: rotateX(0deg);
+	}
+	to {
+		transform: rotateX(180deg);
+	}
+}
+					</code></pre>
+					
+					<aside class="notes">
+						Keyframes is an at rule. You can specify as many keyframes as you want. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<pre class="long-example"><code>
+@keyframes ro {
+	00.00% { transform: translate(72em, 35em) translateZ(-32em) rotateX(0deg) rotateZ(0deg); }
+	09.96% { transform: translate(72em, 35em) translateZ(-32em) rotateX(0deg) rotateZ(0deg); }
+	10.18% { transform: translate(72em, 32em) translateZ(-32em) rotateX(0deg) rotateZ(0deg); }
+	11.22% { transform: translate(72em, 16em) translateZ(-16em) rotateX(0deg) rotateZ(0deg); }
+	11.51% { transform: translate(72em, 12em) translateZ(-16em) rotateX(0deg) rotateZ(0deg); }
+	13.51% { transform: translate(72em, 12em) translateZ(-16em) rotateX(0deg) rotateZ(0deg); }
+	13.73% { transform: translate(75em, 12em) translateZ(-15em) rotateX(0deg) rotateZ(0deg); }
+	14.17% { transform: translate(75em, 21em) translateZ(1em) rotateX(0deg) rotateZ(0deg); }
+	14.83% { transform: translate(86em, 21em) translateZ(1em) rotateX(0deg) rotateZ(0deg); }
+	15.50% { transform: translate(70em, 20em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	18.08% { transform: translate(18em, 19em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	18.60% { transform: translate(18em, 10em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	19.19% { transform: translate(18em, 1em) translateZ(23em) rotateX(0deg) rotateZ(0deg); }
+	19.41% { transform: translate(18em, -3em) translateZ(24em) rotateX(0deg) rotateZ(0deg); }
+	20.81% { transform: translate(18em, -3em) translateZ(24em) rotateX(0deg) rotateZ(0deg); }
+	23.76% { transform: translate(80em, -3em) translateZ(24em) rotateX(0deg) rotateZ(0deg); }
+	25.02% { transform: translate(80em, -27em) translateZ(24em) rotateX(0deg) rotateZ(0deg); }
+	25.46% { transform: translate(80em, -27em) translateZ(24em) rotateX(0deg) rotateZ(0deg); }
+	25.83% { transform: translate(80em, -74em) translateZ(24em) rotateX(0deg) rotateZ(0deg); }
+	26.86% { transform: translate(80em, -74em) translateZ(24em) rotateX(0deg) rotateZ(0deg); }
+	27.23% { transform: translate(43em, -43em) translateZ(61em) rotateX(0deg) rotateZ(0deg); }
+	29.52% { transform: translate(92em, -43em) translateZ(61em) rotateX(0deg) rotateZ(0deg); }
+	31.96% { transform: translate(50em, 50em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	32.47% { transform: translate(41em, 50em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	32.84% { transform: translate(41em, 42em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	37.93% { transform: translate(41em, 42em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	38.30% { transform: translate(41em, 34em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	39.48% { transform: translate(17em, 34em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	40.00% { transform: translate(17em, 34em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	40.37% { transform: translate(17em, 34em) translateZ(47em) rotateX(0deg) rotateZ(0deg); }
+	41.48% { transform: translate(17em, 34em) translateZ(47em) rotateX(0deg) rotateZ(0deg); }
+	41.70% { transform: translate(17em, 34em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	42.36% { transform: translate(17em, 34em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	43.62% { transform: translate(17em, 34em) translateZ(31em) rotateX(0deg) rotateZ(0deg); }
+	44.50% { transform: translate(17em, 34em) translateZ(31em) rotateX(0deg) rotateZ(0deg); }
+	45.39% { transform: translate(17em, 20em) translateZ(31em) rotateX(0deg) rotateZ(0deg); }
+	45.83% { transform: translate(17em, 20em) translateZ(31em) rotateX(0deg) rotateZ(0deg); }
+	46.05% { transform: translate(17em, 20em) translateZ(47em) rotateX(0deg) rotateZ(0deg); }
+	47.23% { transform: translate(17em, 20em) translateZ(47em) rotateX(0deg) rotateZ(0deg); }
+	47.60% { transform: translate(17em, 13em) translateZ(47em) rotateX(0deg) rotateZ(0deg); }
+	48.41% { transform: translate(35em, 13em) translateZ(47em) rotateX(0deg) rotateZ(0deg); }
+	48.63% { transform: translate(42em, -29em) translateZ(76em) rotateX(0deg) rotateZ(0deg); }
+	49.08% { transform: translate(42em, -19em) translateZ(76em) rotateX(0deg) rotateZ(0deg); }
+	49.52% { transform: translate(49em, -19em) translateZ(76em) rotateX(0deg) rotateZ(0deg); }
+	50.77% { transform: translate(49em, -19em) translateZ(76em) rotateX(0deg) rotateZ(0deg); }
+	51.51% { transform: translate(33em, -19em) translateZ(76em) rotateX(0deg) rotateZ(0deg); }
+	51.96% { transform: translate(33em, -12em) translateZ(76em) rotateX(0deg) rotateZ(0deg); }
+	52.47% { transform: translate(33em, -12em) translateZ(76em) rotateX(0deg) rotateZ(0deg); }
+	52.77% { transform: translate(33em, 19em) translateZ(76em) rotateX(0deg) rotateZ(0deg); }
+	53.80% { transform: translate(33em, 19em) translateZ(76em) rotateX(0deg) rotateZ(0deg); }
+	54.17% { transform: translate(33em, 27em) translateZ(76em) rotateX(0deg) rotateZ(0deg); }
+	55.13% { transform: translate(56em, 27em) translateZ(76em) rotateX(0deg) rotateZ(0deg); }
+	56.24% { transform: translate(56em, 27em) translateZ(76em) rotateX(0deg) rotateZ(0deg); }
+	56.97% { transform: translate(56em, 28em) translateZ(75em) rotateX(0deg) rotateZ(0deg); }
+	58.23% { transform: translate(56em, 37em) translateZ(69em) rotateX(0deg) rotateZ(0deg); }
+	58.38% { transform: translate(56em, 38em) translateZ(68em) rotateX(0deg) rotateZ(0deg); }
+	58.89% { transform: translate(56em, 43em) translateZ(64em) rotateX(0deg) rotateZ(0deg); }
+	59.48% { transform: translate(56em, 48em) translateZ(58em) rotateX(0deg) rotateZ(0deg); }
+	59.93% { transform: translate(56em, 53em) translateZ(54em) rotateX(0deg) rotateZ(0deg); }
+	60.52% { transform: translate(56em, 60em) translateZ(48em) rotateX(0deg) rotateZ(0deg); }
+	60.96% { transform: translate(56em, 64em) translateZ(42em) rotateX(0deg) rotateZ(0deg); }
+	61.40% { transform: translate(56em, 68em) translateZ(21em) rotateX(0deg) rotateZ(0deg); }
+	62.43% { transform: translate(56em, 78em) translateZ(18em) rotateX(0deg) rotateZ(0deg); }
+	62.66% { transform: translate(56em, 80em) translateZ(18em) rotateX(0deg) rotateZ(0deg); }
+	63.25% { transform: translate(56em, 76em) translateZ(16em) rotateX(0deg) rotateZ(0deg); }
+	63.54% { transform: translate(56em, 78em) translateZ(13em) rotateX(0deg) rotateZ(0deg); }
+	63.84% { transform: translate(53em, 83em) translateZ(10em) rotateX(0deg) rotateZ(0deg); }
+	64.21% { transform: translate(51em, 85em) translateZ(9em) rotateX(0deg) rotateZ(0deg); }
+	64.80% { transform: translate(51em, 89em) translateZ(1em) rotateX(0deg) rotateZ(0deg); }
+	65.02% { transform: translate(50em, 88em) translateZ(-3em) rotateX(0deg) rotateZ(0deg); }
+	65.61% { transform: translate(48em, 87em) translateZ(-10em) rotateX(0deg) rotateZ(0deg); }
+	66.20% { transform: translate(47em, 94em) translateZ(-16em) rotateX(0deg) rotateZ(0deg); }
+	66.72% { transform: translate(53em, 96em) translateZ(-10em) rotateX(0deg) rotateZ(0deg); }
+	67.31% { transform: translate(55em, 94em) translateZ(-20em) rotateX(0deg) rotateZ(0deg); }
+	67.75% { transform: translate(55.5em, 94em) translateZ(-23em) rotateX(0deg) rotateZ(0deg); }
+	68.34% { transform: translate(55em, 96em) translateZ(-28em) rotateX(0deg) rotateZ(0deg); }
+	68.86% { transform: translate(55em, 98em) translateZ(-31em) rotateX(0deg) rotateZ(0deg); }
+	69.30% { transform: translate(55em, 99em) translateZ(-32em) rotateX(0deg) rotateZ(0deg); }
+	70.18% { transform: translate(61em, 114em) translateZ(-41em) rotateX(0deg) rotateZ(0deg); }
+	71.36% { transform: translate(39em, 134em) translateZ(-57em) rotateX(0deg) rotateZ(0deg); }
+	72.77% { transform: translate(27em, 171em) translateZ(-60em) rotateX(0deg) rotateZ(0deg); }
+	78.74% { transform: translate(27em, 171em) translateZ(-60em) rotateX(0deg) rotateZ(0deg); }
+	79.11% { transform: translate(12em, 195em) translateZ(-44em) rotateX(0deg) rotateZ(0deg); }
+	79.26% { transform: translate(12em, 195.5em) translateZ(-44em) rotateX(2deg) rotateZ(4deg); }
+	79.41% { transform: translate(12em, 201em) translateZ(-47em) rotateX(-10deg) rotateZ(14deg); }
+	79.63% { transform: translate(12em, 206em) translateZ(-51em) rotateX(-24deg) rotateZ(35deg); }
+	79.70% { transform: translate(12em, 208em) translateZ(-59em) rotateX(-30deg) rotateZ(41deg); }
+	79.93% { transform: translate(13em, 227em) translateZ(-77em) rotateX(-90deg) rotateZ(90deg); }
+	81.99% { transform: translate(13em, 234em) translateZ(-77em) rotateX(-90deg) rotateZ(90deg); }
+	82.29% { transform: translate(13em, 218em) translateZ(-77em) rotateX(-90deg) rotateZ(90deg); }
+	83.47% { transform: translate(13em, 218em) translateZ(-77em) rotateX(-90deg) rotateZ(90deg); }
+	84.57% { transform: translate(13em, 218em) translateZ(-106em) rotateX(-90deg) rotateZ(90deg); }
+	85.24% { transform: translate(40em, 218em) translateZ(-106em) rotateX(-90deg) rotateZ(90deg); }
+	85.68% { transform: translate(46em, 223em) translateZ(-106em) rotateX(-90deg) rotateZ(90deg); }
+	85.83% { transform: translate(49em, 223em) translateZ(-106em) rotateX(-90deg) rotateZ(90deg); }
+	86.79% { transform: translate(49em, 223em) translateZ(-87em) rotateX(-90deg) rotateZ(90deg); }
+	87.23% { transform: translate(49em, 215em) translateZ(-78em) rotateX(-90deg) rotateZ(90deg); }
+	87.67% { transform: translate(49em, 215em) translateZ(-67em) rotateX(-90deg) rotateZ(90deg); }
+	87.97% { transform: translate(49em, 215em) translateZ(-64em) rotateX(-66deg) rotateZ(80deg); }
+	88.19% { transform: translate(49em, 214em) translateZ(-62em) rotateX(-54deg) rotateZ(70deg); }
+	88.41% { transform: translate(49em, 211em) translateZ(-58em) rotateX(-43deg) rotateZ(50deg); }
+	88.63% { transform: translate(49em, 207em) translateZ(-55em) rotateX(-31deg) rotateZ(50deg); }
+	88.86% { transform: translate(49em, 203em) translateZ(-53em) rotateX(-18deg) rotateZ(27deg); }
+	89.00% { transform: translate(49em, 201em) translateZ(-53em) rotateX(0deg) rotateZ(0deg); }
+	91.73% { transform: translate(49em, 146em) translateZ(-52em) rotateX(0deg) rotateZ(0deg); }
+	92.91% { transform: translate(71em, 146em) translateZ(-52em) rotateX(0deg) rotateZ(0deg); }
+	93.14% { transform: translate(89em, 154em) translateZ(-43em) rotateX(0deg) rotateZ(0deg); }
+	93.73% { transform: translate(89em, 154em) translateZ(-43em) rotateX(0deg) rotateZ(0deg); }
+	94.17% { transform: translate(96em, 154em) translateZ(-43em) rotateX(0deg) rotateZ(0deg); }
+	95.28% { transform: translate(96em, 154em) translateZ(-43em) rotateX(0deg) rotateZ(0deg); }
+	95.79% { transform: translate(96em, 163em) translateZ(-43em) rotateX(0deg) rotateZ(0deg); }
+	100.0% { transform: translate(96em, 163em) translateZ(-43em) rotateX(0deg) rotateZ(0deg); }
+}
+					</code></pre>
+					
+					<aside class="notes">
+						In one of my demos I had these kind of keyframes. But it definately shouldn't be so scary.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<code>--animation: 10s linear infinite;</code>
+					
+					<aside class="notes">
+						I like to place all the animation attributes to a single custom property. Because a few animations exist in a single body, I want to manage all the attributes in one place.
+						<br />
+						Let's make it walk. A walk cycle is every artist's basic animation when creating a character.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/walk.png" />
+					</div>
+					
+					<aside class="notes">
+						You can google a picture of a walking cycle, find a video with a walking person, or record yourself.
+						<br />
+						Next, I define keyframes. A keyframe captures the movement at the extreme point. 
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/jump.png" />
+					</div>
+					
+					<aside class="notes">
+						When I jump, there are two points — the highest and the lowest. The browser will calculate everything in between automatically, so I need to find these keyframes of the walk.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/keyframes.png" />
+					</div>
+					
+					<aside class="notes">
+						I collect all of them, count them, and divide 100% by this number. 
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<code>100% / 4 keyframes = 25%</code>
+					
+					<aside class="notes">
+						This is the length of the keyframe.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<pre><code data-trim>
+@keyframes walk {
+	0%, 100% {}
+	25% {}
+	50% {}
+	75% {}
+}
+					</code></pre>
+					
+					<aside class="notes">
+						Then, I just find the right angle for each joint, copy that, and paste it into the keyframes.
+						<br />
+						And, of course, I check the result. [pause]
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/walk-1.webp" />
+					</div>
+					
+					<aside class="notes">
+						Animation is the point where you should choose the mood of you character. The mood affects how this person acts. And this affects how complecated animation you will have.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/walk-2.webp" />
+					</div>
+					
+					<aside class="notes">
+						For a default walk I need around six keyframes. For a run I need a little more. For something super femine I need much more keyframes, because of the movement of other parts of the body and more detailed movement in general.
+						<br />
+						Animation is fun! I can do any other animation. Even make it dance. [long pause]
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example32">
+						<div class="bibendum">
+							<div class="bibendum__body"></div>
+							<div class="bibendum__armLeft">
+								<div class="bibendum__shoulder">
+									<div class="bibendum__elbow">
+										<div></div>
+										<div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__armRight">
+								<div class="bibendum__shoulder">
+									<div class="bibendum__elbow">
+										<div></div>
+										<div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__head">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+							<div class="bibendum__legLeft">
+								<div class="bibendum__thigh">
+									<div class="bibendum__shin">
+										<div></div>
+										<div class="bibendum__foot"><div></div></div>
+									</div>
+								</div>
+							</div>
+							<div class="bibendum__legRight">
+								<div class="bibendum__thigh">
+									<div class="bibendum__shin">
+										<div></div>
+										<div class="bibendum__foot"><div></div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<audio controls="false" data-autoplay preload src="/dist/music-short.mp3"></audio>
+					
+					<aside class="notes">
+						I already said I can change the cube's appearance by changing the background. So I can create the whole dance floor! [long pause]
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example33">
+						<div class="scene__cell">
+								<!-- bibendum -->
+								<div class="person__shadow bibendum__shadow"></div>
+								<div class="person bibendum">
+										<div class="person__body"></div>
+										<div class="person__armLeft">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__armRight">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__head">
+												<div></div>
+												<div></div>
+												<div></div>
+												<div></div>
+												<div></div>
+												<div></div>
+										</div>
+										<div class="person__legLeft">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__legRight">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+						
+						<div class="scene__cell">
+								<!-- homer -->
+								<div class="person__shadow homer__shadow"></div>
+								<div class="person homer">
+										<div class="person__body"></div>
+										<div class="person__armLeft">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__armRight">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__head">
+												<div></div>
+										</div>
+										<div class="person__legLeft">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__legRight">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+						
+						<div class="scene__cell">
+								<!-- joker -->
+								<div class="person__shadow joker__shadow"></div>
+								<div class="person joker">
+										<div class="person__body"></div>
+										<div class="person__armLeft">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__armRight">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__head">
+												<div></div>
+												<div>
+														<div>
+																<div>
+																		<div>
+																				<div>
+																						<div>
+																								<div></div>
+																						</div>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+												<div>
+														<div>
+																<div>
+																		<div>
+																				<div>
+																						<div>
+																								<div></div>
+																						</div>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
+										<div class="person__legLeft">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__legRight">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+						
+						<div class="scene__cell">
+								<!-- walter white -->
+								<div class="person__shadow walterwhite__shadow"></div>
+								<div class="person walterwhite">
+										<div class="person__body"></div>
+										<div class="person__armLeft">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__armRight">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__head">
+												<div></div>
+										</div>
+										<div class="person__legLeft">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__legRight">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+						
+						<div class="scene__cell">
+								<!-- spiderman -->
+								<div class="person__shadow spiderman__shadow"></div>
+								<div class="person spiderman">
+										<div class="person__body"></div>
+										<div class="person__armLeft">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__armRight">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__head">
+												<div></div>
+										</div>
+										<div class="person__legLeft">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__legRight">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+						
+						<div class="scene__cell">
+								<!-- guard -->
+								<div class="person__shadow guard__shadow"></div>
+								<div class="person guard">
+										<div class="person__body"></div>
+										<div class="person__armLeft">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__armRight">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__head">
+												<div></div>
+										</div>
+										<div class="person__legLeft">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__legRight">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+						
+						<div class="scene__cell">
+								<!-- green lantern -->
+								<div class="person__shadow lantern__shadow"></div>
+								<div class="person lantern">
+										<div class="person__body"></div>
+										<div class="person__armLeft">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__armRight">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__head">
+												<div></div>
+												<div>
+														<div>
+																<div>
+																		<div>
+																				<div>
+																						<div>
+																								<div></div>
+																						</div>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+												<div>
+														<div>
+																<div>
+																		<div>
+																				<div>
+																						<div>
+																								<div></div>
+																						</div>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
+										<div class="person__legLeft">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__legRight">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+						
+						<div class="scene__cell">
+								<!-- flash -->
+								<div class="person__shadow flash__shadow"></div>
+								<div class="person flash">
+										<div class="person__body"></div>
+										<div class="person__armLeft">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__armRight">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__head">
+												<div></div>
+												<div class="person__horn person__hornl">
+														<div></div>
+														<div></div>
+														<div></div>
+														<div></div>
+														<div></div>
+												</div>
+												<div class="person__horn person__hornr">
+														<div></div>
+														<div></div>
+														<div></div>
+														<div></div>
+														<div></div>
+												</div>
+										</div>
+										<div class="person__legLeft">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+																<div></div>
+																<div></div>
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__legRight">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+																<div></div>
+																<div></div>
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+						
+						<div class="scene__cell">
+								<!-- mask -->
+								<div class="person__shadow mask__shadow"></div>
+								<div class="person mask">
+										<div class="person__body"></div>
+										<div class="person__armLeft">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__armRight">
+												<div class="person__shoulder">
+														<div class="person__elbow">
+																<div></div>
+																<div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__head">
+												<div></div>
+												<div class="mask__hat">
+														<div></div>
+														<div></div>
+														<div></div>
+												</div>
+										</div>
+										<div class="person__legLeft">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+										<div class="person__legRight">
+												<div class="person__thigh">
+														<div class="person__shin">
+																<div></div>
+																<div class="person__foot"><div></div></div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+					</div>
+
+					<audio controls="false" data-autoplay preload src="/dist/music-long.mp3"></audio>
+					
+					<aside class="notes">
+						Minecraft-ish characters are fun, but I want more. I want to use **many more** elements, masks, clip-paths, math functions, and gradients, and spend much time.
+					</aside>
+				</section>
+
+				<!-- 5. SCULPTING -->
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						- 5 -
+						## Sculpting
+
+						Note:
+						It’s time for sculpting.
+					</script>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example34">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+											<div class="dummy__torso">
+													<div class="dummy__torso-helper"></div>
+													<div class="dummy__neck">
+															<div class="dummy__neck-helper"></div>
+															<div class="dummy__head">
+																	<div class="dummy__head-helper"></div>
+															</div>
+													</div>
+													<div class="dummy__leftShoulder">
+															<div class="dummy__leftShoulder-helper"></div>
+															<div class="dummy__leftArm">
+																	<div class="dummy__leftArm-helper"></div>
+																	<div class="dummy__leftHand">
+																			<div class="dummy__leftHand-helper"></div>
+																	</div>
+															</div>
+													</div>
+													<div class="dummy__rightShoulder">
+															<div class="dummy__rightShoulder-helper"></div>
+															<div class="dummy__rightArm">
+																	<div class="dummy__rightArm-helper"></div>
+																	<div class="dummy__rightHand">
+																			<div class="dummy__rightHand-helper"></div>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+									<div class="dummy__hips">
+											<div class="dummy__hips-helper"></div>
+											<div class="dummy__leftLeg">
+													<div class="dummy__leftLeg-helper"></div>
+													<div class="dummy__leftShin">
+															<div class="dummy__leftShin-helper"></div>
+															<div class="dummy__leftFoot">
+																	<div class="dummy__leftFoot-helper"></div>
+															</div>
+													</div>
+											</div>
+											<div class="dummy__rightLeg">
+													<div class="dummy__rightLeg-helper"></div>
+													<div class="dummy__rightShin">
+															<div class="dummy__rightShin-helper"></div>
+															<div class="dummy__rightFoot">
+																	<div class="dummy__rightFoot-helper"></div>
+															</div>
+													</div>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						I added a few more cubes, changed the proportions. Okay, looks pretty smooth.
+						<br />
+						The next step is cutting edges.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example35">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						Then, I rotate cube sides and cut edges one body part by another. [pause]
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<code style="display: block; text-align: left; margin-bottom: 40px">clip-path: circle() | ellipse() | path() | rect() | shape() | xywh() | polygon()</code>
+					<code style="display: block; text-align: left; margin-bottom: 40px">mask: image() | url() | gradient()</code>
+					<code style="display: block; text-align: left; margin-bottom: 40px">background: linear-gradient()</code>
+					
+					<aside class="notes">
+						In CSS, we have many different properties for cutting edges. I used clip-path, mask, and gradients here.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<code style="display: block; text-align: left; margin-bottom: 40px">clip-path: polygon()</code>
+					<code style="display: block; text-align: left; margin-bottom: 40px">mask: image() | url() | gradient()</code>
+					<code style="display: block; text-align: left; margin-bottom: 40px">background: linear-gradient()</code>
+					
+					<aside class="notes">
+						I already told you about the clip path. It's a property for masking elements. It has its own disadvantages. I don't like to use it for circles. But it's the only option to create a mask for a rectangle with rounded corners.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<code style="display: block; text-align: left; margin-bottom: 40px">clip-path: polygon()</code>
+					<code style="display: block; text-align: left; margin-bottom: 40px">mask: linear-gradient()</code>
+					<code style="display: block; text-align: left; margin-bottom: 40px">background: linear-gradient()</code>
+					
+					<aside class="notes">
+						Mask property is cool. If you're not a Pure CSS Artist like me, who thinks all the shapes should be done with Pure CSS, you can use an SVG as the mask. But I prefer to use gradients. 
+						<br />
+						I can use any gradients with all the capabilities.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example36">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So, I cut edges for each body part separately because they'll be moving separately.
+						<br />
+						To create something more smooth, for example, if I want to create curves of the body, I use chains of divs, like in the example with the sausage-like shape. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example36">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+											<div class="dummy__torso">
+													<div class="dummy__torso-1"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-2"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-3"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-4"><div><div><div></div></div></div></div>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So, I cut edges for each body part separately because they'll be moving separately.
+						<br />
+						To create something more smooth, for example, if I want to create curves of the body, I use chains of divs, like in the example with the sausage-like shape. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example36">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+											<div class="dummy__torso">
+													<div class="dummy__torso-1"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-2"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-3"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-4"><div><div><div></div></div></div></div>
+													<div class="dummy__leftShoulder">
+															<div class="dummy__leftShoulder-helper">
+																	<div>
+																	</div>
+															</div>
+													</div>
+													<div class="dummy__rightShoulder">
+															<div class="dummy__rightShoulder-helper">
+																	<div>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So, I cut edges for each body part separately because they'll be moving separately.
+						<br />
+						To create something more smooth, for example, if I want to create curves of the body, I use chains of divs, like in the example with the sausage-like shape. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example36">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+											<div class="dummy__torso">
+													<div class="dummy__torso-1"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-2"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-3"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-4"><div><div><div></div></div></div></div>
+													<div class="dummy__leftShoulder">
+															<div class="dummy__leftShoulder-helper">
+																	<div>
+																			<div class="dummy__leftArm">
+																					<div class="dummy__leftArm-helper"></div>
+																					<div class="dummy__leftArm-1"></div>
+																					<div class="dummy__leftArm-2"></div>
+																					<div class="dummy__leftArm-3"></div>
+																					<div class="dummy__leftArm-4"></div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+													<div class="dummy__rightShoulder">
+															<div class="dummy__rightShoulder-helper">
+																	<div>
+																			<div class="dummy__rightArm">
+																					<div class="dummy__rightArm-helper"></div>
+																					<div class="dummy__rightArm-1"></div>
+																					<div class="dummy__rightArm-2"></div>
+																					<div class="dummy__rightArm-3"></div>
+																					<div class="dummy__rightArm-4"></div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So, I cut edges for each body part separately because they'll be moving separately.
+						<br />
+						To create something more smooth, for example, if I want to create curves of the body, I use chains of divs, like in the example with the sausage-like shape. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example36">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+											<div class="dummy__torso">
+													<div class="dummy__torso-1"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-2"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-3"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-4"><div><div><div></div></div></div></div>
+													<div class="dummy__leftShoulder">
+															<div class="dummy__leftShoulder-helper">
+																	<div>
+																			<div class="dummy__leftArm">
+																					<div class="dummy__leftArm-helper"></div>
+																					<div class="dummy__leftArm-1"></div>
+																					<div class="dummy__leftArm-2"></div>
+																					<div class="dummy__leftArm-3"></div>
+																					<div class="dummy__leftArm-4"></div>
+																					<div class="dummy__leftHand">
+																							<div class="dummy__leftHand-1"></div>
+																							<div class="dummy__leftHand-2"></div>
+																							<div class="dummy__leftHand-3"></div>
+																							<div class="dummy__leftHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+													<div class="dummy__rightShoulder">
+															<div class="dummy__rightShoulder-helper">
+																	<div>
+																			<div class="dummy__rightArm">
+																					<div class="dummy__rightArm-helper"></div>
+																					<div class="dummy__rightArm-1"></div>
+																					<div class="dummy__rightArm-2"></div>
+																					<div class="dummy__rightArm-3"></div>
+																					<div class="dummy__rightArm-4"></div>
+																					<div class="dummy__rightHand">
+																							<div class="dummy__rightHand-1"></div>
+																							<div class="dummy__rightHand-2"></div>
+																							<div class="dummy__rightHand-3"></div>
+																							<div class="dummy__rightHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So, I cut edges for each body part separately because they'll be moving separately.
+						<br />
+						To create something more smooth, for example, if I want to create curves of the body, I use chains of divs, like in the example with the sausage-like shape. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example36">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+											<div class="dummy__torso">
+													<div class="dummy__torso-1"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-2"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-3"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-4"><div><div><div></div></div></div></div>
+													<div class="dummy__neck">
+															<div class="dummy__neck-helper"></div>
+													</div>
+													<div class="dummy__leftShoulder">
+															<div class="dummy__leftShoulder-helper">
+																	<div>
+																			<div class="dummy__leftArm">
+																					<div class="dummy__leftArm-helper"></div>
+																					<div class="dummy__leftArm-1"></div>
+																					<div class="dummy__leftArm-2"></div>
+																					<div class="dummy__leftArm-3"></div>
+																					<div class="dummy__leftArm-4"></div>
+																					<div class="dummy__leftHand">
+																							<div class="dummy__leftHand-1"></div>
+																							<div class="dummy__leftHand-2"></div>
+																							<div class="dummy__leftHand-3"></div>
+																							<div class="dummy__leftHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+													<div class="dummy__rightShoulder">
+															<div class="dummy__rightShoulder-helper">
+																	<div>
+																			<div class="dummy__rightArm">
+																					<div class="dummy__rightArm-helper"></div>
+																					<div class="dummy__rightArm-1"></div>
+																					<div class="dummy__rightArm-2"></div>
+																					<div class="dummy__rightArm-3"></div>
+																					<div class="dummy__rightArm-4"></div>
+																					<div class="dummy__rightHand">
+																							<div class="dummy__rightHand-1"></div>
+																							<div class="dummy__rightHand-2"></div>
+																							<div class="dummy__rightHand-3"></div>
+																							<div class="dummy__rightHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So, I cut edges for each body part separately because they'll be moving separately.
+						<br />
+						To create something more smooth, for example, if I want to create curves of the body, I use chains of divs, like in the example with the sausage-like shape. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example36">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+											<div class="dummy__torso">
+													<div class="dummy__torso-1"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-2"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-3"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-4"><div><div><div></div></div></div></div>
+													<div class="dummy__neck">
+															<div class="dummy__neck-helper"></div>
+															<div class="dummy__head">
+																	<div class="dummy__head-helper"></div>
+															</div>
+													</div>
+													<div class="dummy__leftShoulder">
+															<div class="dummy__leftShoulder-helper">
+																	<div>
+																			<div class="dummy__leftArm">
+																					<div class="dummy__leftArm-helper"></div>
+																					<div class="dummy__leftArm-1"></div>
+																					<div class="dummy__leftArm-2"></div>
+																					<div class="dummy__leftArm-3"></div>
+																					<div class="dummy__leftArm-4"></div>
+																					<div class="dummy__leftHand">
+																							<div class="dummy__leftHand-1"></div>
+																							<div class="dummy__leftHand-2"></div>
+																							<div class="dummy__leftHand-3"></div>
+																							<div class="dummy__leftHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+													<div class="dummy__rightShoulder">
+															<div class="dummy__rightShoulder-helper">
+																	<div>
+																			<div class="dummy__rightArm">
+																					<div class="dummy__rightArm-helper"></div>
+																					<div class="dummy__rightArm-1"></div>
+																					<div class="dummy__rightArm-2"></div>
+																					<div class="dummy__rightArm-3"></div>
+																					<div class="dummy__rightArm-4"></div>
+																					<div class="dummy__rightHand">
+																							<div class="dummy__rightHand-1"></div>
+																							<div class="dummy__rightHand-2"></div>
+																							<div class="dummy__rightHand-3"></div>
+																							<div class="dummy__rightHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So, I cut edges for each body part separately because they'll be moving separately.
+						<br />
+						To create something more smooth, for example, if I want to create curves of the body, I use chains of divs, like in the example with the sausage-like shape. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example36">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+											<div class="dummy__torso">
+													<div class="dummy__torso-1"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-2"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-3"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-4"><div><div><div></div></div></div></div>
+													<div class="dummy__neck">
+															<div class="dummy__neck-helper"></div>
+															<div class="dummy__head">
+																	<div class="dummy__head-helper"></div>
+															</div>
+													</div>
+													<div class="dummy__leftShoulder">
+															<div class="dummy__leftShoulder-helper">
+																	<div>
+																			<div class="dummy__leftArm">
+																					<div class="dummy__leftArm-helper"></div>
+																					<div class="dummy__leftArm-1"></div>
+																					<div class="dummy__leftArm-2"></div>
+																					<div class="dummy__leftArm-3"></div>
+																					<div class="dummy__leftArm-4"></div>
+																					<div class="dummy__leftHand">
+																							<div class="dummy__leftHand-1"></div>
+																							<div class="dummy__leftHand-2"></div>
+																							<div class="dummy__leftHand-3"></div>
+																							<div class="dummy__leftHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+													<div class="dummy__rightShoulder">
+															<div class="dummy__rightShoulder-helper">
+																	<div>
+																			<div class="dummy__rightArm">
+																					<div class="dummy__rightArm-helper"></div>
+																					<div class="dummy__rightArm-1"></div>
+																					<div class="dummy__rightArm-2"></div>
+																					<div class="dummy__rightArm-3"></div>
+																					<div class="dummy__rightArm-4"></div>
+																					<div class="dummy__rightHand">
+																							<div class="dummy__rightHand-1"></div>
+																							<div class="dummy__rightHand-2"></div>
+																							<div class="dummy__rightHand-3"></div>
+																							<div class="dummy__rightHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+									<div class="dummy__hips">
+											<div class="dummy__hips-helper"></div>
+											<div class="dummy__hips-1"></div>
+											<div class="dummy__hips-2"></div>
+											<div class="dummy__hips-3"></div>
+											<div class="dummy__hips-4"><div></div></div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So, I cut edges for each body part separately because they'll be moving separately.
+						<br />
+						To create something more smooth, for example, if I want to create curves of the body, I use chains of divs, like in the example with the sausage-like shape. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example36">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+											<div class="dummy__torso">
+													<div class="dummy__torso-1"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-2"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-3"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-4"><div><div><div></div></div></div></div>
+													<div class="dummy__neck">
+															<div class="dummy__neck-helper"></div>
+															<div class="dummy__head">
+																	<div class="dummy__head-helper"></div>
+															</div>
+													</div>
+													<div class="dummy__leftShoulder">
+															<div class="dummy__leftShoulder-helper">
+																	<div>
+																			<div class="dummy__leftArm">
+																					<div class="dummy__leftArm-helper"></div>
+																					<div class="dummy__leftArm-1"></div>
+																					<div class="dummy__leftArm-2"></div>
+																					<div class="dummy__leftArm-3"></div>
+																					<div class="dummy__leftArm-4"></div>
+																					<div class="dummy__leftHand">
+																							<div class="dummy__leftHand-1"></div>
+																							<div class="dummy__leftHand-2"></div>
+																							<div class="dummy__leftHand-3"></div>
+																							<div class="dummy__leftHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+													<div class="dummy__rightShoulder">
+															<div class="dummy__rightShoulder-helper">
+																	<div>
+																			<div class="dummy__rightArm">
+																					<div class="dummy__rightArm-helper"></div>
+																					<div class="dummy__rightArm-1"></div>
+																					<div class="dummy__rightArm-2"></div>
+																					<div class="dummy__rightArm-3"></div>
+																					<div class="dummy__rightArm-4"></div>
+																					<div class="dummy__rightHand">
+																							<div class="dummy__rightHand-1"></div>
+																							<div class="dummy__rightHand-2"></div>
+																							<div class="dummy__rightHand-3"></div>
+																							<div class="dummy__rightHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+									<div class="dummy__hips">
+											<div class="dummy__hips-helper"></div>
+											<div class="dummy__hips-1"></div>
+											<div class="dummy__hips-2"></div>
+											<div class="dummy__hips-3"></div>
+											<div class="dummy__hips-4"><div></div></div>
+											<div class="dummy__leftLeg">
+													<div class="dummy__leftLeg-helper"></div>
+											</div>
+											<div class="dummy__rightLeg">
+													<div class="dummy__rightLeg-helper"></div>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So, I cut edges for each body part separately because they'll be moving separately.
+						<br />
+						To create something more smooth, for example, if I want to create curves of the body, I use chains of divs, like in the example with the sausage-like shape. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example36">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+											<div class="dummy__torso">
+													<div class="dummy__torso-1"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-2"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-3"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-4"><div><div><div></div></div></div></div>
+													<div class="dummy__neck">
+															<div class="dummy__neck-helper"></div>
+															<div class="dummy__head">
+																	<div class="dummy__head-helper"></div>
+															</div>
+													</div>
+													<div class="dummy__leftShoulder">
+															<div class="dummy__leftShoulder-helper">
+																	<div>
+																			<div class="dummy__leftArm">
+																					<div class="dummy__leftArm-helper"></div>
+																					<div class="dummy__leftArm-1"></div>
+																					<div class="dummy__leftArm-2"></div>
+																					<div class="dummy__leftArm-3"></div>
+																					<div class="dummy__leftArm-4"></div>
+																					<div class="dummy__leftHand">
+																							<div class="dummy__leftHand-1"></div>
+																							<div class="dummy__leftHand-2"></div>
+																							<div class="dummy__leftHand-3"></div>
+																							<div class="dummy__leftHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+													<div class="dummy__rightShoulder">
+															<div class="dummy__rightShoulder-helper">
+																	<div>
+																			<div class="dummy__rightArm">
+																					<div class="dummy__rightArm-helper"></div>
+																					<div class="dummy__rightArm-1"></div>
+																					<div class="dummy__rightArm-2"></div>
+																					<div class="dummy__rightArm-3"></div>
+																					<div class="dummy__rightArm-4"></div>
+																					<div class="dummy__rightHand">
+																							<div class="dummy__rightHand-1"></div>
+																							<div class="dummy__rightHand-2"></div>
+																							<div class="dummy__rightHand-3"></div>
+																							<div class="dummy__rightHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+									<div class="dummy__hips">
+											<div class="dummy__hips-helper"></div>
+											<div class="dummy__hips-1"></div>
+											<div class="dummy__hips-2"></div>
+											<div class="dummy__hips-3"></div>
+											<div class="dummy__hips-4"><div></div></div>
+											<div class="dummy__leftLeg">
+													<div class="dummy__leftLeg-helper"></div>
+													<div class="dummy__leftShin">
+															<div class="dummy__leftShin-helper"></div>
+															<div class="dummy__leftShin-1"></div>
+															<div class="dummy__leftShin-2"></div>
+															<div class="dummy__leftShin-3"></div>
+															<div class="dummy__leftShin-4"></div>
+													</div>
+											</div>
+											<div class="dummy__rightLeg">
+													<div class="dummy__rightLeg-helper"></div>
+													<div class="dummy__rightShin">
+															<div class="dummy__rightShin-helper"></div>
+															<div class="dummy__rightShin-1"></div>
+															<div class="dummy__rightShin-2"></div>
+															<div class="dummy__rightShin-3"></div>
+															<div class="dummy__rightShin-4"></div>
+													</div>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So, I cut edges for each body part separately because they'll be moving separately.
+						<br />
+						To create something more smooth, for example, if I want to create curves of the body, I use chains of divs, like in the example with the sausage-like shape. 
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example36">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+											<div class="dummy__torso">
+													<div class="dummy__torso-1"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-2"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-3"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-4"><div><div><div></div></div></div></div>
+													<div class="dummy__neck">
+															<div class="dummy__neck-helper"></div>
+															<div class="dummy__head">
+																	<div class="dummy__head-helper"></div>
+															</div>
+													</div>
+													<div class="dummy__leftShoulder">
+															<div class="dummy__leftShoulder-helper">
+																	<div>
+																			<div class="dummy__leftArm">
+																					<div class="dummy__leftArm-helper"></div>
+																					<div class="dummy__leftArm-1"></div>
+																					<div class="dummy__leftArm-2"></div>
+																					<div class="dummy__leftArm-3"></div>
+																					<div class="dummy__leftArm-4"></div>
+																					<div class="dummy__leftHand">
+																							<div class="dummy__leftHand-1"></div>
+																							<div class="dummy__leftHand-2"></div>
+																							<div class="dummy__leftHand-3"></div>
+																							<div class="dummy__leftHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+													<div class="dummy__rightShoulder">
+															<div class="dummy__rightShoulder-helper">
+																	<div>
+																			<div class="dummy__rightArm">
+																					<div class="dummy__rightArm-helper"></div>
+																					<div class="dummy__rightArm-1"></div>
+																					<div class="dummy__rightArm-2"></div>
+																					<div class="dummy__rightArm-3"></div>
+																					<div class="dummy__rightArm-4"></div>
+																					<div class="dummy__rightHand">
+																							<div class="dummy__rightHand-1"></div>
+																							<div class="dummy__rightHand-2"></div>
+																							<div class="dummy__rightHand-3"></div>
+																							<div class="dummy__rightHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+									<div class="dummy__hips">
+											<div class="dummy__hips-helper"></div>
+											<div class="dummy__hips-1"></div>
+											<div class="dummy__hips-2"></div>
+											<div class="dummy__hips-3"></div>
+											<div class="dummy__hips-4"><div></div></div>
+											<div class="dummy__leftLeg">
+													<div class="dummy__leftLeg-helper"></div>
+													<div class="dummy__leftShin">
+															<div class="dummy__leftShin-helper"></div>
+															<div class="dummy__leftShin-1"></div>
+															<div class="dummy__leftShin-2"></div>
+															<div class="dummy__leftShin-3"></div>
+															<div class="dummy__leftShin-4"></div>
+															<div class="dummy__leftFoot">
+																	<div class="dummy__leftFoot-1"></div>
+																	<div class="dummy__leftFoot-2"><div></div></div>
+															</div>
+													</div>
+											</div>
+											<div class="dummy__rightLeg">
+													<div class="dummy__rightLeg-helper"></div>
+													<div class="dummy__rightShin">
+															<div class="dummy__rightShin-helper"></div>
+															<div class="dummy__rightShin-1"></div>
+															<div class="dummy__rightShin-2"></div>
+															<div class="dummy__rightShin-3"></div>
+															<div class="dummy__rightShin-4"></div>
+															<div class="dummy__rightFoot">
+																	<div class="dummy__rightFoot-1"></div>
+																	<div class="dummy__rightFoot-2"><div></div></div>
+															</div>
+													</div>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So, I cut edges for each body part separately because they'll be moving separately.
+						<br />
+						To create something more smooth, for example, if I want to create curves of the body, I use chains of divs, like in the example with the sausage-like shape. 
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example-grid">
+						<pre><code data-trim>
+<div>
+	<div>
+		<div></div>
+	</div>
+</div>
+						</code></pre>
+
+						<div class="example example37"><div class="block"><div><div></div></div></div></div>
+					</div>
+					
+					<aside class="notes">
+						This is the div with two more nested divs. They all relate to each other. That's why I don't need to place them separately and find how they all can be connected.
+						<br />
+						If I rotate one element, the whole shape doesn't fall apart.
+					</aside>
+				</section>
+				
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="example example36">
+						<div class="dummy-wrapper">
+							<div class="dummy">
+									<div class="dummy__belly">
+											<div class="dummy__belly-helper"></div>
+											<div class="dummy__torso">
+													<div class="dummy__torso-1"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-2"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-3"><div><div><div></div></div></div></div>
+													<div class="dummy__torso-4"><div><div><div></div></div></div></div>
+													<div class="dummy__neck">
+															<div class="dummy__neck-helper"></div>
+															<div class="dummy__head">
+																	<div class="dummy__head-helper"></div>
+															</div>
+													</div>
+													<div class="dummy__leftShoulder">
+															<div class="dummy__leftShoulder-helper">
+																	<div>
+																			<div class="dummy__leftArm">
+																					<div class="dummy__leftArm-helper"></div>
+																					<div class="dummy__leftArm-1"></div>
+																					<div class="dummy__leftArm-2"></div>
+																					<div class="dummy__leftArm-3"></div>
+																					<div class="dummy__leftArm-4"></div>
+																					<div class="dummy__leftHand">
+																							<div class="dummy__leftHand-1"></div>
+																							<div class="dummy__leftHand-2"></div>
+																							<div class="dummy__leftHand-3"></div>
+																							<div class="dummy__leftHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+													<div class="dummy__rightShoulder">
+															<div class="dummy__rightShoulder-helper">
+																	<div>
+																			<div class="dummy__rightArm">
+																					<div class="dummy__rightArm-helper"></div>
+																					<div class="dummy__rightArm-1"></div>
+																					<div class="dummy__rightArm-2"></div>
+																					<div class="dummy__rightArm-3"></div>
+																					<div class="dummy__rightArm-4"></div>
+																					<div class="dummy__rightHand">
+																							<div class="dummy__rightHand-1"></div>
+																							<div class="dummy__rightHand-2"></div>
+																							<div class="dummy__rightHand-3"></div>
+																							<div class="dummy__rightHand-4"></div>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+									<div class="dummy__hips">
+											<div class="dummy__hips-helper"></div>
+											<div class="dummy__hips-1"></div>
+											<div class="dummy__hips-2"></div>
+											<div class="dummy__hips-3"></div>
+											<div class="dummy__hips-4"><div></div></div>
+											<div class="dummy__leftLeg">
+													<div class="dummy__leftLeg-helper"></div>
+													<div class="dummy__leftShin">
+															<div class="dummy__leftShin-helper"></div>
+															<div class="dummy__leftShin-1"></div>
+															<div class="dummy__leftShin-2"></div>
+															<div class="dummy__leftShin-3"></div>
+															<div class="dummy__leftShin-4"></div>
+															<div class="dummy__leftFoot">
+																	<div class="dummy__leftFoot-1"></div>
+																	<div class="dummy__leftFoot-2"><div></div></div>
+															</div>
+													</div>
+											</div>
+											<div class="dummy__rightLeg">
+													<div class="dummy__rightLeg-helper"></div>
+													<div class="dummy__rightShin">
+															<div class="dummy__rightShin-helper"></div>
+															<div class="dummy__rightShin-1"></div>
+															<div class="dummy__rightShin-2"></div>
+															<div class="dummy__rightShin-3"></div>
+															<div class="dummy__rightShin-4"></div>
+															<div class="dummy__rightFoot">
+																	<div class="dummy__rightFoot-1"></div>
+																	<div class="dummy__rightFoot-2"><div></div></div>
+															</div>
+													</div>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						So I choose the angle, rotate all the elements to get the right shape.
+						<br />
+						Then I rotate my character and cut edges one by one.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/shape-1.png" />
+					</div>
+					
+					<aside class="notes">
+						Now every body part looks kind of like this if I look from the top
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/shape-2.png" />
+					</div>
+					
+					<aside class="notes">
+						I add a few more divs to every body part and do the same thing — 
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/shape-3.png" />
+					</div>
+					
+					<aside class="notes">
+						place them, rotate, and cut edges. I'm not a sculptor, but I think sculpting also works this way.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<pre><code data-trim>
+--skin: #f1eae2;
+--hair: #f4e27f;
+--clothes: #508d69;
+--socks: #ffb6d9;
+					</code></pre>
+					
+					<aside class="notes">
+						Next, I color my character and add other elements, such as clothes and hair.
+						<br />
+						Coloring a complex character is hard. But I use the same trick — light source on top in front of the character.
+						<br />
+						I created a list of colors I'll use. 
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<pre><code data-trim>
+background: color-mix(in oklch, var(--clothes) 80%, black);
+background: color-mix(in oklch, var(--clothes) 80%, white);
+					</code></pre>
+					
+					<aside class="notes">
+						For each edge I mix this color with black. This way I have a customizable system.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/hair.webp" />
+					</div>
+					
+					<aside class="notes">
+						I can change the hair color or clothes.
+					</aside>
+				</section>
+				
+				<!-- ONE MORE THING -->
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						## One more thing
+
+						Note:
+						I use one more trick all the time to make it look like a real drawing. All the videos and images have distortion because they were compressed on the way to you.
+					</script>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/noise-1.png" />
+					</div>
+					
+					<aside class="notes">
+						One more thing.
+						<br />
+						I use one more trick all the time to make it look like a real drawing. All the videos and images have distortion because they were compressed on the way to you.
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/noise-2.png" />
+					</div>
+				</section>
+
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						https://yoksel.github.io/svg-filters/
+
+						Note:
+						I use a tool made by Yoksel.
+					</script>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<pre><code data-trim>
+.surface {
+	--noise: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg"><filter id="filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="turbulence" baseFrequency="1 1" numOctaves="10" seed="10" stitchTiles="stitch" result="turbulence"/><feDisplacementMap in="SourceGraphic" in2="displacementMap" scale="1.5" xChannelSelector="A" yChannelSelector="A" x="0%" y="0%" width="100%" height="100%" result="displacementMap2"/></filter></svg>#filter');
+	filter: var(--noise);
+}
+					</code></pre>
+					
+					<aside class="notes">
+						So I apply this filter to my demo. But not on top of everything, only on top of static surfaces. Otherwise you can heat your house during the winter.
+						<br />
+						And, of course, I need to test if it works. I make it run. [pause]
+					</aside>
+				</section>
+
+				<section data-transition="fade-in" data-transition-speed="fast">
+					<div class="img-wrapper">
+						<img src="./dist/images/final.webp" />
+					</div>
+					
+					<aside class="notes">
+						Well, that's it. I created and animated a 3D character in five steps. Does it look good? You tell me! Share your thoughts on Mastodon, Bluesky or Twitter. [pause]
+					</aside>
+				</section>
+
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast" style="text-align: left !important;">
+					<script type="text/template">
+						[miocene.io/character-modeling-2024](miocene.io/character-modeling-2024)
+
+						[miocene.io](miocene.io)
+
+						[youtube.com/@julia_miocene](youtube.com/@julia_miocene)
+						
+						[codepen.io/miocene](codepen.io/miocene)
+
+						Note:
+						If there's one thing you'd take away from my talk, I'd like you to know that
+					</script>
+				</section>
+
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						## Nothing is impossible
+
+						Note:
+						…nothing is impossible. There are a lot of more competent people in this room. If I can create something like this, you can do even more.
+					</script>
+				</section>
+
+				<section data-markdown data-transition="fade-in" data-transition-speed="fast">
+					<script type="text/template">
+						## Thanks!
+						@julia_miocene
+	
+						Note:
+						Thanks!
+					</script>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

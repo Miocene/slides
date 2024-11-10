@@ -1,0 +1,100 @@
+.present .example35 {
+  width: var(--slide-width); height: var(--slide-height);
+  --cell: calc(var(--slide-height) / 20);
+  --animation: 5s linear;
+  
+  --light: #4b91c8;
+  --medium: #48708e;
+  --medium-dark: #3b6281;
+  --dark: #354755;
+}
+
+.example35::before, .example35::after, .example35 *, .example35 *::before, .example35 *::after {
+  content: '';
+  position: absolute;
+  display: block;
+  transform-style: preserve-3d;
+}
+
+.present .example35 .dummy-wrapper {
+  top: calc(50% + calc(var(--cell)* -2)); left: 50%;
+  transform: translate(0, calc(var(--cell) * 3));
+}
+
+.present .example35 .dummy {
+  top: 0; left: 0;
+  transform-origin: center center;
+  transform: translate(0, 0) rotateX(70deg) rotateZ(-50deg) rotateX(0deg);
+}
+
+/* BELLY */
+.present .example35 .dummy__belly {
+  top: 0; left: 0;
+  width: calc(var(--cell)* 9.5); height: calc(var(--cell)* 8);
+  background: var(--dark);
+  transform-origin: center center;
+  translate: -50% -50%;
+}
+.present .example35 .dummy__belly::before {
+  top: 0; left: 0;
+  width: 100%; height: calc(var(--cell)* 3.74);
+  background: linear-gradient(-104deg, transparent 40%, var(--medium-dark) 0 91%, transparent 0), linear-gradient(104deg, transparent 50%, var(--medium-dark) 0 91%, transparent 0);
+  transform-origin: top left;
+  rotate: x 73deg;
+  animation: example35-1 var(--animation);
+}
+@keyframes example35-1 {
+  0% { rotate: x 90deg; }
+  12.5%, 100% { rotate: x 73deg; }
+}
+.present .example35 .dummy__belly::after {
+  top: 0; left: 0;
+  width: calc(var(--cell)* 3.7); height: 100%;
+  background: linear-gradient(-186deg, transparent 40%, var(--medium) 0 95.3%, transparent 0), linear-gradient(16deg, transparent 50%, var(--medium) 0 88.2%, transparent 0);
+  transform-origin: top left;
+  rotate: y -76deg;
+  animation: example35-2 var(--animation);
+}
+@keyframes example35-2 {
+  0%, 12.5% { rotate: y -90deg; }
+  25%, 100% { rotate: y -76deg; }
+
+  0%, 62% { background: var(--medium); }
+  62.5%, 100% { background: linear-gradient(-186deg, transparent 40%, var(--medium) 0 95.3%, transparent 0), linear-gradient(16deg, transparent 50%, var(--medium) 0 88.2%, transparent 0); }
+}
+.present .example35 .dummy__belly-helper {
+  width: 100%; height: 100%;
+  translate: 0 0 calc(var(--cell)* 3.6);
+}
+.present .example35 .dummy__belly-helper::before {
+  top: 0; right: 0;
+  width: calc(var(--cell)* 3.7); height: 100%;
+  background: linear-gradient(-174deg, transparent 40%, var(--medium) 0 95.3%, transparent 0), linear-gradient(-16deg, transparent 50%, var(--medium) 0 88%, transparent 0);
+  transform-origin: right center;
+  translate: 0 0 calc(var(--cell)* -3.6);
+  rotate: y 76deg;
+  animation: example35-3 var(--animation);
+}
+@keyframes example35-3 {
+  0%, 25% { rotate: y 90deg; }
+  32.5%, 100% { rotate: y 76deg; }
+  
+  0%, 74.5% { background: var(--medium); }
+  75%, 100% { background: linear-gradient(-174deg, transparent 40%, var(--medium) 0 95.3%, transparent 0), linear-gradient(-16deg, transparent 50%, var(--medium) 0 88%, transparent 0); }
+}
+.present .example35 .dummy__belly-helper::after {
+  bottom: 0; left: 0;
+  width: 100%; height: calc(var(--cell)* 3.6);
+  background: linear-gradient(-76deg, transparent 40%, var(--light) 0 91.4%, transparent 0), linear-gradient(76deg, transparent 50%, var(--light) 0 91.4%, transparent 0);
+  transform-origin: bottom left;
+  rotate: x -84deg;
+  translate: 0 0 calc(var(--cell)* -3.6);
+  animation: example35-4 var(--animation);
+}
+@keyframes example35-4 {
+  0%, 32.5% { rotate: x -90deg; }
+  50%, 100% { rotate: x -84deg; }
+  
+  0%, 82% { background: var(--light); }
+  82.5%, 100% { background: linear-gradient(-76deg, transparent 40%, var(--light) 0 91.4%, transparent 0), linear-gradient(76deg, transparent 50%, var(--light) 0 91.4%, transparent 0); }
+}

@@ -1,0 +1,85 @@
+.present .example5 {
+  transform-style: preserve-3d;
+  --size: min(20vh, 20vw);
+  width: var(--slide-width);
+  height: var(--slide-height);
+}
+.example5 .cube, .example5 .cube::before, .example5 .cube::after, .example5 .cube *, .example5 .cube *::before, .example5 .cube *::after {
+  content: '';
+  position: absolute;
+  display: block;
+  transform-style: preserve-3d;
+  background: white;
+  box-shadow: inset 0 0 0 2px #1E1E1E;
+  width: var(--size); height: var(--size);
+}
+
+.present .example5 .cube {
+  top: 50%; left: 50%;
+  transform-origin: center center;
+  animation: example5-1 20s ease both;
+  animation-fill-mode: forwards;
+  transform: translate(-50%, -10%) rotateX(75deg) rotateZ(0.6turn);
+  /* transform: translate(-50%, -10%) rotateX(75deg) rotateZ(1.6turn); */
+}
+@keyframes example5-1 {
+  from { transform: translate(-50%, -10%) rotateX(75deg) rotateZ(0.6turn); }
+  to { transform: translate(-50%, -10%) rotateX(75deg) rotateZ(1.6turn); }
+}
+.present .example5 .cube::before {
+  top: 0; left: 100%;
+  transform-origin: top left;
+  animation: example5-2 1s 2s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-fill-mode: forwards;
+  transform: rotateY(0deg);
+  /* transform: rotateY(-90deg); */
+}
+@keyframes example5-2 {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(-90deg); }
+}
+.present .example5 .cube::after {
+  top: 0; left: 0;
+  transform-origin: top left;
+  animation: example5-3 1s 3s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-fill-mode: forwards;
+  transform: rotateY(-180deg);
+  /* transform: rotateY(-90deg); */
+}
+@keyframes example5-3 {
+  from { transform: rotateY(-180deg); }
+  to { transform: rotateY(-90deg); }
+}
+.present .example5 .cube > div {
+  transform-origin: top center;
+  animation: example5-4 1s 6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-fill-mode: forwards;
+  transform: rotateX(180deg);
+  /* transform: rotateX(90deg); */
+}
+@keyframes example5-4 {
+  from { transform: rotateX(180deg); }
+  to { transform: rotateX(90deg); }
+}
+.present .example5 .cube > div::before {
+  animation: example5-5 1s 5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-fill-mode: forwards;
+  transform: translatez(0);
+  /* transform: translatez(calc(var(--size) * -1)); */
+}
+@keyframes example5-5 {
+  from { transform: translatez(0); }
+  to { transform: translatez(calc(var(--size) * -1)); }
+}
+.present .example5 .cube > div::after {
+  top: 100%;
+  transform-origin: top center;
+  animation: example5-6 1s 4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-fill-mode: forwards;
+  transform: rotateX(0deg);
+  /* transform: rotateX(-90deg); */
+}
+@keyframes example5-6 {
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(-90deg); }
+}
