@@ -1,23 +1,22 @@
-.present .example3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.example3 {
   perspective: 4000px;
 }
-.present .example3 .block-s {
-  position: absolute;
+.example3 .block-s {
   top: 50%; left: 50%;
   width: min(70%, 500px); aspect-ratio: 1/1;
   background-color: #202020;
   translate: -50% -50%;
+}
+.present .example3 .block-s {
   animation: example3-1 5s linear infinite;
 }
-.present .example3 .block-b {
-  position: absolute;
+.example3 .block-b {
   top: 50%; left: 50%;
   width: min(40%, 300px); aspect-ratio: 1/1;
   background-color: #EA5E57;
   translate: -50% -50%;
+}
+.present .example3 .block-b {
   animation: example3-2 5s linear infinite;
 }
 

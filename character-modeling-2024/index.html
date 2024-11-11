@@ -6,6 +6,9 @@
 
 		<title>Character Modelling in CSS — Julia Miocene, 2024</title>
 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/miocene/miocene.css">
@@ -32,7 +35,7 @@
 						## Let’s play a game
 
 						Note:
-						I'm going to show you six images, and your task is to guess which ones were created using pure CSS and which ones were made in a graphic editor. Ready to test your CSS knowledge and your CSS intuition?
+						I'm going to show you four images, and your task is to guess which ones were created using pure CSS and which ones were made in a graphic editor. Ready to test your CSS knowledge and your CSS intuition?
 					</script>
 				</section>
 				
@@ -66,7 +69,7 @@
 					<img class="game game-4" src="./dist/images/game-4.png" />
 					
 					<aside class="notes">
-						The last one. Raise your hand if you think it was made in a graphic editor. [pause]
+						The last one. Raise your hand if you think it was made with no CSS. [pause]
 					</aside>
 				</section>
 				
@@ -192,8 +195,6 @@
 						Sponge, lemon, pigeon, mosquito, portrait, noodles, girl, 
 						<br />
 						From a simple Sponge to a complex Girl.
-						<br />
-						As part of my commitment to sharing knowledge, 
 					</aside>
 				</section>
 				
@@ -227,7 +228,7 @@
 						## What is character?
 						
 						Note:
-						Before we start creating character, let’s define what a character is.
+						Let’s define what a character is.
 					</script>
 				</section>
 
@@ -333,7 +334,7 @@
 					</div>
 
 					<aside class="notes">
-						There is a perspective property that helps us see the objects’ depth.
+						It doesn't look like a 3D. It looks like it shrinking.
 					</aside>
 				</section>
 
@@ -352,6 +353,8 @@ body {
 					</div>
 					
 					<aside class="notes">
+						There is a perspective property that helps us see the objects’ depth.
+						<br />
 						But it’s still not 3D. Look what happens if I add another block inside and rotate it, too.
 					</aside>
 				</section>
@@ -675,6 +678,8 @@ transform: rotateX(90deg) translateX(100px) translateY(100px);</code></pre>
 
 						Note:
 						The next step is the light source. Since there is no such thing as a light source in CSS, 
+						<br />
+						I need to **imagine** where it could be and manually color the character based on this light source.
 					</script>
 				</section>
 				
@@ -684,8 +689,6 @@ transform: rotateX(90deg) translateX(100px) translateY(100px);</code></pre>
 					</div>
 					
 					<aside class="notes">
-						I need to **imagine** where it could be and manually color the character based on this light source.
-						<br />
 						I tried a few different techniques. Finally, I found the perfect place for a light source for beginners in 3D modeling in CSS — 
 					</aside>
 				</section>
@@ -1335,7 +1338,7 @@ background: linear-gradient() x y / width height;
 					<aside class="notes">
 						When I nest elements properly, I reduce amount of animations. To rotate the shoulder I need just one. In case with no nesting I need to rotate each part separately. Which is... well... a lot of efford to do.
 						<br />
-						I haven't done it for my first demos, and it's so bad! I don't update or delete them because I want to see how I improve my skills and show people how they shouldn't do.
+						I haven't done it for my first demos, and it's so bad! 
 					</aside>
 				</section>
 				
@@ -1343,6 +1346,9 @@ background: linear-gradient() x y / width height;
 					<div class="img-wrapper">
 						<img src="./dist/images/cyclist.webp" />
 					</div>
+					<aside class="notes">
+						I don't update or delete them because I want to see how I improve my skills and show people how they shouldn't do.
+					</aside>
 				</section>
 				
 				<section data-transition="fade-in" data-transition-speed="fast">
@@ -1362,6 +1368,7 @@ background: linear-gradient() x y / width height;
 						<pre><code data-trim>
 .square {
 	rotate: 360deg;
+	transform-origin: center center;
 }
 						</code></pre>
 
@@ -1378,6 +1385,7 @@ background: linear-gradient() x y / width height;
 						<pre><code data-trim>
 .square {
 	rotate: 90deg;
+	transform-origin: left top;
 }
 						</code></pre>
 
@@ -1385,7 +1393,7 @@ background: linear-gradient() x y / width height;
 					</div>
 					
 					<aside class="notes">
-						Transform-origin draws a point in the space for the transformations. Any transformation will be applied from this point. By default it's in the center of the object.
+						You can place it anyway: within the object, outsize of it, using an Z-axis. You can use any units you want.
 					</aside>
 				</section>
 				
@@ -1583,8 +1591,6 @@ background: linear-gradient() x y / width height;
 						Here I should animate rotation, translate, sometimes skew, scale, opacity and colors. Too much.
 						<br />
 						The only thing I should animate for a 3D character is the rotation of the joints, which usually rotate on one axis.
-						<br />
-						I use keyframes for animation. I tried to work with the linear function but found it less convenient to choreograph.
 					</aside>
 				</section>
 				
@@ -1601,6 +1607,8 @@ background: linear-gradient() x y / width height;
 					</code></pre>
 					
 					<aside class="notes">
+						I use keyframes for animation. I tried to work with the linear function but found it less convenient to choreograph.
+						<br />
 						Keyframes is an at rule. You can specify as many keyframes as you want. 
 					</aside>
 				</section>
@@ -1734,7 +1742,8 @@ background: linear-gradient() x y / width height;
 					<aside class="notes">
 						I like to place all the animation attributes to a single custom property. Because a few animations exist in a single body, I want to manage all the attributes in one place.
 						<br />
-						Let's make it walk. A walk cycle is every artist's basic animation when creating a character.
+						<br />
+						Let's talk about walking. A walk cycle is every artist's basic animation when creating a character.
 					</aside>
 				</section>
 
@@ -1781,10 +1790,10 @@ background: linear-gradient() x y / width height;
 				<section data-transition="fade-in" data-transition-speed="fast">
 					<pre><code data-trim>
 @keyframes walk {
-	0%, 100% {}
-	25% {}
-	50% {}
-	75% {}
+	0%, 100% { rotate: 0deg; }
+	25% { rotate: 60deg; }
+	50% { rotate: 20deg; }
+	75% { rotate: 70deg; }
 }
 					</code></pre>
 					
@@ -1864,7 +1873,7 @@ background: linear-gradient() x y / width height;
 						</div>
 					</div>
 
-					<audio controls="false" data-autoplay preload src="/dist/music-short.mp3"></audio>
+					<audio controls="false" data-autoplay preload src="dist/music-short.mp3"></audio>
 					
 					<aside class="notes">
 						I already said I can change the cube's appearance by changing the background. So I can create the whole dance floor! [long pause]
@@ -2345,11 +2354,7 @@ background: linear-gradient() x y / width height;
 						</div>
 					</div>
 
-					<audio controls="false" data-autoplay preload src="/dist/music-long.mp3"></audio>
-					
-					<aside class="notes">
-						Minecraft-ish characters are fun, but I want more. I want to use **many more** elements, masks, clip-paths, math functions, and gradients, and spend much time.
-					</aside>
+					<audio controls="false" data-autoplay preload src="dist/music-long.mp3"></audio>
 				</section>
 
 				<!-- 5. SCULPTING -->
@@ -2359,6 +2364,8 @@ background: linear-gradient() x y / width height;
 						## Sculpting
 
 						Note:
+						Minecraft-ish characters are fun, but I want more. I want to use **many more** elements, masks, clip-paths, math functions, and gradients, and spend much time.
+
 						It’s time for sculpting.
 					</script>
 				</section>
@@ -2423,7 +2430,7 @@ background: linear-gradient() x y / width height;
 					</div>
 					
 					<aside class="notes">
-						I added a few more cubes, changed the proportions. Okay, looks pretty smooth.
+						I added a few more cubes to match the real body. I added a neck, separated body into torso, belly and hips. Okay, looks pretty smooth.
 						<br />
 						The next step is cutting edges.
 					</aside>
@@ -2461,7 +2468,7 @@ background: linear-gradient() x y / width height;
 					<code style="display: block; text-align: left; margin-bottom: 40px">background: linear-gradient()</code>
 					
 					<aside class="notes">
-						I already told you about the clip path. It's a property for masking elements. It has its own disadvantages. I don't like to use it for circles. But it's the only option to create a mask for a rectangle with rounded corners.
+						I already told you about the clip path. It's a property for masking elements. For this demo I used only the polygon() function.
 					</aside>
 				</section>
 				
@@ -2473,7 +2480,7 @@ background: linear-gradient() x y / width height;
 					<aside class="notes">
 						Mask property is cool. If you're not a Pure CSS Artist like me, who thinks all the shapes should be done with Pure CSS, you can use an SVG as the mask. But I prefer to use gradients. 
 						<br />
-						I can use any gradients with all the capabilities.
+						I can use any gradients with all the capabilities within the mask property or as a background if I want to use nexted elements.
 					</aside>
 				</section>
 				
@@ -3271,9 +3278,9 @@ background: linear-gradient() x y / width height;
 					</div>
 					
 					<aside class="notes">
-						So I choose the angle, rotate all the elements to get the right shape.
+						Then I rotate my character and cut all the leftovers, rotate it one more time and to the same cleanup.
 						<br />
-						Then I rotate my character and cut edges one by one.
+						It looks pretty edgy, but it already looks like a human body.
 					</aside>
 				</section>
 
@@ -3351,7 +3358,7 @@ background: color-mix(in oklch, var(--clothes) 80%, white);
 						## One more thing
 
 						Note:
-						I use one more trick all the time to make it look like a real drawing. All the videos and images have distortion because they were compressed on the way to you.
+						I use one more trick all the time to make it look like a real drawing.
 					</script>
 				</section>
 
@@ -3361,9 +3368,7 @@ background: color-mix(in oklch, var(--clothes) 80%, white);
 					</div>
 					
 					<aside class="notes">
-						One more thing.
-						<br />
-						I use one more trick all the time to make it look like a real drawing. All the videos and images have distortion because they were compressed on the way to you.
+						All the videos and images have distortion because they were compressed on the way to you.
 					</aside>
 				</section>
 
@@ -3418,6 +3423,8 @@ background: color-mix(in oklch, var(--clothes) 80%, white);
 						[codepen.io/miocene](codepen.io/miocene)
 
 						Note:
+						Here are all the links you might need: slides, my site with some tutorials and demos, my channel with CSS art and my codepen.
+
 						If there's one thing you'd take away from my talk, I'd like you to know that
 					</script>
 				</section>

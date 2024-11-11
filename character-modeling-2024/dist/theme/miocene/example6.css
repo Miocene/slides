@@ -1,10 +1,11 @@
-.present .example6 .block {
-  position: absolute;
+.example6 .block {
   top: 50%; left: 50%;
   width: min(25%, 200px); aspect-ratio: 1 / 1;
   background-color: #202020;
-  animation: example6 4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
   transform: translate(-50%, -50%) translate(-100px, -100px) translatex(200px) rotate(90deg) translateX(200px) rotate(90deg) translateX(200px) rotate(90deg) translateX(200px) rotate(90deg);
+}
+.present .example6 .block {
+  animation: example6 4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 @keyframes example6 {

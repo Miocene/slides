@@ -1,12 +1,14 @@
-.present .example24 {
+.example24 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.present .example24 .block {
+.example24 .block {
   width: min(50%, 300px); aspect-ratio: 1/1;
   background-color: #202020;
   background-image: radial-gradient(red 4px, transparent 0);
+}
+.present .example24 .block {
   animation: example24 5s linear infinite;
 }
 

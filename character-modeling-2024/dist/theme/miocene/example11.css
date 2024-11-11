@@ -1,47 +1,45 @@
-.present .example11 {
+.example11 {
   perspective: 10000px;
   transform-style: preserve-3d;
   --size: min(15vh, 15vw);
 }
 
-.example11 .cube, .example11 .cube::before, .example11 .cube::after, .example11 .cube *, .example11 .cube *::before, .example11 .cube *::after {
-  content: '';
-  position: absolute;
-  display: block;
-  transform-style: preserve-3d;
+.example11 *, .example11 *::before, .example11 *::after {
   background: white;
   box-shadow: inset 0 0 0 2px #1E1E1E;
   width: var(--size); height: var(--size);
 }
 
-.present .example11 .cube {
+.example11 .cube {
   top: 50%; left: 50%;
   transform-origin: center center;
   transform: translate(-50%, -10%) rotateX(75deg) rotateZ(1.6turn);
 }
-.present .example11 .cube::before {
+.example11 .cube::before {
   top: 0; left: 100%;
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
-.present .example11 .cube::after {
+.example11 .cube::after {
   top: 0; left: 0;
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
-.present .example11 .cube > div {
+.example11 .cube > div {
   transform-origin: top center;
   transform: rotateX(90deg);
 }
-.present .example11 .cube > div::before {
+.example11 .cube > div::before {
   transform: translatez(calc(var(--size) * -1));
 }
-.present .example11 .cube > div::after {
+.example11 .cube > div::after {
   top: 100%;
   transform-origin: top center;
-  animation: example11-6 1s 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-fill-mode: forwards;
   transform: rotateX(0deg);
+}
+.present .example11 .cube > div::after {
+  animation: example11-6 1s 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 @keyframes example11-6 {
   from { transform: rotateX(0deg); }

@@ -1,21 +1,23 @@
-.present .example29 {
+.example29 {
   height: var(--slide-height);
   
 }
-.present .example29 .block {
+.example29 .block {
   top: 0.5em; left: 50%;
   font-size: calc(var(--slide-height) / 6);
   translate: -50%;
 }
-.present .example29 .block div {
+.example29 .block div {
   top: 100%; left: 0;
   translate: 0 -1em;
   background-image: radial-gradient(circle at 0.5em 0.5em, red 8px, transparent 0);
   rotate: -15deg;
+}
+.present .example29 .block div {
   animation: example29 3s ease infinite;
 }
-.present .example29 .block, .present .example29 .block div {
-  position: absolute;
+.example29 .block,
+.example29 .block div {
   width: 1em; aspect-ratio: 1 / 1.7;
   box-shadow: inset 0 0 0 4px #202020;
   border-radius: 99em;

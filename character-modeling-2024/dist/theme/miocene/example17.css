@@ -1,253 +1,246 @@
-.present .example17 {
+.example17 {
   transform-style: preserve-3d;
   --size: min(20vh, 20vw);
   --cell: calc(var(--size) / 16);
 }
 
-.example17 div, .example17 div::before, .example17 div::after {
-  content: '';
-  position: absolute;
-  display: block;
-  transform-style: preserve-3d;
-}
-
-.present .example17 .fox {
+.example17 .fox {
   top: 50%; left: 50%;
   width: calc(var(--cell)* 16); height: calc(var(--cell)* 16);
   transform-origin: center center;
   transform: translate(-50%, -10%) rotateX(0deg) rotateZ(-180deg);
 }
-.present .example17 .fox::before {
+.example17 .fox::before {
   top: 0; left: 100%;
   height: 100%; width: calc(var(--cell)* 14);
-  background: linear-gradient(0deg, #b4b4b4, #b4b4b4) calc(var(--cell)* 0) calc(var(--cell)* 4) / calc(var(--cell)* 2) calc(var(--cell)* 8) no-repeat, #b37342;
+  background: linear-gradient(0deg, #b4b4b4, #b4b4b4) 0 calc(var(--cell)* 4) / calc(var(--cell)* 2) calc(var(--cell)* 8) no-repeat, #b37342;
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
-.present .example17 .fox::after {
+.example17 .fox::after {
   top: 0; left: 0;
   height: 100%; width: calc(var(--cell)* 14);
-  background: linear-gradient(0deg, #b4b4b4, #b4b4b4) calc(var(--cell)* 0) calc(var(--cell)* 4) / calc(var(--cell)* 2) calc(var(--cell)* 8) no-repeat, #b37342;
+  background: linear-gradient(0deg, #b4b4b4, #b4b4b4) 0 calc(var(--cell)* 4) / calc(var(--cell)* 2) calc(var(--cell)* 8) no-repeat, #b37342;
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
-.present .example17 .fox > div:nth-child(1) {
+.example17 .fox > div:nth-child(1) {
   width: 100%; height: calc(var(--cell)* 14);
-  background: radial-gradient(ellipse farthest-side at 0% 49%, #dedfde 50%, #ffffff) calc(var(--cell)* 9.9) calc(var(--cell)* 2) / calc(var(--cell)* 1) calc(var(--cell)* 3) no-repeat, 
-            radial-gradient(ellipse farthest-side at 100% 49%, #dedfde 50%, #ffffff) calc(var(--cell)* 6) calc(var(--cell)* 2) / calc(var(--cell)* 1) calc(var(--cell)* 3) no-repeat, 
+  background: radial-gradient(ellipse farthest-side at 0% 49%, #dedfde 50%, #ffffff) calc(var(--cell)* 9.9) calc(var(--cell)* 2) / var(--cell) calc(var(--cell)* 3) no-repeat, 
+            radial-gradient(ellipse farthest-side at 100% 49%, #dedfde 50%, #ffffff) calc(var(--cell)* 6) calc(var(--cell)* 2) / var(--cell) calc(var(--cell)* 3) no-repeat, 
             linear-gradient(0deg, #dedfde 70%, #ffffff) calc(var(--cell)* 7) calc(var(--cell)* 2) / calc(var(--cell)* 3) calc(var(--cell)* 2) no-repeat, 
-            linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 13) calc(var(--cell)* 10) / calc(var(--cell)* 1) calc(var(--cell)* 1) no-repeat, 
-            linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 2) calc(var(--cell)* 10) / calc(var(--cell)* 1) calc(var(--cell)* 1) no-repeat, 
+            linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 13) calc(var(--cell)* 10) / var(--cell) var(--cell) no-repeat, 
+            linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 2) calc(var(--cell)* 10) / var(--cell) var(--cell) no-repeat, 
             linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell)* 2) calc(var(--cell)* 7) / calc(var(--cell)* 3) calc(var(--cell)* 4) no-repeat, 
             linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell)* 11) calc(var(--cell)* 7) / calc(var(--cell)* 3) calc(var(--cell)* 4) no-repeat, 
-            linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell)* 7) calc(var(--cell)* 6) / calc(var(--cell)* 2) calc(var(--cell)* 1) no-repeat, 
+            linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell)* 7) calc(var(--cell)* 6) / calc(var(--cell)* 2) var(--cell) no-repeat, 
             linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 5) calc(var(--cell)* 2) / calc(var(--cell)* 6) calc(var(--cell)* 4) no-repeat, 
-            linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 4) calc(var(--cell)* 0) / calc(var(--cell)* 8) calc(var(--cell)* 2) no-repeat, 
+            linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 4) 0 / calc(var(--cell)* 8) calc(var(--cell)* 2) no-repeat, 
             #fea361;
   transform-origin: top center;
   transform: rotateX(90deg);
 }
-.present .example17 .fox > div:nth-child(1)::before {
+.example17 .fox > div:nth-child(1)::before {
   width: 100%; height: 100%;
   background: #b37342;
   transform: translateZ(calc(var(--cell)* -16));
 }
-.present .example17 .fox > div:nth-child(1)::after {
+.example17 .fox > div:nth-child(1)::after {
   top: 100%;
   width: 100%; height: calc(var(--cell)* 16);
   background: linear-gradient(180deg, #b37342 80%, #ffac70) calc(var(--cell)* 11) calc(var(--cell)* 4) / calc(var(--cell)* 5) calc(var(--cell)* 4) no-repeat, 
-              linear-gradient(180deg, #b37342 80%, #ffac70) calc(var(--cell)* 0) calc(var(--cell)* 4) / calc(var(--cell)* 5) calc(var(--cell)* 4) no-repeat, 
+              linear-gradient(180deg, #b37342 80%, #ffac70) 0 calc(var(--cell)* 4) / calc(var(--cell)* 5) calc(var(--cell)* 4) no-repeat, 
               #ffac70;
   transform-origin: top center;
   transform: rotateX(-90deg);
 }
 
-.present .example17 .fox__leg {
+.example17 .fox__leg {
   width: calc(var(--cell)* 4); height: calc(var(--cell)* 4);
   background: #352927;
   transform: translateZ(calc(var(--cell)* -2));
 }
-.present .example17 .fox__leg::before {
+.example17 .fox__leg::before {
   left: 100%;
   width: calc(var(--cell)* 2); height: calc(var(--cell)* 4);
   background: #3c302c;
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
-.present .example17 .fox__leg::after {
+.example17 .fox__leg::after {
   top: 100%;
   width: calc(var(--cell)* 4); height: calc(var(--cell)* 2);
   background: #3c2e2e;
   transform-origin: top left;
   transform: rotateX(90deg);
 }
-.present .example17 .fox__leg > div {
+.example17 .fox__leg > div {
   width: calc(var(--cell)* 4); height: calc(var(--cell)* 2);
   transform-origin: top left;
   transform: rotateX(90deg);
 }
-.present .example17 .fox__leg > div::before {
+.example17 .fox__leg > div::before {
   width: calc(var(--cell)* 4); height: calc(var(--cell)* 2);
   background: #3c302c;
   transform-origin: top left;
   transform: rotateY(90deg);
 }
-.present .example17 .fox__leg1 > div, 
-.present .example17 .fox__leg3 > div {
+.example17 .fox__leg1 > div, 
+.example17 .fox__leg3 > div {
   background: #5e4a47;
 }
-.present .example17 .fox__leg2 > div, 
-.present .example17 .fox__leg4 > div {
+.example17 .fox__leg2 > div, 
+.example17 .fox__leg4 > div {
   background: #3b2f2d;
 }
-.present .example17 .fox__leg1 {
-  top: calc(var(--cell)* 0); left: calc(var(--cell)* 0);
+.example17 .fox__leg1 {
+  top: 0; left: 0;
 }
-.present .example17 .fox__leg2 {
-  top: calc(var(--cell)* 12); left: calc(var(--cell)* 0);
+.example17 .fox__leg2 {
+  top: calc(var(--cell)* 12); left: 0;
 }
-.present .example17 .fox__leg3 {
-  top: calc(var(--cell)* 0); left: calc(var(--cell)* 12);
+.example17 .fox__leg3 {
+  top: 0; left: calc(var(--cell)* 12);
 }
-.present .example17 .fox__leg4 {
+.example17 .fox__leg4 {
   top: calc(var(--cell)* 12); left: calc(var(--cell)* 12);
 }
-.present .example17 .fox__ear {
+.example17 .fox__ear {
   width: calc(var(--cell)* 5); height: calc(var(--cell)* 4);
   background: #5e4a47;
   transform: translateZ(calc(var(--cell)* 18));
 }
-.present .example17 .fox__ear::before {
+.example17 .fox__ear::before {
   top: 100%;
   width: calc(var(--cell)* 5); height: calc(var(--cell)* 4);
-  background: linear-gradient(0deg, #b37342 calc(var(--cell)* 1), #3c302c 0);
+  background: linear-gradient(0deg, #b37342 var(--cell), #3c302c 0);
   transform-origin: top left;
   transform: rotateX(-90deg);
 }
-.present .example17 .fox__ear::after {
+.example17 .fox__ear::after {
   left: 100%;
   width: calc(var(--cell)* 5); height: calc(var(--cell)* 4);
-  background: linear-gradient(-90deg, #b37342 calc(var(--cell)* 1), #3c312c 0);
+  background: linear-gradient(-90deg, #b37342 var(--cell), #3c312c 0);
   transform-origin: top left;
   transform: rotateY(90deg);
 }
-.present .example17 .fox__ear > div {
+.example17 .fox__ear > div {
   width: calc(var(--cell)* 4); height: calc(var(--cell)* 4);
-  background: linear-gradient(-90deg, #b37342 calc(var(--cell)* 1), #3c312c 0);
+  background: linear-gradient(-90deg, #b37342 var(--cell), #3c312c 0);
   transform-origin: top left;
   transform: rotateY(90deg);
 }
-.present .example17 .fox__ear > div::before {
+.example17 .fox__ear > div::before {
   width: calc(var(--cell)* 4); height: calc(var(--cell)* 5);
   background: linear-gradient(0deg, #ffffff, #ffffff) var(--cell) var(--cell) / calc(var(--cell)* 3) calc(var(--cell)* 3) no-repeat, 
-              linear-gradient(-90deg, #fea361 calc(var(--cell)* 1), #5e4a47 0);
+              linear-gradient(-90deg, #fea361 var(--cell), #5e4a47 0);
   transform-origin: top left;
   transform: rotateX(90deg);
 }
-.present .example17 .fox__earl {
+.example17 .fox__earl {
   left: calc(var(--cell)* 11);
 }
-.present .example17 .fox__tail {
+.example17 .fox__tail {
   top: 100%; left: calc(var(--cell)* 4);
   width: calc(var(--cell)* 8); height: calc(var(--cell)* 3);
   background: #a2a2a2;
 }
-.present .example17 .fox__tail::before {
+.example17 .fox__tail::before {
   top: calc(var(--cell)* -8); left: 100%;
   width: calc(var(--cell)* 18); height: calc(var(--cell)* 11);
   background: linear-gradient(-90deg, #b4b4b4 calc(var(--cell)* 2), transparent 0) 0 calc(var(--cell)* 2) no-repeat, 
-              linear-gradient(0deg, #b4b4b4 calc(var(--cell)* 1), transparent 0), 
+              linear-gradient(0deg, #b4b4b4 var(--cell), transparent 0), 
               #b37342;
-  clip-path: polygon(0 0, 0 calc(var(--cell)* 11), calc(var(--cell)* 17) calc(var(--cell)* 11), calc(var(--cell)* 17) calc(var(--cell)* 3), calc(var(--cell)* 18) calc(var(--cell)* 3), calc(var(--cell)* 18) calc(var(--cell)* 0));
+  clip-path: polygon(0 0, 0 calc(var(--cell)* 11), calc(var(--cell)* 17) calc(var(--cell)* 11), calc(var(--cell)* 17) calc(var(--cell)* 3), calc(var(--cell)* 18) calc(var(--cell)* 3), calc(var(--cell)* 18) 0);
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
-.present .example17 .fox__tail::after {
+.example17 .fox__tail::after {
   top: calc(var(--cell)* -8); left: 0;
   width: calc(var(--cell)* 18); height: calc(var(--cell)* 11);
   background: linear-gradient(-90deg, #b4b4b4 calc(var(--cell)* 2), transparent 0) 0 calc(var(--cell)* 2) no-repeat, 
-              linear-gradient(0deg, #b4b4b4 calc(var(--cell)* 1), transparent 0), 
+              linear-gradient(0deg, #b4b4b4 var(--cell), transparent 0), 
               #b37342;
-  clip-path: polygon(0 0, 0 calc(var(--cell)* 11), calc(var(--cell)* 17) calc(var(--cell)* 11), calc(var(--cell)* 17) calc(var(--cell)* 3), calc(var(--cell)* 18) calc(var(--cell)* 3), calc(var(--cell)* 18) calc(var(--cell)* 0));
+  clip-path: polygon(0 0, 0 calc(var(--cell)* 11), calc(var(--cell)* 17) calc(var(--cell)* 11), calc(var(--cell)* 17) calc(var(--cell)* 3), calc(var(--cell)* 18) calc(var(--cell)* 3), calc(var(--cell)* 18) 0);
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
-.present .example17 .fox__tail > div:nth-child(1) {
+.example17 .fox__tail > div:nth-child(1) {
   top: calc(var(--cell)* -8);
   width: calc(var(--cell)* 8); height: calc(var(--cell)* 3);
-  background: linear-gradient(0deg, #ffffff calc(var(--cell)* 1), #ffac70 0);
+  background: linear-gradient(0deg, #ffffff var(--cell), #ffac70 0);
   transform: translateZ(calc(var(--cell)* 18));
 }
-.present .example17 .fox__tail > div:nth-child(1)::before {
+.example17 .fox__tail > div:nth-child(1)::before {
   top: 100%;
   width: calc(var(--cell)* 8); height: calc(var(--cell)* 8);
   background: #ffffff;
   transform: translateZ(calc(var(--cell)* -1));
 }
-.present .example17 .fox__tail > div:nth-child(1)::after {
+.example17 .fox__tail > div:nth-child(1)::after {
   width: calc(var(--cell)* 8); height: calc(var(--cell)* 4);
   background: #fea361;
   transform-origin: top left;
   transform: rotateX(-90deg);
 }
-.present .example17 .fox__tail > div:nth-child(2) {
+.example17 .fox__tail > div:nth-child(2) {
   top: 100%;
   width: calc(var(--cell)* 8); height: calc(var(--cell)* 17);
   background: #b4b4b4;
   transform-origin: top left;
   transform: rotateX(90deg);
 }
-.present .example17 .fox__tail > div:nth-child(2)::before {
+.example17 .fox__tail > div:nth-child(2)::before {
   top: 100%;
-  width: calc(var(--cell)* 8); height: calc(var(--cell)* 1);
+  width: calc(var(--cell)* 8); height: var(--cell);
   background: #b4b4b4;
   transform: translateZ(calc(var(--cell)* 8));
 }
-.present .example17 .fox__nose {
+.example17 .fox__nose {
   top: calc(var(--cell)* -3); left: calc(var(--cell)* 6);
   width: calc(var(--cell)* 4); height: calc(var(--cell)* 3);
-  background: linear-gradient(0deg, #0c0d21, #0c0d21) var(--cell) 0 / calc(var(--cell)* 2) calc(var(--cell)* 1) no-repeat, 
+  background: linear-gradient(0deg, #0c0d21, #0c0d21) var(--cell) 0 / calc(var(--cell)* 2) var(--cell) no-repeat, 
             #ffac70;
   transform: translateZ(calc(var(--cell)* 7));
 }
-.present .example17 .fox__nose::before {
+.example17 .fox__nose::before {
   left: 100%;
   width: calc(var(--cell)* 3); height: calc(var(--cell)* 3);
-  background: linear-gradient(90deg, #b37342 calc(var(--cell)* 1), #b4b4b4 0);
+  background: linear-gradient(90deg, #b37342 var(--cell), #b4b4b4 0);
   transform-origin: top left;
   transform: rotateY(90deg);
 }
-.present .example17 .fox__nose::after {
+.example17 .fox__nose::after {
   width: calc(var(--cell)* 3); height: calc(var(--cell)* 3);
-  background: linear-gradient(90deg, #b37342 calc(var(--cell)* 1), #b4b4b4 0);
+  background: linear-gradient(90deg, #b37342 var(--cell), #b4b4b4 0);
   transform-origin: top left;
   transform: rotateY(90deg);
 }
-.present .example17 .fox__nose > div {
+.example17 .fox__nose > div {
   width: calc(var(--cell)* 4); height: calc(var(--cell)* 3);
   background: #a2a2a2;
   transform: translateZ(calc(var(--cell)* -3));
 }
-.present .example17 .fox__nose > div::before {
+.example17 .fox__nose > div::before {
   width: calc(var(--cell)* 4); height: calc(var(--cell)* 3);
   background: linear-gradient(0deg, #0c0d21, #0c0d21) var(--cell) calc(var(--cell)* 2) / calc(var(--cell)* 2) var(--cell) no-repeat, 
               linear-gradient(0deg, #fea361 var(--cell), #ffffff 0);
   transform-origin: top left;
   transform: rotateX(90deg);
 }
-.present .example17 .fox__shadow {
+.example17 .fox__shadow {
   top: 0; left: 0;
   width: calc(var(--cell)* 16); height: calc(var(--cell)* 40);
   filter: blur(1vw);
   transform-origin: top center;
   transform: translateZ(calc(var(--cell)* -2));
 }
-.present .example17 .fox__shadow::before {
+.example17 .fox__shadow::before {
   width: 100%; height: 100%;
   background: #959595;
-  clip-path: polygon(0 0, calc(var(--cell)* 16) 0, calc(var(--cell)* 16) calc(var(--cell)* 12), calc(var(--cell)* 14) calc(var(--cell)* 31), calc(var(--cell)* 10) calc(var(--cell)* 31), calc(var(--cell)* 10) calc(var(--cell)* 34), calc(var(--cell)* 6) calc(var(--cell)* 34), calc(var(--cell)* 6) calc(var(--cell)* 31), calc(var(--cell)* 2) calc(var(--cell)* 31), calc(var(--cell)* 0) calc(var(--cell)* 12));
+  clip-path: polygon(0 0, calc(var(--cell)* 16) 0, calc(var(--cell)* 16) calc(var(--cell)* 12), calc(var(--cell)* 14) calc(var(--cell)* 31), calc(var(--cell)* 10) calc(var(--cell)* 31), calc(var(--cell)* 10) calc(var(--cell)* 34), calc(var(--cell)* 6) calc(var(--cell)* 34), calc(var(--cell)* 6) calc(var(--cell)* 31), calc(var(--cell)* 2) calc(var(--cell)* 31), 0 calc(var(--cell)* 12));
 }
-.present .example17 .fox__shadow::after {
+.example17 .fox__shadow::after {
   bottom: 0;
   width: calc(var(--cell)* 16); height: calc(var(--cell)* 28);
   backdrop-filter: blur(6vmin);

@@ -1,42 +1,40 @@
-.present .example10 {
+.example10 {
   perspective: 10000px;
   transform-style: preserve-3d;
   --size: min(15vh, 15vw);
 }
 
-.example10 .cube, .example10 .cube::before, .example10 .cube::after, .example10 .cube *, .example10 .cube *::before, .example10 .cube *::after {
-  content: '';
-  position: absolute;
-  display: block;
-  transform-style: preserve-3d;
+.example10 *, .example10 *::before, .example10 *::after {
   background: white;
   box-shadow: inset 0 0 0 2px #1E1E1E;
   width: var(--size); height: var(--size);
 }
 
-.present .example10 .cube {
+.example10 .cube {
   top: 50%; left: 50%;
   transform-origin: center center;
   transform: translate(-50%, -10%) rotateX(75deg) rotateZ(0.6turn);
 }
-.present .example10 .cube::before {
+.example10 .cube::before {
   top: 0; left: 100%;
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
-.present .example10 .cube::after {
+.example10 .cube::after {
   top: 0; left: 0;
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
-.present .example10 .cube > div {
+.example10 .cube > div {
   transform-origin: top center;
   transform: rotateX(90deg);
 }
-.present .example10 .cube > div::before {
-  animation: example10-5 1s 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+.example10 .cube > div::before {
   animation-fill-mode: forwards;
   transform: translatez(0);
+}
+.present .example10 .cube > div::before {
+  animation: example10-5 1s 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 @keyframes example10-5 {
   from { transform: translatez(0); }
