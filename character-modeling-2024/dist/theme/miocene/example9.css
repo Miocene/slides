@@ -1,13 +1,12 @@
 .example9 {
   perspective: 10000px;
   transform-style: preserve-3d;
-  --size: min(15vh, 15vw);
 }
 
 .example9 *, .example9 *::before, .example9 *::after {
   background: white;
   box-shadow: inset 0 0 0 2px #1E1E1E;
-  width: var(--size); height: var(--size);
+  width: var(--cube-size); height: var(--cube-size);
 }
 
 .example9 .cube {

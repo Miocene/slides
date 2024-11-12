@@ -1,12 +1,11 @@
 .example2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   perspective: 2000px;
 }
 .example2 .block {
-  width: min(70%, 500px); aspect-ratio: 1/1;
+  top: 50%; left: 50%;
+  width: var(--square-size); height: var(--square-size);
   background-color: #202020;
+  translate: -50% -50%;
 }
 .present .example2 .block {
   animation: example2 5s linear infinite;

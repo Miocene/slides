@@ -1,7 +1,5 @@
 .example14 {
   transform-style: preserve-3d;
-  --size: min(20vh, 20vw);
-  --cell: calc(var(--size) / 16);
   width: var(--slide-width); height: var(--slide-height);
 }
 
@@ -12,7 +10,7 @@
 
 .example14 .fox {
   top: 50%; left: 50%;
-  width: calc(var(--cell)* 16); height: calc(var(--cell)* 16);
+  width: calc(var(--cell-size)* 16); height: calc(var(--cell-size)* 16);
   transform-origin: center center;
   transform: translate(-50%, -10%) rotateX(75deg) rotateZ(-140deg) rotateY(0deg);
 }
@@ -44,29 +42,29 @@
 }
 .example14 .fox::before {
   top: 0; left: 100%;
-  height: 100%; width: calc(var(--cell)* 14);
-  background: linear-gradient(0deg, #ffffff, #ffffff) 0 calc(var(--cell)* 4) / calc(var(--cell)* 2) calc(var(--cell)* 8) no-repeat, #fea361;
+  height: 100%; width: calc(var(--cell-size)* 14);
+  background: linear-gradient(0deg, #ffffff, #ffffff) 0 calc(var(--cell-size)* 4) / calc(var(--cell-size)* 2) calc(var(--cell-size)* 8) no-repeat, #fea361;
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
 .example14 .fox::after {
   top: 0; left: 0;
-  height: 100%; width: calc(var(--cell)* 14);
-  background: linear-gradient(0deg, #ffffff, #ffffff) 0 calc(var(--cell)* 4) / calc(var(--cell)* 2) calc(var(--cell)* 8) no-repeat, #fea361;
+  height: 100%; width: calc(var(--cell-size)* 14);
+  background: linear-gradient(0deg, #ffffff, #ffffff) 0 calc(var(--cell-size)* 4) / calc(var(--cell-size)* 2) calc(var(--cell-size)* 8) no-repeat, #fea361;
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
 .example14 .fox > div:nth-child(1) {
-  width: 100%; height: calc(var(--cell)* 14);
-  background: linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 13) calc(var(--cell)* 10) / var(--cell) var(--cell) no-repeat, 
-              linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 2) calc(var(--cell)* 10) / var(--cell) var(--cell) no-repeat, 
-              linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell)* 2) calc(var(--cell)* 7) / calc(var(--cell)* 3) calc(var(--cell)* 4) no-repeat, 
-              linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell)* 11) calc(var(--cell)* 7) / calc(var(--cell)* 3) calc(var(--cell)* 4) no-repeat, 
-              linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell)* 7) calc(var(--cell)* 6) / calc(var(--cell)* 2) var(--cell) no-repeat, 
-              linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 5) calc(var(--cell)* 2) / calc(var(--cell)* 6) calc(var(--cell)* 4) no-repeat, 
-              linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell)* 4) 0 / calc(var(--cell)* 8) calc(var(--cell)* 2) no-repeat, 
+  width: 100%; height: calc(var(--cell-size)* 14);
+  background: linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell-size)* 13) calc(var(--cell-size)* 10) / var(--cell-size) var(--cell-size) no-repeat, 
+              linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell-size)* 2) calc(var(--cell-size)* 10) / var(--cell-size) var(--cell-size) no-repeat, 
+              linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell-size)* 2) calc(var(--cell-size)* 7) / calc(var(--cell-size)* 3) calc(var(--cell-size)* 4) no-repeat, 
+              linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell-size)* 11) calc(var(--cell-size)* 7) / calc(var(--cell-size)* 3) calc(var(--cell-size)* 4) no-repeat, 
+              linear-gradient(0deg, #0c0d21, #0c0d21) calc(var(--cell-size)* 7) calc(var(--cell-size)* 6) / calc(var(--cell-size)* 2) var(--cell-size) no-repeat, 
+              linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell-size)* 5) calc(var(--cell-size)* 2) / calc(var(--cell-size)* 6) calc(var(--cell-size)* 4) no-repeat, 
+              linear-gradient(0deg, #ffffff, #ffffff) calc(var(--cell-size)* 4) 0 / calc(var(--cell-size)* 8) calc(var(--cell-size)* 2) no-repeat, 
               #fea361;
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top center;
@@ -76,11 +74,11 @@
   width: 100%; height: 100%;
   background: #fea361;
   box-shadow: inset 0 0 0 1px #1E1E1E;
-  transform: translateZ(calc(var(--cell)* -16));
+  transform: translateZ(calc(var(--cell-size)* -16));
 }
 .example14 .fox > div:nth-child(1)::after {
   top: 100%;
-  width: 100%; height: calc(var(--cell)* 16);
+  width: 100%; height: calc(var(--cell-size)* 16);
   background: #fea361;
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top center;
@@ -88,14 +86,14 @@
 }
 
 .example14 .fox__leg {
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 4);
+  width: calc(var(--cell-size)* 4); height: calc(var(--cell-size)* 4);
   background: #594845;
   box-shadow: inset 0 0 0 1px #1E1E1E;
-  transform: translateZ(calc(var(--cell)* -2));
+  transform: translateZ(calc(var(--cell-size)* -2));
 }
 .example14 .fox__leg::before {
   left: 100%;
-  width: calc(var(--cell)* 2); height: calc(var(--cell)* 4);
+  width: calc(var(--cell-size)* 2); height: calc(var(--cell-size)* 4);
   background: #594845;
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
@@ -103,21 +101,21 @@
 }
 .example14 .fox__leg::after {
   top: 100%;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 2);
+  width: calc(var(--cell-size)* 4); height: calc(var(--cell-size)* 2);
   background: #594845;
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
   transform: rotateX(90deg);
 }
 .example14 .fox__leg > div {
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 2);
+  width: calc(var(--cell-size)* 4); height: calc(var(--cell-size)* 2);
   background: #594845;
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
   transform: rotateX(90deg);
 }
 .example14 .fox__leg > div::before {
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 2);
+  width: calc(var(--cell-size)* 4); height: calc(var(--cell-size)* 2);
   background: #594845;
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
@@ -132,10 +130,10 @@
 }
 @keyframes example14-2 {
   0%, 60% { transform: translateZ(0) translate(0.5px, 0.5px); }
-  62%, 100% { transform: translateZ(calc(var(--cell)* -2)); }
+  62%, 100% { transform: translateZ(calc(var(--cell-size)* -2)); }
 }
 .example14 .fox__leg2 {
-  top: calc(var(--cell)* 12); left: 0;
+  top: calc(var(--cell-size)* 12); left: 0;
   transform: translateZ(0) translate(0.5px, -0.5px);
 }
 .present .example14 .fox__leg2 {
@@ -143,10 +141,10 @@
 }
 @keyframes example14-3 {
   0%, 62% { transform: translateZ(0) translate(0.5px, -0.5px); }
-  64%, 100% { transform: translateZ(calc(var(--cell)* -2)); }
+  64%, 100% { transform: translateZ(calc(var(--cell-size)* -2)); }
 }
 .example14 .fox__leg3 {
-  top: 0; left: calc(var(--cell)* 12);
+  top: 0; left: calc(var(--cell-size)* 12);
   transform: translateZ(0) translate(-0.5px, 0.5px);
 }
 .present .example14 .fox__leg3 {
@@ -154,10 +152,10 @@
 }
 @keyframes example14-4 {
   0%, 64% { transform: translateZ(0) translate(-0.5px, 0.5px); }
-  66%, 100% { transform: translateZ(calc(var(--cell)* -2)); }
+  66%, 100% { transform: translateZ(calc(var(--cell-size)* -2)); }
 }
 .example14 .fox__leg4 {
-  top: calc(var(--cell)* 12); left: calc(var(--cell)* 12);
+  top: calc(var(--cell-size)* 12); left: calc(var(--cell-size)* 12);
   transform: translateZ(0) translate(-0.5px, -0.5px);
 }
 .present .example14 .fox__leg4 {
@@ -165,65 +163,65 @@
 }
 @keyframes example14-5 {
   0%, 66% { transform: translateZ(0) translate(-0.5px, -0.5px); }
-  68%, 100% { transform: translateZ(calc(var(--cell)* -2)); }
+  68%, 100% { transform: translateZ(calc(var(--cell-size)* -2)); }
 }
 
 .example14 .fox__ear {
-  width: calc(var(--cell)* 5); height: calc(var(--cell)* 4);
+  width: calc(var(--cell-size)* 5); height: calc(var(--cell-size)* 4);
   background: #594845;
   box-shadow: inset 0 0 0 1px #1E1E1E;
-  transform: translateZ(calc(var(--cell)* 18));
+  transform: translateZ(calc(var(--cell-size)* 18));
 }
 .present .example14 .fox__ear {
   animation: example14-6 5s cubic-bezier(0.2, 1, 1, 1.5) infinite;
 }
 @keyframes example14-6 {
-  0%, 40% { transform: var(--compensation) translateZ(calc(var(--cell)* 13.9)); }
-  42%, 100% { transform: translateY(0) translateX(0) translateZ(calc(var(--cell)* 18)); }
+  0%, 40% { transform: var(--compensation) translateZ(calc(var(--cell-size)* 13.9)); }
+  42%, 100% { transform: translateY(0) translateX(0) translateZ(calc(var(--cell-size)* 18)); }
 }
 .example14 .fox__ear::before {
   top: 100%;
-  width: calc(var(--cell)* 5); height: calc(var(--cell)* 4);
-  background: linear-gradient(0deg, #fea361 var(--cell), #594845 0);
+  width: calc(var(--cell-size)* 5); height: calc(var(--cell-size)* 4);
+  background: linear-gradient(0deg, #fea361 var(--cell-size), #594845 0);
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
   transform: rotateX(-90deg);
 }
 .example14 .fox__ear::after {
   left: 100%;
-  width: calc(var(--cell)* 5); height: calc(var(--cell)* 4);
-  background: linear-gradient(-90deg, #fea361 calc(var(--cell)* 2), #594845 0);
+  width: calc(var(--cell-size)* 5); height: calc(var(--cell-size)* 4);
+  background: linear-gradient(-90deg, #fea361 calc(var(--cell-size)* 2), #594845 0);
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
   transform: rotateY(90deg);
 }
 .example14 .fox__ear > div {
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 4);
-  background: linear-gradient(-90deg, #fea361 var(--cell), #594845 0);
+  width: calc(var(--cell-size)* 4); height: calc(var(--cell-size)* 4);
+  background: linear-gradient(-90deg, #fea361 var(--cell-size), #594845 0);
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
   transform: rotateY(90deg);
 }
 .example14 .fox__ear > div::before {
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 5);
-  background: linear-gradient(0deg, #ffffff, #ffffff) var(--cell) var(--cell) / calc(var(--cell)* 3) calc(var(--cell)* 3) no-repeat, linear-gradient(-90deg, #fea361 var(--cell), #594845 0);
+  width: calc(var(--cell-size)* 4); height: calc(var(--cell-size)* 5);
+  background: linear-gradient(0deg, #ffffff, #ffffff) var(--cell-size) var(--cell-size) / calc(var(--cell-size)* 3) calc(var(--cell-size)* 3) no-repeat, linear-gradient(-90deg, #fea361 var(--cell-size), #594845 0);
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
   transform: rotateX(90deg);
 }
 .example14 .fox__earl {
-  left: calc(var(--cell)* 11);
+  left: calc(var(--cell-size)* 11);
   --compensation: translateY(0.5px) translateX(-0.5px);
-  transform: var(--compensation) translateZ(calc(var(--cell)* 13.9));
+  transform: var(--compensation) translateZ(calc(var(--cell-size)* 13.9));
 }
 .example14 .fox__earr {
   --compensation: translateY(0.5px) translateX(0.5px);
-  transform: var(--compensation) translateZ(calc(var(--cell)* 13.9));
+  transform: var(--compensation) translateZ(calc(var(--cell-size)* 13.9));
 }
 
 .example14 .fox__tail {
-  top: 100%; left: calc(var(--cell)* 4);
-  width: calc(var(--cell)* 8); height: calc(var(--cell)* 3);
+  top: 100%; left: calc(var(--cell-size)* 4);
+  width: calc(var(--cell-size)* 8); height: calc(var(--cell-size)* 3);
   background: #ffffff;
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top center;
@@ -237,43 +235,43 @@
   83%, 100% { transform: scale(1); }
 }
 .example14 .fox__tail::before {
-  top: calc(var(--cell)* -8); left: 100%;
-  width: calc(var(--cell)* 18); height: calc(var(--cell)* 11);
-  background: linear-gradient(-90deg, #ffffff calc(var(--cell)* 2), transparent 0) 0 calc(var(--cell)* 2) no-repeat, 
-              linear-gradient(0deg, #ffffff var(--cell), transparent 0), 
+  top: calc(var(--cell-size)* -8); left: 100%;
+  width: calc(var(--cell-size)* 18); height: calc(var(--cell-size)* 11);
+  background: linear-gradient(-90deg, #ffffff calc(var(--cell-size)* 2), transparent 0) 0 calc(var(--cell-size)* 2) no-repeat, 
+              linear-gradient(0deg, #ffffff var(--cell-size), transparent 0), 
               #fea361;
   box-shadow: inset 0 0 0 1px #1E1E1E;
-  clip-path: polygon(0 0, 0 calc(var(--cell)* 11), calc(var(--cell)* 17) calc(var(--cell)* 11), calc(var(--cell)* 17) calc(var(--cell)* 3), calc(var(--cell)* 18) calc(var(--cell)* 3), calc(var(--cell)* 18) 0);
+  clip-path: polygon(0 0, 0 calc(var(--cell-size)* 11), calc(var(--cell-size)* 17) calc(var(--cell-size)* 11), calc(var(--cell-size)* 17) calc(var(--cell-size)* 3), calc(var(--cell-size)* 18) calc(var(--cell-size)* 3), calc(var(--cell-size)* 18) 0);
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
 .example14 .fox__tail::after {
-  top: calc(var(--cell)* -8); left: 0;
-  width: calc(var(--cell)* 18); height: calc(var(--cell)* 11);
-  background: linear-gradient(-90deg, #ffffff calc(var(--cell)* 2), transparent 0) 0 calc(var(--cell)* 2) no-repeat, 
-              linear-gradient(0deg, #ffffff var(--cell), transparent 0), 
+  top: calc(var(--cell-size)* -8); left: 0;
+  width: calc(var(--cell-size)* 18); height: calc(var(--cell-size)* 11);
+  background: linear-gradient(-90deg, #ffffff calc(var(--cell-size)* 2), transparent 0) 0 calc(var(--cell-size)* 2) no-repeat, 
+              linear-gradient(0deg, #ffffff var(--cell-size), transparent 0), 
               #fea361;
   box-shadow: inset 0 0 0 1px #1E1E1E;
-  clip-path: polygon(0 0, 0 calc(var(--cell)* 11), calc(var(--cell)* 17) calc(var(--cell)* 11), calc(var(--cell)* 17) calc(var(--cell)* 3), calc(var(--cell)* 18) calc(var(--cell)* 3), calc(var(--cell)* 18) 0);
+  clip-path: polygon(0 0, 0 calc(var(--cell-size)* 11), calc(var(--cell-size)* 17) calc(var(--cell-size)* 11), calc(var(--cell-size)* 17) calc(var(--cell-size)* 3), calc(var(--cell-size)* 18) calc(var(--cell-size)* 3), calc(var(--cell-size)* 18) 0);
   transform-origin: top left;
   transform: rotateY(-90deg);
 }
 .example14 .fox__tail > div:nth-child(1) {
-  top: calc(var(--cell)* -8);
-  width: calc(var(--cell)* 8); height: calc(var(--cell)* 3);
-  background: linear-gradient(0deg, #ffffff var(--cell), #fea361 0);
+  top: calc(var(--cell-size)* -8);
+  width: calc(var(--cell-size)* 8); height: calc(var(--cell-size)* 3);
+  background: linear-gradient(0deg, #ffffff var(--cell-size), #fea361 0);
   box-shadow: inset 0 0 0 1px #1E1E1E;
-  transform: translateZ(calc(var(--cell)* 18));
+  transform: translateZ(calc(var(--cell-size)* 18));
 }
 .example14 .fox__tail > div:nth-child(1)::before {
   top: 100%;
-  width: calc(var(--cell)* 8); height: calc(var(--cell)* 8);
+  width: calc(var(--cell-size)* 8); height: calc(var(--cell-size)* 8);
   background: #ffffff;
   box-shadow: inset 0 0 0 1px #1E1E1E;
-  transform: translateZ(calc(var(--cell)* -1));
+  transform: translateZ(calc(var(--cell-size)* -1));
 }
 .example14 .fox__tail > div:nth-child(1)::after {
-  width: calc(var(--cell)* 8); height: calc(var(--cell)* 4);
+  width: calc(var(--cell-size)* 8); height: calc(var(--cell-size)* 4);
   background: #fea361;
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
@@ -281,7 +279,7 @@
 }
 .example14 .fox__tail > div:nth-child(2) {
   top: 100%;
-  width: calc(var(--cell)* 8); height: calc(var(--cell)* 17);
+  width: calc(var(--cell-size)* 8); height: calc(var(--cell-size)* 17);
   background: #ffffff;
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
@@ -289,51 +287,51 @@
 }
 .example14 .fox__tail > div:nth-child(2)::before {
   top: 100%;
-  width: calc(var(--cell)* 8); height: var(--cell);
+  width: calc(var(--cell-size)* 8); height: var(--cell-size);
   background: #ffffff;
   box-shadow: inset 0 0 0 1px #1E1E1E;
-  transform: translateZ(calc(var(--cell)* 8));
+  transform: translateZ(calc(var(--cell-size)* 8));
 }
 
 .example14 .fox__nose {
-  top: calc(var(--cell)* -3); left: calc(var(--cell)* 6);
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 3);
-  background: linear-gradient(0deg, #0c0d21, #0c0d21) var(--cell) 0 / calc(var(--cell)* 2) var(--cell) no-repeat, #fea361;
+  top: calc(var(--cell-size)* -3); left: calc(var(--cell-size)* 6);
+  width: calc(var(--cell-size)* 4); height: calc(var(--cell-size)* 3);
+  background: linear-gradient(0deg, #0c0d21, #0c0d21) var(--cell-size) 0 / calc(var(--cell-size)* 2) var(--cell-size) no-repeat, #fea361;
   box-shadow: inset 0 0 0 1px #1E1E1E;
-  transform: translateZ(calc(var(--cell)* 7));
-  transform: translateZ(calc(var(--cell)* 7)) translateY(calc(var(--cell)* 3.1));
+  transform: translateZ(calc(var(--cell-size)* 7));
+  transform: translateZ(calc(var(--cell-size)* 7)) translateY(calc(var(--cell-size)* 3.1));
 }
 .present .example14 .fox__nose {
   animation: example14-8 5s cubic-bezier(0.2, 1, 1, 1.5) infinite;
 }
 @keyframes example14-8 {
-  0%, 10% { transform: translateZ(calc(var(--cell)* 7)) translateY(calc(var(--cell)* 3.1)); }
-  12%, 100% { transform: translateZ(calc(var(--cell)* 7)); }
+  0%, 10% { transform: translateZ(calc(var(--cell-size)* 7)) translateY(calc(var(--cell-size)* 3.1)); }
+  12%, 100% { transform: translateZ(calc(var(--cell-size)* 7)); }
 }
 .example14 .fox__nose::before {
   left: 100%;
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 3);
-  background: linear-gradient(90deg, #fea361 var(--cell), #ffffff 0);
+  width: calc(var(--cell-size)* 3); height: calc(var(--cell-size)* 3);
+  background: linear-gradient(90deg, #fea361 var(--cell-size), #ffffff 0);
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
   transform: rotateY(90deg);
 }
 .example14 .fox__nose::after {
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 3);
-  background: linear-gradient(90deg, #fea361 var(--cell), #ffffff 0);
+  width: calc(var(--cell-size)* 3); height: calc(var(--cell-size)* 3);
+  background: linear-gradient(90deg, #fea361 var(--cell-size), #ffffff 0);
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
   transform: rotateY(90deg);
 }
 .example14 .fox__nose > div {
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 3);
+  width: calc(var(--cell-size)* 4); height: calc(var(--cell-size)* 3);
   background: #ffffff;
   box-shadow: inset 0 0 0 1px #1E1E1E;
-  transform: translateZ(calc(var(--cell)* -3));
+  transform: translateZ(calc(var(--cell-size)* -3));
 }
 .example14 .fox__nose > div::before {
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 3);
-  background: linear-gradient(0deg, #0c0d21, #0c0d21) var(--cell) calc(var(--cell)* 2) / calc(var(--cell)* 2) var(--cell) no-repeat, linear-gradient(0deg, #fea361 var(--cell), #ffffff 0);
+  width: calc(var(--cell-size)* 4); height: calc(var(--cell-size)* 3);
+  background: linear-gradient(0deg, #0c0d21, #0c0d21) var(--cell-size) calc(var(--cell-size)* 2) / calc(var(--cell-size)* 2) var(--cell-size) no-repeat, linear-gradient(0deg, #fea361 var(--cell-size), #ffffff 0);
   box-shadow: inset 0 0 0 1px #1E1E1E;
   transform-origin: top left;
   transform: rotateX(90deg);

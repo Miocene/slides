@@ -1,12 +1,11 @@
 .example5 {
   transform-style: preserve-3d;
-  --size: min(20vh, 20vw);
   width: var(--slide-width); height: var(--slide-height);
 }
 .example5 *, .example5 *::before, .example5 *::after {
   background: white;
   box-shadow: inset 0 0 0 2px #1E1E1E;
-  width: var(--size); height: var(--size);
+  width: var(--cube-size); height: var(--cube-size);
 }
 
 .example5 .cube {
@@ -69,7 +68,7 @@
 }
 @keyframes example5-5 {
   from { transform: translatez(0); }
-  to { transform: translatez(calc(var(--size) * -1)); }
+  to { transform: translatez(calc(var(--cube-size) * -1)); }
 }
 .example5 .cube > div::after {
   top: 100%;
