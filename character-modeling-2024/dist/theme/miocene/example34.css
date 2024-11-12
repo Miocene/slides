@@ -1,14 +1,12 @@
 .example34 {
-  width: var(--slide-width); height: var(--slide-height);
-  --cell: calc(var(--slide-height) / 100);
-  
+  width: var(--slide-width); height: var(--b-slide-height);
   --light: #4b91c8;
   --medium: #48708e;
   --dark: #354755;
 }
 
 .example34 .dummy-wrapper {
-  top: calc(50% + calc(var(--cell)* -2)); left: 50%;
+  top: calc(50% + calc(var(--small-cell-size)* -8)); left: 50%;
 }
 
 .example34 .dummy {
@@ -22,21 +20,21 @@
 /* BELLY */
 .example34 .dummy__belly {
   top: 0; left: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 9);
   background: var(--dark);
   transform-origin: center center;
   translate: -50% -50%;
 }
 .example34 .dummy__belly::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 6);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 6);
   background: var(--medium);
   transform-origin: top left;
   rotate: x 90deg;
 }
 .example34 .dummy__belly::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 6); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 6); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: top left;
   rotate: y -90deg;
@@ -44,18 +42,18 @@
 .example34 .dummy__belly-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* 6);
+  translate: 0 0 calc(var(--small-cell-size)* 6);
 }
 .example34 .dummy__belly-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 6); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 6); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: right center;
   rotate: y -90deg;
 }
 .example34 .dummy__belly-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 6);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 6);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x 90deg;
@@ -66,21 +64,21 @@
 /* TORSO */
 .example34 .dummy__torso {
   top: 0; left: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 9);
   background: var(--dark);
   transform-origin: center center;
-  translate: 0 0 calc(var(--cell)* 6.5);
+  translate: 0 0 calc(var(--small-cell-size)* 6.5);
 }
 .example34 .dummy__torso::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: top left;
   rotate: x 90deg;
 }
 .example34 .dummy__torso::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 9); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 9); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: top left;
   rotate: y -90deg;
@@ -88,18 +86,18 @@
 .example34 .dummy__torso-helper {
   width: 100%; height: 100%;
   background: var(--light);
-  translate: 0 0 calc(var(--cell)* 9);
+  translate: 0 0 calc(var(--small-cell-size)* 9);
 }
 .example34 .dummy__torso-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 9); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 9); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: right center;
   rotate: y -90deg;
 }
 .example34 .dummy__torso-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 9);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x 90deg;
@@ -109,22 +107,22 @@
 
 /* NECK */
 .example34 .dummy__neck {
-  top: calc(var(--cell)* 2); left: calc(var(--cell)* 4);
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 4);
+  top: calc(var(--small-cell-size)* 2); left: calc(var(--small-cell-size)* 4);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 4);
   background: var(--dark);
   transform-origin: center center;
-  translate: 0 0 calc(var(--cell)* 9.5);
+  translate: 0 0 calc(var(--small-cell-size)* 9.5);
 }
 .example34 .dummy__neck::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 3);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 3);
   background: var(--medium);
   transform-origin: top left;
   rotate: x 90deg;
 }
 .example34 .dummy__neck::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 3); height: calc(var(--small-cell-size)* 4);
   background: var(--medium);
   transform-origin: top left;
   rotate: y -90deg;
@@ -132,18 +130,18 @@
 .example34 .dummy__neck-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* 3);
+  translate: 0 0 calc(var(--small-cell-size)* 3);
 }
 .example34 .dummy__neck-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 3); height: calc(var(--small-cell-size)* 4);
   background: var(--medium);
   transform-origin: right center;
   rotate: y -90deg;
 }
 .example34 .dummy__neck-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 3);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 3);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x 90deg;
@@ -153,22 +151,22 @@
 
 /* HEAD */
 .example34 .dummy__head {
-  top: calc(var(--cell)* -1); left: calc(var(--cell)* -2.5);
-  width: calc(var(--cell)* 9); height: calc(var(--cell)* 9);
+  top: calc(var(--small-cell-size)* -1); left: calc(var(--small-cell-size)* -2.5);
+  width: calc(var(--small-cell-size)* 9); height: calc(var(--small-cell-size)* 9);
   background: var(--dark);
-  transform-origin: center calc(var(--cell)* 6);
-  translate: 0 0 calc(var(--cell)* 3.5);
+  transform-origin: center calc(var(--small-cell-size)* 6);
+  translate: 0 0 calc(var(--small-cell-size)* 3.5);
 }
 .example34 .dummy__head::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 9); height: calc(var(--cell)* 11);
+  width: calc(var(--small-cell-size)* 9); height: calc(var(--small-cell-size)* 11);
   background: var(--medium);
   transform-origin: top left;
   rotate: x 90deg;
 }
 .example34 .dummy__head::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 11); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 11); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: top left;
   rotate: y -90deg;
@@ -176,18 +174,18 @@
 .example34 .dummy__head-helper {
   width: 100%; height: 100%;
   background: var(--light);
-  translate: 0 0 calc(var(--cell)* 11);
+  translate: 0 0 calc(var(--small-cell-size)* 11);
 }
 .example34 .dummy__head-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 11); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 11); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: right center;
   rotate: y -90deg;
 }
 .example34 .dummy__head-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 9); height: calc(var(--cell)* 11);
+  width: calc(var(--small-cell-size)* 9); height: calc(var(--small-cell-size)* 11);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x 90deg;
@@ -197,24 +195,24 @@
 
 /* LEFT SHOULDER */
 .example34 .dummy__leftShoulder {
-  top: calc(var(--cell)* 1);
-  left: calc(var(--cell)* -4.5);
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 4);
+  top: calc(var(--small-cell-size)* 1);
+  left: calc(var(--small-cell-size)* -4.5);
+  width: calc(var(--small-cell-size)* 4);
+  height: calc(var(--small-cell-size)* 4);
   background: var(--light);
   transform-origin: right center;
-  translate: 0 0 calc(var(--cell)* 9);
+  translate: 0 0 calc(var(--small-cell-size)* 9);
 }
 .example34 .dummy__leftShoulder::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 13);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 13);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__leftShoulder::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 13); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 13); height: calc(var(--small-cell-size)* 4);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -222,18 +220,18 @@
 .example34 .dummy__leftShoulder-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -13);
+  translate: 0 0 calc(var(--small-cell-size)* -13);
 }
 .example34 .dummy__leftShoulder-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 13); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 13); height: calc(var(--small-cell-size)* 4);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__leftShoulder-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 13);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 13);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;
@@ -244,21 +242,21 @@
 /* LEFT ARM */
 .example34 .dummy__leftArm {
   top: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 4);
   background: var(--dark);
   transform-origin: top center;
-  translate: 0 0 calc(var(--cell)* -13.5);
+  translate: 0 0 calc(var(--small-cell-size)* -13.5);
 }
 .example34 .dummy__leftArm::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 12);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 12);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__leftArm::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 4);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -266,18 +264,18 @@
 .example34 .dummy__leftArm-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -12);
+  translate: 0 0 calc(var(--small-cell-size)* -12);
 }
 .example34 .dummy__leftArm-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 4);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__leftArm-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 12);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 12);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;
@@ -287,22 +285,22 @@
 
 /* LEFT HAND */
 .example34 .dummy__leftHand {
-  top: 0; left: calc(var(--cell)* 1);
-  width: calc(var(--cell)* 2); height: calc(var(--cell)* 5);
+  top: 0; left: calc(var(--small-cell-size)* 1);
+  width: calc(var(--small-cell-size)* 2); height: calc(var(--small-cell-size)* 5);
   background: var(--dark);
   transform-origin: center center;
-  translate: 0 0 calc(var(--cell)* -12.5);
+  translate: 0 0 calc(var(--small-cell-size)* -12.5);
 }
 .example34 .dummy__leftHand::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 2); height: calc(var(--cell)* 6);
+  width: calc(var(--small-cell-size)* 2); height: calc(var(--small-cell-size)* 6);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__leftHand::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 6); height: calc(var(--cell)* 5);
+  width: calc(var(--small-cell-size)* 6); height: calc(var(--small-cell-size)* 5);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -310,18 +308,18 @@
 .example34 .dummy__leftHand-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -6);
+  translate: 0 0 calc(var(--small-cell-size)* -6);
 }
 .example34 .dummy__leftHand-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 6); height: calc(var(--cell)* 5);
+  width: calc(var(--small-cell-size)* 6); height: calc(var(--small-cell-size)* 5);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__leftHand-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 2); height: calc(var(--cell)* 6);
+  width: calc(var(--small-cell-size)* 2); height: calc(var(--small-cell-size)* 6);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;
@@ -331,24 +329,24 @@
 
 /* RIGHT SHOULDER */
 .example34 .dummy__rightShoulder {
-  top: calc(var(--cell)* 1);
-  left: calc(var(--cell)* 12.5);
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 4);
+  top: calc(var(--small-cell-size)* 1);
+  left: calc(var(--small-cell-size)* 12.5);
+  width: calc(var(--small-cell-size)* 4);
+  height: calc(var(--small-cell-size)* 4);
   background: var(--light);
   transform-origin: left center;
-  translate: 0 0 calc(var(--cell)* 9);
+  translate: 0 0 calc(var(--small-cell-size)* 9);
 }
 .example34 .dummy__rightShoulder::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 13);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 13);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__rightShoulder::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 13); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 13); height: calc(var(--small-cell-size)* 4);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -356,18 +354,18 @@
 .example34 .dummy__rightShoulder-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -13);
+  translate: 0 0 calc(var(--small-cell-size)* -13);
 }
 .example34 .dummy__rightShoulder-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 13); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 13); height: calc(var(--small-cell-size)* 4);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__rightShoulder-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 13);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 13);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;
@@ -378,21 +376,21 @@
 /* RIGHT ARM */
 .example34 .dummy__rightArm {
   top: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 4);
   background: var(--dark);
   transform-origin: top center;
-  translate: 0 0 calc(var(--cell)* -13.5);
+  translate: 0 0 calc(var(--small-cell-size)* -13.5);
 }
 .example34 .dummy__rightArm::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 12);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 12);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__rightArm::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 4);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -400,18 +398,18 @@
 .example34 .dummy__rightArm-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -12);
+  translate: 0 0 calc(var(--small-cell-size)* -12);
 }
 .example34 .dummy__rightArm-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 4);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__rightArm-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 12);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 12);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;
@@ -421,22 +419,22 @@
 
 /* RIGHT HAND */
 .example34 .dummy__rightHand {
-  top: 0; left: calc(var(--cell)* 1);
-  width: calc(var(--cell)* 2); height: calc(var(--cell)* 5);
+  top: 0; left: calc(var(--small-cell-size)* 1);
+  width: calc(var(--small-cell-size)* 2); height: calc(var(--small-cell-size)* 5);
   background: var(--dark);
   transform-origin: center center;
-  translate: 0 0 calc(var(--cell)* -12.5);
+  translate: 0 0 calc(var(--small-cell-size)* -12.5);
 }
 .example34 .dummy__rightHand::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 2); height: calc(var(--cell)* 6);
+  width: calc(var(--small-cell-size)* 2); height: calc(var(--small-cell-size)* 6);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__rightHand::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 6); height: calc(var(--cell)* 5);
+  width: calc(var(--small-cell-size)* 6); height: calc(var(--small-cell-size)* 5);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -444,18 +442,18 @@
 .example34 .dummy__rightHand-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -6);
+  translate: 0 0 calc(var(--small-cell-size)* -6);
 }
 .example34 .dummy__rightHand-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 6); height: calc(var(--cell)* 5);
+  width: calc(var(--small-cell-size)* 6); height: calc(var(--small-cell-size)* 5);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__rightHand-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 2); height: calc(var(--cell)* 6);
+  width: calc(var(--small-cell-size)* 2); height: calc(var(--small-cell-size)* 6);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;
@@ -464,21 +462,21 @@
 /* HIPS */
 .example34 .dummy__hips {
   top: 0; left: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 9);
   background: var(--dark);
   transform-origin: center center;
-  translate: -50% -50% calc(var(--cell)* -.5);
+  translate: -50% -50% calc(var(--small-cell-size)* -.5);
 }
 .example34 .dummy__hips::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 4);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__hips::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -486,18 +484,18 @@
 .example34 .dummy__hips-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -4);
+  translate: 0 0 calc(var(--small-cell-size)* -4);
 }
 .example34 .dummy__hips-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 4); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 4); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__hips-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 12); height: calc(var(--cell)* 4);
+  width: calc(var(--small-cell-size)* 12); height: calc(var(--small-cell-size)* 4);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;
@@ -509,21 +507,21 @@
 /* LEFT LEG */
 .example34 .dummy__leftLeg {
   top: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 9);
   background: var(--dark);
   transform-origin: center center;
-  translate: 0 0 calc(var(--cell)* -4.5);
+  translate: 0 0 calc(var(--small-cell-size)* -4.5);
 }
 .example34 .dummy__leftLeg::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 16);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 16);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__leftLeg::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 16); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 16); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -531,18 +529,18 @@
 .example34 .dummy__leftLeg-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -16);
+  translate: 0 0 calc(var(--small-cell-size)* -16);
 }
 .example34 .dummy__leftLeg-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 16); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 16); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__leftLeg-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 16);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 16);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;
@@ -553,21 +551,21 @@
 /* LEFT SHIN */
 .example34 .dummy__leftShin {
   top: 0; right: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 9);
   background: var(--dark);
   transform-origin: bottom center;
-  translate: 0 0 calc(var(--cell)* -16.5);
+  translate: 0 0 calc(var(--small-cell-size)* -16.5);
 }
 .example34 .dummy__leftShin::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 20);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 20);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__leftShin::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 20); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 20); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -575,18 +573,18 @@
 .example34 .dummy__leftShin-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -20);
+  translate: 0 0 calc(var(--small-cell-size)* -20);
 }
 .example34 .dummy__leftShin-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 20); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 20); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__leftShin-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 20);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 20);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;
@@ -597,21 +595,21 @@
 /* LEFT FOOT */
 .example34 .dummy__leftFoot {
   top: 0; right: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 12);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 12);
   background: var(--dark);
   transform-origin: top center;
-  translate: 0 0 calc(var(--cell)* -20.5);
+  translate: 0 0 calc(var(--small-cell-size)* -20.5);
 }
 .example34 .dummy__leftFoot::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 3);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 3);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__leftFoot::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 12);
+  width: calc(var(--small-cell-size)* 3); height: calc(var(--small-cell-size)* 12);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -619,18 +617,18 @@
 .example34 .dummy__leftFoot-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -3);
+  translate: 0 0 calc(var(--small-cell-size)* -3);
 }
 .example34 .dummy__leftFoot-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 12);
+  width: calc(var(--small-cell-size)* 3); height: calc(var(--small-cell-size)* 12);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__leftFoot-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 3);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 3);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;
@@ -640,21 +638,21 @@
 /* RIGHT LEG */
 .example34 .dummy__rightLeg {
   top: 0; right: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 9);
   background: var(--dark);
   transform-origin: center center;
-  translate: 0 0 calc(var(--cell)* -4.5);
+  translate: 0 0 calc(var(--small-cell-size)* -4.5);
 }
 .example34 .dummy__rightLeg::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 16);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 16);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__rightLeg::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 16); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 16); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -662,18 +660,18 @@
 .example34 .dummy__rightLeg-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -16);
+  translate: 0 0 calc(var(--small-cell-size)* -16);
 }
 .example34 .dummy__rightLeg-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 16); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 16); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__rightLeg-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 16);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 16);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;
@@ -684,21 +682,21 @@
 /* RIGHT SHIN */
 .example34 .dummy__rightShin {
   top: 0; right: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 9);
   background: var(--dark);
   transform-origin: bottom center;
-  translate: 0 0 calc(var(--cell)* -16.5);
+  translate: 0 0 calc(var(--small-cell-size)* -16.5);
 }
 .example34 .dummy__rightShin::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 20);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 20);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__rightShin::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 20); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 20); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -706,18 +704,18 @@
 .example34 .dummy__rightShin-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -20);
+  translate: 0 0 calc(var(--small-cell-size)* -20);
 }
 .example34 .dummy__rightShin-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 20); height: calc(var(--cell)* 9);
+  width: calc(var(--small-cell-size)* 20); height: calc(var(--small-cell-size)* 9);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__rightShin-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 20);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 20);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;
@@ -728,21 +726,21 @@
 /* RIGHT FOOT */
 .example34 .dummy__rightFoot {
   top: 0; right: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 12);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 12);
   background: var(--dark);
   transform-origin: top center;
-  translate: 0 0 calc(var(--cell)* -20.5);
+  translate: 0 0 calc(var(--small-cell-size)* -20.5);
 }
 .example34 .dummy__rightFoot::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 3);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 3);
   background: var(--medium);
   transform-origin: top left;
   rotate: x -90deg;
 }
 .example34 .dummy__rightFoot::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 12);
+  width: calc(var(--small-cell-size)* 3); height: calc(var(--small-cell-size)* 12);
   background: var(--medium);
   transform-origin: top left;
   rotate: y 90deg;
@@ -750,18 +748,18 @@
 .example34 .dummy__rightFoot-helper {
   width: 100%; height: 100%;
   background: var(--dark);
-  translate: 0 0 calc(var(--cell)* -3);
+  translate: 0 0 calc(var(--small-cell-size)* -3);
 }
 .example34 .dummy__rightFoot-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 12);
+  width: calc(var(--small-cell-size)* 3); height: calc(var(--small-cell-size)* 12);
   background: var(--medium);
   transform-origin: right center;
   rotate: y 90deg;
 }
 .example34 .dummy__rightFoot-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 5.75); height: calc(var(--cell)* 3);
+  width: calc(var(--small-cell-size)* 5.75); height: calc(var(--small-cell-size)* 3);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x -90deg;

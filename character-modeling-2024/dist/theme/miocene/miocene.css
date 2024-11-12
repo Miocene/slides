@@ -84,6 +84,7 @@
   font-size: var(--r-main-font-size);
   font-weight: 300;
   color: var(--r-main-color);
+  --b-slide-height: var(--slide-height);
 }
 
 .reveal ::selection {

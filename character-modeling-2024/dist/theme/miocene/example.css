@@ -1,5 +1,5 @@
 .example-grid {
-  height: var(--slide-height);
+  height: var(--b-slide-height);
   grid-template-columns: 1fr 1fr;
   display: grid;
   align-items: center;
@@ -11,6 +11,8 @@
   --square-size: calc(var(--slide-width) / 3);
   --cube-size: calc(var(--slide-width) / 4);
   --cell-size: calc(var(--slide-width) / 60);
+  --tiny-cell-size: calc(var(--slide-width) / 130);
+  --small-cell-size: calc(var(--slide-width) / 110);
   --huge-cell-size: calc(var(--slide-width) / 30);
 }
 

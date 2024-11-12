@@ -10,7 +10,7 @@
   transform: translatex(-50%) rotateX(-10deg) rotateY(60deg);
 }
 .present .example37 .block {
-  animation: example37-1 2s linear both;
+  animation: example37-1 5s linear infinite;
 }
 .example37 .block > div,
 .example37 .block > div > div {
@@ -22,13 +22,13 @@
 }
 .present .example37 .block > div,
 .present .example37 .block > div > div {
-  animation: example37-2 2s linear both;
+  animation: example37-2 5s linear infinite;
 }
 
 @keyframes example37-1 {
-  to { transform: translatex(-50%) rotateX(-10deg) rotateY(60deg) rotatex(-20deg); }
+  50% { transform: translatex(-50%) rotateX(-10deg) rotateY(60deg) rotatex(-40deg); }
 }
 
 @keyframes example37-2 {
-  to { rotate: x 20deg; }
+  50% { rotate: x 40deg; }
 }

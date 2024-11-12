@@ -1,6 +1,6 @@
 .example20 {
   transform-style: preserve-3d;
-  width: var(--slide-width); height: var(--slide-height);
+  width: var(--slide-width); height: var(--b-slide-height);
 }
 
 .example20 .fox {

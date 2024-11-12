@@ -1,6 +1,5 @@
 .example36 {
-  width: var(--slide-width); height: var(--slide-height);
-  --cell: calc(var(--slide-height) / 100);
+  width: var(--slide-width); height: var(--b-slide-height);
   
   --light: #4b91c8;
   --medium: #48708e;
@@ -9,177 +8,176 @@
 }
 
 .example36 .dummy-wrapper {
-  top: calc(50% + calc(var(--cell)* -2)); left: 50%;
-  transform: translate(0vmin, -0.5vmin);
+  top: calc(50% + calc(var(--tiny-cell-size)* -2)); left: 50%;
 }
 
 .example36 .dummy {
   top: 0; left: 0;
   transform-origin: center center;
-  transform: translate(0, calc(var(--cell)* -7)) rotateY(30deg) rotateX(90deg);
+  transform: translate(0, calc(var(--tiny-cell-size)* -7)) rotateX(80deg) rotateZ(-30deg);
 }
 
 /* BELLY */
 .example36 .dummy__belly {
   top: 0; left: 0;
-  width: calc(var(--cell)* 9.5); height: calc(var(--cell)* 8);
+  width: calc(var(--tiny-cell-size)* 9.5); height: calc(var(--tiny-cell-size)* 8);
   background: var(--dark);
   transform-origin: center center;
   translate: -50% -50%;
 }
 .example36 .dummy__belly::before {
   top: 0; left: 0;
-  width: 100%; height: calc(var(--cell)* 3.74);
+  width: 100%; height: calc(var(--tiny-cell-size)* 3.74);
   background: linear-gradient(-104deg, transparent 40%, var(--medium-dark) 0 91%, transparent 0), linear-gradient(104deg, transparent 50%, var(--medium-dark) 0 91%, transparent 0);
   transform-origin: top left;
   rotate: x 73deg;
 }
 .example36 .dummy__belly::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 3.7); height: 100%;
+  width: calc(var(--tiny-cell-size)* 3.7); height: 100%;
   background: linear-gradient(-186deg, transparent 40%, var(--medium) 0 95.3%, transparent 0), linear-gradient(16deg, transparent 50%, var(--medium) 0 88.2%, transparent 0);
   transform-origin: top left;
   rotate: y -76deg;
 }
 .example36 .dummy__belly-helper {
   width: 100%; height: 100%;
-  translate: 0 0 calc(var(--cell)* 3.6);
+  translate: 0 0 calc(var(--tiny-cell-size)* 3.6);
 }
 .example36 .dummy__belly-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 3.7); height: 100%;
+  width: calc(var(--tiny-cell-size)* 3.7); height: 100%;
   background: linear-gradient(-174deg, transparent 40%, var(--medium) 0 95.3%, transparent 0), linear-gradient(-16deg, transparent 50%, var(--medium) 0 88%, transparent 0);
   transform-origin: right center;
-  translate: 0 0 calc(var(--cell)* -3.6);
+  translate: 0 0 calc(var(--tiny-cell-size)* -3.6);
   rotate: y 76deg;
 }
 .example36 .dummy__belly-helper::after {
   bottom: 0; left: 0;
-  width: 100%; height: calc(var(--cell)* 3.6);
+  width: 100%; height: calc(var(--tiny-cell-size)* 3.6);
   background: linear-gradient(-76deg, transparent 40%, var(--light) 0 91.4%, transparent 0), linear-gradient(76deg, transparent 50%, var(--light) 0 91.4%, transparent 0);
   transform-origin: bottom left;
   rotate: x -84deg;
-  translate: 0 0 calc(var(--cell)* -3.6);
+  translate: 0 0 calc(var(--tiny-cell-size)* -3.6);
 }
 
 
 
 /* TORSO */
 .example36 .dummy__torso {
-  top: calc(var(--cell)* 1.1); left: calc(var(--cell)* 0.9);
-  width: calc(var(--cell)* 7.7); height: calc(var(--cell)* 6.5);
+  top: calc(var(--tiny-cell-size)* 1.1); left: calc(var(--tiny-cell-size)* 0.9);
+  width: calc(var(--tiny-cell-size)* 7.7); height: calc(var(--tiny-cell-size)* 6.5);
   background: var(--dark);
   transform-origin: center center;
-  translate: 0 0 calc(var(--cell)* 3.57);
+  translate: 0 0 calc(var(--tiny-cell-size)* 3.57);
 }
 .example36 .dummy__torso-1 {
-  top: 0; left: calc(var(--cell)* -1);
-  width: calc(var(--cell)* 10); height: calc(var(--cell)* 4);
+  top: 0; left: calc(var(--tiny-cell-size)* -1);
+  width: calc(var(--tiny-cell-size)* 10); height: calc(var(--tiny-cell-size)* 4);
   background: linear-gradient(72deg, transparent 40%, var(--medium-dark) 0 85.6%, transparent 0), linear-gradient(82deg, transparent 40%, var(--medium-dark) 0 87.9%, transparent 0), linear-gradient(280deg, transparent 50%, var(--medium-dark) 0 90.6%, transparent 0), linear-gradient(288deg, transparent 50%, var(--medium-dark) 0 88%, transparent 0);
   transform-origin: top left;
   rotate: x 91deg;
 }
 .example36 .dummy__torso-1 > div {
-  top: 100%; left: calc(var(--cell)* -1.2);
-  width: calc(var(--cell)* 12.1); height: calc(var(--cell)* 7.2);
+  top: 100%; left: calc(var(--tiny-cell-size)* -1.2);
+  width: calc(var(--tiny-cell-size)* 12.1); height: calc(var(--tiny-cell-size)* 7.2);
   background: linear-gradient(461deg, transparent 40%, var(--medium-dark) 0 94.4%, transparent 0) 0 100% / 100% 48.6% no-repeat, linear-gradient(259deg, transparent 40%, var(--medium-dark) 0 94.2%, transparent 0) 0 100% / 100% 48.6% no-repeat, linear-gradient(288deg, transparent 40%, var(--medium-dark) 0 90.5%, transparent 0) 0 0 / 100% 51.4% no-repeat, linear-gradient(72deg, transparent 40%, var(--medium-dark) 0 90.7%, transparent 0) 0 0 / 100% 51.4% no-repeat;
   transform-origin: top left;
   rotate: x 5deg;
 }
 .example36 .dummy__torso-1 > div > div {
   top: 100%; left: 0;
-  width: 100%; height: calc(var(--cell)* 2.7);
+  width: 100%; height: calc(var(--tiny-cell-size)* 2.7);
   background: linear-gradient(259deg, transparent 40%, var(--medium-dark) 0 92%, transparent 0) 0 0 / 100% 50% no-repeat, linear-gradient(101deg, transparent 40%, var(--medium-dark) 0 92.2%, transparent 0) 0 0 / 100% 50% no-repeat, linear-gradient(133deg, transparent 40%, var(--medium-dark) 0 83.5%, transparent 0) 0 100% / 100% 50% no-repeat, linear-gradient(-133deg, transparent 40%, var(--medium-dark) 0 83.3%, transparent 0) 0 100% / 100% 50% no-repeat;
   transform-origin: top left;
   rotate: x -18deg;
 }
 .example36 .dummy__torso-2 {
-  top: 100%; left: calc(var(--cell)* -0.4);
-  width: calc(var(--cell)* 8.5); height: calc(var(--cell)* 2.1);
+  top: 100%; left: calc(var(--tiny-cell-size)* -0.4);
+  width: calc(var(--tiny-cell-size)* 8.5); height: calc(var(--tiny-cell-size)* 2.1);
   background: linear-gradient(-81deg, transparent 40%, var(--light) 0 95.2%, transparent 0), linear-gradient(81deg, transparent 50%, var(--light) 0 95.6%, transparent 0);
   transform-origin: top left;
   rotate: x 91deg;
 }
 .example36 .dummy__torso-2 > div {
-  top: 100%; left: calc(var(--cell)* -1.2);
-  width: calc(var(--cell)* 11); height: calc(var(--cell)* 4.2);
+  top: 100%; left: calc(var(--tiny-cell-size)* -1.2);
+  width: calc(var(--tiny-cell-size)* 11); height: calc(var(--tiny-cell-size)* 4.2);
   background: linear-gradient(-74deg, transparent 40%, var(--light) 0 89.6%, transparent 0), linear-gradient(74deg, transparent 50%, var(--light) 0 89%, transparent 0);
   transform-origin: top left;
   rotate: x -28deg;
 }
 .example36 .dummy__torso-2 > div > div {
-  top: 100%; left: calc(var(--cell)* -0.8);
-  width: calc(var(--cell)* 12.3); height: calc(var(--cell)* 4.2);
+  top: 100%; left: calc(var(--tiny-cell-size)* -0.8);
+  width: calc(var(--tiny-cell-size)* 12.3); height: calc(var(--tiny-cell-size)* 4.2);
   background: linear-gradient(-260deg, var(--light) 95%, transparent 0) 100% 100% / 60% 52% no-repeat, linear-gradient(-100.3deg, var(--light) 90.2%, transparent 0) 0 100% / 50% 52% no-repeat, linear-gradient(-73.6deg, var(--light) 89.4%, transparent 0) 0 0 / 60% 49% no-repeat, linear-gradient(73.4deg, var(--light) 92.3%, transparent 0) 100% 0 / 60% 49% no-repeat;
   transform-origin: top left;
   rotate: x 50deg;
 }
 .example36 .dummy__torso-2 > div > div > div {
-  top: 100%; left: calc(var(--cell)* 0.6);
-  width: calc(var(--cell)* 11.5); height: calc(var(--cell)* 4.6);
+  top: 100%; left: calc(var(--tiny-cell-size)* 0.6);
+  width: calc(var(--tiny-cell-size)* 11.5); height: calc(var(--tiny-cell-size)* 4.6);
   background: linear-gradient(131deg, transparent 40%, var(--light) 0 84.9%, transparent 0) 0 100% / 100% 30% no-repeat, linear-gradient(229deg, transparent 40%, var(--light) 0 86.1%, transparent 0) 0 100% / 100% 30% no-repeat, linear-gradient(260.3deg, transparent 40%, var(--light) 0 95.1%, transparent 0) 0 0 / 100% 70% no-repeat, linear-gradient(100deg, transparent 40%, var(--light) 0 93.9%, transparent 0) 0 0 / 100% 70% no-repeat;
   transform-origin: top left;
   rotate: x 6deg;
 }
 .example36 .dummy__torso-2 > div > div > div::before {
-  top: 100%; left: calc(var(--cell)* 1.8);
-  width: calc(var(--cell)* 7.8); height: calc(var(--cell)* 4.6);
+  top: 100%; left: calc(var(--tiny-cell-size)* 1.8);
+  width: calc(var(--tiny-cell-size)* 7.8); height: calc(var(--tiny-cell-size)* 4.6);
   background: var(--light);
   transform-origin: top left;
   rotate: x 60deg;
 }
 .example36 .dummy__torso-3 {
   top: 0; left: 0;
-  width: calc(var(--cell)* 2.1); height: calc(var(--cell)* 6.6);
+  width: calc(var(--tiny-cell-size)* 2.1); height: calc(var(--tiny-cell-size)* 6.6);
   background: linear-gradient(-181deg, var(--medium) 97.8%, transparent 0);
   transform-origin: top left;
   rotate: y -99deg;
 }
 .example36 .dummy__torso-3 > div {
-  top: calc(var(--cell)* -0.5); left: 100%;
-  width: calc(var(--cell)* 5.9); height: calc(var(--cell)* 8.86);
+  top: calc(var(--tiny-cell-size)* -0.5); left: 100%;
+  width: calc(var(--tiny-cell-size)* 5.9); height: calc(var(--tiny-cell-size)* 8.86);
   background: linear-gradient(-202deg, var(--medium) 86.4%, transparent 0) 100% 100% / 36% 60% no-repeat, linear-gradient(-6deg, var(--medium) 90.9%, transparent 0) 100% 0 / 68% 50% no-repeat, linear-gradient(-1deg, var(--medium) 89.8%, transparent 0) 0 0 / 33% 50% no-repeat, linear-gradient(207deg, var(--medium) 73.8%, transparent 0) 0 100% / 64% 60% no-repeat;
   transform-origin: top left;
   rotate: y -9deg;
 }
 .example36 .dummy__torso-3 > div > div {
-  top: calc(var(--cell)* -0.4); left: 100%;
-  width: calc(var(--cell)* 4.9); height: calc(var(--cell)* 8.4);
+  top: calc(var(--tiny-cell-size)* -0.4); left: 100%;
+  width: calc(var(--tiny-cell-size)* 4.9); height: calc(var(--tiny-cell-size)* 8.4);
   background: linear-gradient(-208deg, var(--medium) 64.6%, transparent 0) 100% 100% / 62% 60% no-repeat, linear-gradient(-202deg, var(--medium) 87.1%, transparent 0) 0 100% / 38% 60% no-repeat, linear-gradient(11deg, var(--medium) 93%, transparent 0) 100% 0 / 30% 60% no-repeat, linear-gradient(-6deg, var(--medium) 92%, transparent 0) 0 0 / 70% 60% no-repeat;
   transform-origin: top left;
   rotate: y 29deg;
 }
 .example36 .dummy__torso-3 > div > div > div {
-  top: calc(var(--cell)* 0.3); left: 100%;
-  width: calc(var(--cell)* 1.8); height: calc(var(--cell)* 5.8);
+  top: calc(var(--tiny-cell-size)* 0.3); left: 100%;
+  width: calc(var(--tiny-cell-size)* 1.8); height: calc(var(--tiny-cell-size)* 5.8);
   background: linear-gradient(-200deg, transparent 30%, var(--medium) 0 88.6%, transparent 0), linear-gradient(9deg, transparent 50%, var(--medium) 0 94%, transparent 0);
   transform-origin: top left;
   rotate: y 33deg;
 }
 .example36 .dummy__torso-4 {
   top: 0; left: 100%;
-  width: calc(var(--cell)* 2.1); height: calc(var(--cell)* 6.6);
+  width: calc(var(--tiny-cell-size)* 2.1); height: calc(var(--tiny-cell-size)* 6.6);
   background: linear-gradient(-181deg, var(--medium) 97.8%, transparent 0);
   transform-origin: top left;
   rotate: y -81deg;
 }
 .example36 .dummy__torso-4 > div {
-  top: calc(var(--cell)* -0.5); left: 100%;
-  width: calc(var(--cell)* 5.9); height: calc(var(--cell)* 8.86);
+  top: calc(var(--tiny-cell-size)* -0.5); left: 100%;
+  width: calc(var(--tiny-cell-size)* 5.9); height: calc(var(--tiny-cell-size)* 8.86);
   background: linear-gradient(-202deg, var(--medium) 86.4%, transparent 0) 100% 100% / 36% 60% no-repeat, linear-gradient(-6deg, var(--medium) 90.9%, transparent 0) 100% 0 / 68% 50% no-repeat, linear-gradient(-1deg, var(--medium) 89.8%, transparent 0) 0 0 / 33% 50% no-repeat, linear-gradient(207deg, var(--medium) 73.8%, transparent 0) 0 100% / 64% 60% no-repeat;
   transform-origin: top left;
   rotate: y 9deg;
 }
 .example36 .dummy__torso-4 > div > div {
-  top: calc(var(--cell)* -0.4); left: 100%;
-  width: calc(var(--cell)* 4.9); height: calc(var(--cell)* 8.4);
+  top: calc(var(--tiny-cell-size)* -0.4); left: 100%;
+  width: calc(var(--tiny-cell-size)* 4.9); height: calc(var(--tiny-cell-size)* 8.4);
   background: linear-gradient(-208deg, var(--medium) 64.6%, transparent 0) 100% 100% / 62% 60% no-repeat, linear-gradient(-202deg, var(--medium) 87.1%, transparent 0) 0 100% / 38% 60% no-repeat, linear-gradient(11deg, var(--medium) 93%, transparent 0) 100% 0 / 30% 60% no-repeat, linear-gradient(-6deg, var(--medium) 92%, transparent 0) 0 0 / 70% 60% no-repeat;
   transform-origin: top left;
   rotate: y -29deg;
 }
 .example36 .dummy__torso-4 > div > div > div {
-  top: calc(var(--cell)* 0.3); left: 100%;
-  width: calc(var(--cell)* 1.8); height: calc(var(--cell)* 5.8);
+  top: calc(var(--tiny-cell-size)* 0.3); left: 100%;
+  width: calc(var(--tiny-cell-size)* 1.8); height: calc(var(--tiny-cell-size)* 5.8);
   background: linear-gradient(-200deg, transparent 30%, var(--medium) 0 88.6%, transparent 0), linear-gradient(9deg, transparent 50%, var(--medium) 0 94%, transparent 0);
   transform-origin: top left;
   rotate: y -33deg;
@@ -189,67 +187,67 @@
 
 /* NECK */
 .example36 .dummy__neck {
-  top: calc(var(--cell)* -0.3); left: calc(var(--cell)* 1.4);
-  width: calc(var(--cell)* 4.5); height: calc(var(--cell)* 4.8);
+  top: calc(var(--tiny-cell-size)* -0.3); left: calc(var(--tiny-cell-size)* 1.4);
+  width: calc(var(--tiny-cell-size)* 4.5); height: calc(var(--tiny-cell-size)* 4.8);
   background: var(--dark);
   transform-origin: center center;
-  translate: 0 0 calc(var(--cell)* 13.8);
+  translate: 0 0 calc(var(--tiny-cell-size)* 13.8);
 }
 .example36 .dummy__neck::before {
   top: 0; left: 0;
-  width: calc(var(--cell)* 4.5); height: calc(var(--cell)* 3);
+  width: calc(var(--tiny-cell-size)* 4.5); height: calc(var(--tiny-cell-size)* 3);
   background: linear-gradient(-102deg, transparent 40%, var(--medium-dark) 0 87.8%, transparent 0), linear-gradient(103deg, transparent 40%, var(--medium-dark) 0 88%, transparent 0);
   transform-origin: top left;
   rotate: x 84deg;
 }
 .example36 .dummy__neck::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 4.8);
+  width: calc(var(--tiny-cell-size)* 3); height: calc(var(--tiny-cell-size)* 4.8);
   background: linear-gradient(5deg, transparent 40%, var(--medium) 0 93.9%, transparent 0), linear-gradient(-184deg, transparent 40%, var(--medium) 0 95.7%, transparent 0);
   transform-origin: top left;
   rotate: y -78deg;
 }
 .example36 .dummy__neck-helper {
   width: 100%; height: 100%;
-  translate: 0 0 calc(var(--cell)* 3);
+  translate: 0 0 calc(var(--tiny-cell-size)* 3);
 }
 .example36 .dummy__neck-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 4.8);
+  width: calc(var(--tiny-cell-size)* 3); height: calc(var(--tiny-cell-size)* 4.8);
   background: linear-gradient(184deg, transparent 40%, var(--medium) 0 96%, transparent 0), linear-gradient(-5deg, transparent 40%, var(--medium) 0 94%, transparent 0);
   transform-origin: right center;
   rotate: y 78deg;
-  translate: 0 0 calc(var(--cell)* -3);
+  translate: 0 0 calc(var(--tiny-cell-size)* -3);
 }
 .example36 .dummy__neck-helper::after {
   bottom: 0; left: 0;
-  width: calc(var(--cell)* 4.5); height: calc(var(--cell)* 2.9);
+  width: calc(var(--tiny-cell-size)* 4.5); height: calc(var(--tiny-cell-size)* 2.9);
   background: linear-gradient(282deg, transparent 40%, var(--light) 0 88%, transparent 0), linear-gradient(78deg, transparent 40%, var(--light) 0 88%, transparent 0);
   transform-origin: bottom left;
   rotate: x -86deg;
-  translate: 0 0 calc(var(--cell)* -3);
+  translate: 0 0 calc(var(--tiny-cell-size)* -3);
 }
 
 
 
 /* HEAD */
 .example36 .dummy__head {
-  top: calc(var(--cell)* -2.3); left: calc(var(--cell)* -2.5);
-  width: calc(var(--cell)* 9.5); height: calc(var(--cell)* 11.6);
+  top: calc(var(--tiny-cell-size)* -2.3); left: calc(var(--tiny-cell-size)* -2.5);
+  width: calc(var(--tiny-cell-size)* 9.5); height: calc(var(--tiny-cell-size)* 11.6);
   background: var(--dark);
-  transform-origin: center calc(var(--cell)* 6);
-  translate: 0 0 calc(var(--cell)* 1.7);
+  transform-origin: center calc(var(--tiny-cell-size)* 6);
+  translate: 0 0 calc(var(--tiny-cell-size)* 1.7);
 }
 .example36 .dummy__head::before {
   top: 0; left: 0;
-  width: 100%; height: calc(var(--cell)* 13);
+  width: 100%; height: calc(var(--tiny-cell-size)* 13);
   background: var(--medium-dark);
   transform-origin: top left;
   rotate: x 90deg;
 }
 .example36 .dummy__head::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 13); height: calc(var(--cell)* 11.6);
+  width: calc(var(--tiny-cell-size)* 13); height: calc(var(--tiny-cell-size)* 11.6);
   background: var(--medium);
   transform-origin: top left;
   rotate: y -90deg;
@@ -257,18 +255,18 @@
 .example36 .dummy__head-helper {
   width: 100%; height: 100%;
   background: var(--light);
-  translate: 0 0 calc(var(--cell)* 13);
+  translate: 0 0 calc(var(--tiny-cell-size)* 13);
 }
 .example36 .dummy__head-helper::before {
   top: 0; right: 0;
-  width: calc(var(--cell)* 13); height: calc(var(--cell)* 11.6);
+  width: calc(var(--tiny-cell-size)* 13); height: calc(var(--tiny-cell-size)* 11.6);
   background: var(--medium);
   transform-origin: right center;
   rotate: y -90deg;
 }
 .example36 .dummy__head-helper::after {
   bottom: 0; left: 0;
-  width: 100%; height: calc(var(--cell)* 13);
+  width: 100%; height: calc(var(--tiny-cell-size)* 13);
   background: var(--light);
   transform-origin: bottom left;
   rotate: x 90deg;
@@ -278,32 +276,32 @@
 
 /* LEFT SHOULDER */
 .example36 .dummy__leftShoulder {
-  top: var(--cell);
-  left: calc(var(--cell)* -2.3);
-  width: var(--cell);
-  height: calc(var(--cell)* 4);
+  top: var(--tiny-cell-size);
+  left: calc(var(--tiny-cell-size)* -2.3);
+  width: var(--tiny-cell-size);
+  height: calc(var(--tiny-cell-size)* 4);
   background: var(--light);
   transform-origin: right center;
-  translate: 0 0 calc(var(--cell)* 12.5);
+  translate: 0 0 calc(var(--tiny-cell-size)* 12.5);
 }
 .example36 .dummy__leftShoulder::before {
-  top: 0; left: var(--cell);
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 14.5);
+  top: 0; left: var(--tiny-cell-size);
+  width: calc(var(--tiny-cell-size)* 3); height: calc(var(--tiny-cell-size)* 14.5);
   background: linear-gradient(93deg, transparent 40%, var(--medium-dark) 0 86.5%, transparent 0) 0 100% / 100% 81.1% no-repeat, linear-gradient(-91deg, transparent 40%, var(--medium-dark) 0 93.9%, transparent 0) 0 100% / 100% 81.1% no-repeat, linear-gradient(-77deg, var(--medium-dark) 87.1%, transparent 0) 0 6.3% / 100% 13.5% no-repeat, linear-gradient(-56deg, var(--medium-dark) 71.8%, transparent 0) 0 0 / 100% 5.6% no-repeat;
   transform-origin: top left;
-  transform: rotateX(-90deg) rotateZ(56deg) translateX(calc(var(--cell)* -1));
+  transform: rotateX(-90deg) rotateZ(56deg) translateX(calc(var(--tiny-cell-size)* -1));
 }
 .example36 .dummy__leftShoulder::after {
-  top: calc(var(--cell)* 4); left: calc(var(--cell)* -1);
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 14.3);
+  top: calc(var(--tiny-cell-size)* 4); left: calc(var(--tiny-cell-size)* -1);
+  width: calc(var(--tiny-cell-size)* 3); height: calc(var(--tiny-cell-size)* 14.3);
   background: linear-gradient(93deg, transparent 40%, var(--light) 0 86.5%, transparent 0) 0 100% / 100% 81.1% no-repeat, linear-gradient(-91deg, transparent 40%, var(--light) 0 93.9%, transparent 0) 0 100% / 100% 81.1% no-repeat, linear-gradient(-77deg, var(--light) 87.1%, transparent 0) 0 6.3% / 100% 13.5% no-repeat, linear-gradient(-56deg, var(--light) 71.8%, transparent 0) 0 0 / 100% 5.6% no-repeat;
   transform-origin: top left;
-  transform: rotateX(-90deg) rotateZ(56deg) translateY(calc(var(--cell)* -1.6));
+  transform: rotateX(-90deg) rotateZ(56deg) translateY(calc(var(--tiny-cell-size)* -1.6));
 }
 .example36 .dummy__leftShoulder-helper {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 2);
+  width: calc(var(--tiny-cell-size)* 2);
   height: 100%;
   background: var(--light);
   transform-origin: top left;
@@ -312,7 +310,7 @@
 .example36 .dummy__leftShoulder-helper > div {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 11.5);
+  width: calc(var(--tiny-cell-size)* 11.5);
   height: 100%;
   background: var(--medium);
   transform-origin: top left;
@@ -325,7 +323,7 @@
   height: 100%;
   background: var(--medium-dark);
   transform-origin: top right;
-  transform: translateZ(calc(var(--cell)* 2.3)) rotateY(4deg);
+  transform: translateZ(calc(var(--tiny-cell-size)* 2.3)) rotateY(4deg);
 }
 
 
@@ -333,13 +331,13 @@
 /* LEFT ARM */
 .example36 .dummy__leftArm {
   top: 0; left: 100%;
-  translate: 0 0 calc(var(--cell)* 2.2);
+  translate: 0 0 calc(var(--tiny-cell-size)* 2.2);
 }
 .example36 .dummy__leftArm-1 {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 1.5);
-  height: calc(var(--cell)* 4);
+  width: calc(var(--tiny-cell-size)* 1.5);
+  height: calc(var(--tiny-cell-size)* 4);
   background: linear-gradient(-187deg, transparent 40%, var(--medium-dark) 0 95.5%, transparent 0), linear-gradient(4deg, transparent 40%, var(--medium-dark) 0 97%, transparent 0);
   transform-origin: top left;
   transform: rotateY(-10deg);
@@ -347,8 +345,8 @@
 .example36 .dummy__leftArm-1::before {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 11.5);
-  height: calc(var(--cell)* 4);
+  width: calc(var(--tiny-cell-size)* 11.5);
+  height: calc(var(--tiny-cell-size)* 4);
   background: conic-gradient(from -100deg at 50% 50%, var(--medium-dark) 20deg, transparent 0), linear-gradient(5deg, transparent 45%, var(--medium-dark) 0 77.3%, transparent 0), linear-gradient(175.6deg, transparent 43%, var(--medium-dark) 0 78%, transparent 0);
   transform-origin: top left;
   transform: rotateY(17deg);
@@ -356,17 +354,17 @@
 .example36 .dummy__leftArm-2 {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 1.5);
-  height: calc(var(--cell)* 4);
+  width: calc(var(--tiny-cell-size)* 1.5);
+  height: calc(var(--tiny-cell-size)* 4);
   background: linear-gradient(-187deg, transparent 40%, var(--medium) 0 95.5%, transparent 0), linear-gradient(4deg, transparent 40%, var(--medium) 0 97%, transparent 0);
   transform-origin: top left;
-  transform: translateZ(calc(var(--cell)* -2.3)) rotateY(20deg);
+  transform: translateZ(calc(var(--tiny-cell-size)* -2.3)) rotateY(20deg);
 }
 .example36 .dummy__leftArm-2::before {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 12);
-  height: calc(var(--cell)* 4);
+  width: calc(var(--tiny-cell-size)* 12);
+  height: calc(var(--tiny-cell-size)* 4);
   background: conic-gradient(from -100deg at 50% 50%, var(--medium) 20deg, transparent 0), linear-gradient(5deg, transparent 45%, var(--medium) 0 77.3%, transparent 0), linear-gradient(175deg, transparent 43%, var(--medium) 0 76%, transparent 0);
   transform-origin: top left;
   transform: rotateY(-22deg);
@@ -374,162 +372,162 @@
 .example36 .dummy__leftArm-3 {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 12.9);
-  height: calc(var(--cell)* 3.2);
+  width: calc(var(--tiny-cell-size)* 12.9);
+  height: calc(var(--tiny-cell-size)* 3.2);
   background: conic-gradient(from -94deg at 75% 60%, var(--medium-dark) 12deg, transparent 0), linear-gradient(-353deg, transparent 49%, var(--medium-dark) 0 68.5%, transparent 0) 100% 0 / 88.5% 100% no-repeat, linear-gradient(-182.6deg, transparent 60%, var(--medium-dark) 0 84%, transparent 0) 100% 0 / 88.5% 100% no-repeat, linear-gradient(-159deg, transparent 40%, var(--medium-dark) 0 84%, transparent 0) 0 0 / 11.5% 100% no-repeat, linear-gradient(-9deg, transparent 40%, var(--medium-dark) 0 92%, transparent 0) 0 0 / 11.5% 100% no-repeat;
   transform-origin: top left;
-  transform: translateZ(calc(var(--cell)* 0.3)) rotateX(-90deg) rotateY(-5deg);
+  transform: translateZ(calc(var(--tiny-cell-size)* 0.3)) rotateX(-90deg) rotateY(-5deg);
 }
 .example36 .dummy__leftArm-4 {
-  top: calc(var(--cell)* 4);
+  top: calc(var(--tiny-cell-size)* 4);
   left: 0;
-  width: calc(var(--cell)* 12.9);
-  height: calc(var(--cell)* 3.2);
+  width: calc(var(--tiny-cell-size)* 12.9);
+  height: calc(var(--tiny-cell-size)* 3.2);
   background: conic-gradient(from -94deg at 75% 60%, var(--light) 12deg, transparent 0), linear-gradient(-353deg, transparent 49%, var(--light) 0 68.5%, transparent 0) 100% 0 / 88.5% 100% no-repeat, linear-gradient(-182.6deg, transparent 60%, var(--light) 0 84%, transparent 0) 100% 0 / 88.5% 100% no-repeat, linear-gradient(-159deg, transparent 40%, var(--light) 0 84%, transparent 0) 0 0 / 11.5% 100% no-repeat, linear-gradient(-9deg, transparent 40%, var(--light) 0 92%, transparent 0) 0 0 / 11.5% 100% no-repeat;
   transform-origin: top left;
-  transform: translatez(calc(var(--cell)* 0.3)) rotateX(-90deg) rotateY(5deg);
+  transform: translatez(calc(var(--tiny-cell-size)* 0.3)) rotateX(-90deg) rotateY(5deg);
 }
 
 
 
 /* LEFT HAND */
 .example36 .dummy__leftHand {
-  top: calc(var(--cell)* 1.1);
-  left: calc(var(--cell)* 12.8);
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 1.8);
+  top: calc(var(--tiny-cell-size)* 1.1);
+  left: calc(var(--tiny-cell-size)* 12.8);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 1.8);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* -1.1);
+  translate: 0 0 calc(var(--tiny-cell-size)* -1.1);
   rotate: y 90deg;
 }
 .example36 .dummy__leftHand::before {
-  top: calc(var(--cell)* -0.8);
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 8.2);
-  height: calc(var(--cell)* 2.9);
-  background: linear-gradient(364.5deg, transparent 40%, var(--medium-dark) 0 89%, transparent 0) calc(var(--cell)* 1.9) 0 / 47% 100% no-repeat, linear-gradient(375deg, transparent 40%, var(--medium-dark) 0 72%, transparent 0) 100% 0 / 30% 100% no-repeat, linear-gradient(177deg, transparent 40%, var(--medium-dark) 0 94%, transparent 0) 100% 0 / 57% 100% no-repeat, linear-gradient(185deg, transparent 40%, var(--medium-dark) 0 92%, transparent 0) 0 0 / 44% 100% no-repeat, linear-gradient(-24deg, transparent 40%, var(--medium-dark) 0 76%, transparent 0) 0 0 / 24% 100% no-repeat;
+  top: calc(var(--tiny-cell-size)* -0.8);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 8.2);
+  height: calc(var(--tiny-cell-size)* 2.9);
+  background: linear-gradient(364.5deg, transparent 40%, var(--medium-dark) 0 89%, transparent 0) calc(var(--tiny-cell-size)* 1.9) 0 / 47% 100% no-repeat, linear-gradient(375deg, transparent 40%, var(--medium-dark) 0 72%, transparent 0) 100% 0 / 30% 100% no-repeat, linear-gradient(177deg, transparent 40%, var(--medium-dark) 0 94%, transparent 0) 100% 0 / 57% 100% no-repeat, linear-gradient(185deg, transparent 40%, var(--medium-dark) 0 92%, transparent 0) 0 0 / 44% 100% no-repeat, linear-gradient(-24deg, transparent 40%, var(--medium-dark) 0 76%, transparent 0) 0 0 / 24% 100% no-repeat;
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: y -87deg;
 }
 .example36 .dummy__leftHand::after {
-  top: calc(var(--cell)* -0.8);
+  top: calc(var(--tiny-cell-size)* -0.8);
   left: 100%;
-  width: calc(var(--cell)* 8.2);
-  height: calc(var(--cell)* 2.9);
-  background: linear-gradient(365deg, transparent 40%, var(--medium) 0 89%, transparent 0) calc(var(--cell)* 1.9) 0 / 47% 100% no-repeat, linear-gradient(375deg, transparent 40%, var(--medium) 0 72%, transparent 0) 100% 0 / 30% 100% no-repeat, linear-gradient(177deg, transparent 40%, var(--medium) 0 94%, transparent 0) 100% 0 / 57% 100% no-repeat, linear-gradient(185deg, transparent 40%, var(--medium) 0 92%, transparent 0) 0 0 / 44% 100% no-repeat, linear-gradient(-24deg, transparent 40%, var(--medium) 0 76%, transparent 0) 0 0 / 24% 100% no-repeat;
+  width: calc(var(--tiny-cell-size)* 8.2);
+  height: calc(var(--tiny-cell-size)* 2.9);
+  background: linear-gradient(365deg, transparent 40%, var(--medium) 0 89%, transparent 0) calc(var(--tiny-cell-size)* 1.9) 0 / 47% 100% no-repeat, linear-gradient(375deg, transparent 40%, var(--medium) 0 72%, transparent 0) 100% 0 / 30% 100% no-repeat, linear-gradient(177deg, transparent 40%, var(--medium) 0 94%, transparent 0) 100% 0 / 57% 100% no-repeat, linear-gradient(185deg, transparent 40%, var(--medium) 0 92%, transparent 0) 0 0 / 44% 100% no-repeat, linear-gradient(-24deg, transparent 40%, var(--medium) 0 76%, transparent 0) 0 0 / 24% 100% no-repeat;
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: y -92deg;
 }
 .example36 .dummy__leftHand-1 {
-  top: calc(var(--cell)* -0.8);
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 3.7);
+  top: calc(var(--tiny-cell-size)* -0.8);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 3.7);
   background: linear-gradient(92deg, transparent 40%, var(--medium-dark) 0 85%, transparent 0), linear-gradient(-93deg, transparent 40%, var(--medium-dark) 0 77%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 2);
+  translate: 0 0 calc(var(--tiny-cell-size)* 2);
   rotate: x 85deg;
 }
 .example36 .dummy__leftHand-1::before {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 2.1);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 2.1);
   background: linear-gradient(448deg, transparent 40%, var(--medium-dark) 0 95%, transparent 0), linear-gradient(273deg, transparent 40%, var(--medium-dark) 0 90%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: x 209deg;
 }
 .example36 .dummy__leftHand-1::after {
   top: 100%;
   left: 0;
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 2.55);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 2.55);
   background: linear-gradient(92deg, transparent 51%, var(--medium-dark) 0 77%, transparent 0), linear-gradient(-93deg, transparent 40%, var(--medium-dark) 0 68%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: x 350deg;
 }
 .example36 .dummy__leftHand-2 {
-  top: calc(var(--cell)* 1.9);
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 3.7);
+  top: calc(var(--tiny-cell-size)* 1.9);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 3.7);
   background: linear-gradient(92deg, transparent 40%, green 0 90%, transparent 0), linear-gradient(-93deg, transparent 40%, green 0 86%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: x 87deg;
 }
 .example36 .dummy__leftHand-2::before {
   top: 100%;
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 4.5);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 4.5);
   background: linear-gradient(267deg, transparent 36%, var(--light) 0 70%, transparent 0), linear-gradient(92deg, transparent 50%, var(--light) 0 79%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: x 5deg;
 }
 .example36 .dummy__leftHand-2::after {
-  top: calc(var(--cell)* 8.18);
-  left: calc(var(--cell)* 0.5);
-  width: calc(var(--cell)* 0.5);
-  height: calc(var(--cell)* 1.7);
+  top: calc(var(--tiny-cell-size)* 8.18);
+  left: calc(var(--tiny-cell-size)* 0.5);
+  width: calc(var(--tiny-cell-size)* 0.5);
+  height: calc(var(--tiny-cell-size)* 1.7);
   background: var(--medium);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0.4);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0.4);
   rotate: x 93deg;
 }
 .example36 .dummy__leftHand-3 {
-  top: calc(var(--cell)* 1.9);
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 3);
+  top: calc(var(--tiny-cell-size)* 1.9);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 3);
   background: conic-gradient(from -8deg at 50% 57%, var(--light) 20deg, transparent 0), linear-gradient(263deg, transparent 51%, var(--light) 0 73%, transparent 0), linear-gradient(95deg, transparent 51%, var(--light) 0 78%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: x 69deg;
 }
 .example36 .dummy__leftHand-3::before {
   top: 100%;
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 2.45);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 2.45);
   background: linear-gradient(-87deg, transparent 45%, var(--light) 0 68%, transparent 0), linear-gradient(88deg, transparent 45%, var(--light) 0 75%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: x 30deg;
 }
 .example36 .dummy__leftHand-3::after {
-  top: calc(var(--cell)* 5.1);
-  left: calc(var(--cell)* 0.1);
-  width: var(--cell);
-  height: calc(var(--cell)* 0.55);
+  top: calc(var(--tiny-cell-size)* 5.1);
+  left: calc(var(--tiny-cell-size)* 0.1);
+  width: var(--tiny-cell-size);
+  height: calc(var(--tiny-cell-size)* 0.55);
   background: linear-gradient(89deg, transparent 40%, var(--medium) 0 93%, transparent 0), linear-gradient(289deg, transparent 40%, var(--medium) 0 85%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 1.2);
+  translate: 0 0 calc(var(--tiny-cell-size)* 1.2);
   rotate: x 110deg;
 }
 .example36 .dummy__leftHand-4 {
-  top: calc(var(--cell)* 1.8);
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 5.2);
-  height: calc(var(--cell)* 1.3);
+  top: calc(var(--tiny-cell-size)* 1.8);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 5.2);
+  height: calc(var(--tiny-cell-size)* 1.3);
   background: linear-gradient(170deg, var(--medium-dark) 73%, transparent 0) 100% 0 / 46% 100% no-repeat, linear-gradient(202deg, var(--medium-dark) 51%, transparent 0) 0 0 / 54% 100% no-repeat;
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   transform: rotateY(-90deg) rotateX(-20deg);
 }
 .example36 .dummy__leftHand-4::before {
-  top: calc(var(--cell)* 0.5);
+  top: calc(var(--tiny-cell-size)* 0.5);
   left: 0;
-  width: calc(var(--cell)* 5.2);
-  height: calc(var(--cell)* 1.4);
+  width: calc(var(--tiny-cell-size)* 5.2);
+  height: calc(var(--tiny-cell-size)* 1.4);
   background: linear-gradient(171deg, var(--medium) 65%, transparent 0) 100% 0 / 46% 100% no-repeat, linear-gradient(201deg, var(--medium) 47%, transparent 0) 0 0 / 54% 100% no-repeat;
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* -1.1);
+  translate: 0 0 calc(var(--tiny-cell-size)* -1.1);
   transform: rotateX(35deg);
 }
 
@@ -537,32 +535,32 @@
 
 /* RIGHT SHOULDER */
 .example36 .dummy__rightShoulder {
-  top: calc(var(--cell)* 0); left: calc(var(--cell)* 8.9);
-  width: var(--cell); height: calc(var(--cell)* 4);
+  top: calc(var(--tiny-cell-size)* 0); left: calc(var(--tiny-cell-size)* 8.9);
+  width: var(--tiny-cell-size); height: calc(var(--tiny-cell-size)* 4);
   background: var(--light);
   transform-origin: left center;
-  translate: 0 0 calc(var(--cell)* 12.5);
+  translate: 0 0 calc(var(--tiny-cell-size)* 12.5);
 }
 .example36 .dummy__rightShoulder::before {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 3);
-  height: calc(var(--cell)* 14.5);
+  width: calc(var(--tiny-cell-size)* 3);
+  height: calc(var(--tiny-cell-size)* 14.5);
   background: linear-gradient(93deg, transparent 40%, var(--medium-dark) 0 86.5%, transparent 0) 0 100% / 100% 81.1% no-repeat, linear-gradient(-91deg, transparent 40%, var(--medium-dark) 0 93.9%, transparent 0) 0 100% / 100% 81.1% no-repeat, linear-gradient(-77deg, var(--medium-dark) 87.1%, transparent 0) 0 6.3% / 100% 13.5% no-repeat, linear-gradient(-56deg, var(--medium-dark) 71.8%, transparent 0) 0 0 / 100% 5.6% no-repeat;
   transform-origin: top left;
-  transform: rotateX(-90deg) rotateY(180deg) rotateZ(56deg) translateX(calc(var(--cell)* -1));
+  transform: rotateX(-90deg) rotateY(180deg) rotateZ(56deg) translateX(calc(var(--tiny-cell-size)* -1));
 }
 .example36 .dummy__rightShoulder::after {
   top: 0; left: 0;
-  width: calc(var(--cell)* 3); height: calc(var(--cell)* 14.3);
+  width: calc(var(--tiny-cell-size)* 3); height: calc(var(--tiny-cell-size)* 14.3);
   background: linear-gradient(93deg, transparent 40%, var(--light) 0 86.5%, transparent 0) 0 100% / 100% 81.1% no-repeat, linear-gradient(-91deg, transparent 40%, var(--light) 0 93.9%, transparent 0) 0 100% / 100% 81.1% no-repeat, linear-gradient(-77deg, var(--light) 87.1%, transparent 0) 0 6.3% / 100% 13.5% no-repeat, linear-gradient(-56deg, var(--light) 71.8%, transparent 0) 0 0 / 100% 5.6% no-repeat;
   transform-origin: top left;
-  transform: rotateX(-90deg) rotateY(180deg) rotateZ(56deg) translateX(calc(var(--cell)* -1)) translateZ(calc(var(--cell)* -4));
+  transform: rotateX(-90deg) rotateY(180deg) rotateZ(56deg) translateX(calc(var(--tiny-cell-size)* -1)) translateZ(calc(var(--tiny-cell-size)* -4));
 }
 .example36 .dummy__rightShoulder-helper {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 2);
+  width: calc(var(--tiny-cell-size)* 2);
   height: 100%;
   background: var(--light);
   transform-origin: top left;
@@ -571,7 +569,7 @@
 .example36 .dummy__rightShoulder-helper > div {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 11.5);
+  width: calc(var(--tiny-cell-size)* 11.5);
   height: 100%;
   background: var(--medium);
   transform-origin: top left;
@@ -584,7 +582,7 @@
   height: 100%;
   background: var(--medium-dark);
   transform-origin: top right;
-  transform: translateZ(calc(var(--cell)* -2.3)) rotateY(-4deg);
+  transform: translateZ(calc(var(--tiny-cell-size)* -2.3)) rotateY(-4deg);
 }
 
 
@@ -596,8 +594,8 @@
 .example36 .dummy__rightArm-1 {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 1.5);
-  height: calc(var(--cell)* 4);
+  width: calc(var(--tiny-cell-size)* 1.5);
+  height: calc(var(--tiny-cell-size)* 4);
   background: linear-gradient(-187deg, transparent 40%, var(--medium) 0 95.5%, transparent 0), linear-gradient(4deg, transparent 40%, var(--medium) 0 97%, transparent 0);
   transform-origin: top left;
   transform: rotateY(-10deg);
@@ -605,8 +603,8 @@
 .example36 .dummy__rightArm-1::before {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 11.5);
-  height: calc(var(--cell)* 4);
+  width: calc(var(--tiny-cell-size)* 11.5);
+  height: calc(var(--tiny-cell-size)* 4);
   background: conic-gradient(from -100deg at 50% 50%, var(--medium) 20deg, transparent 0), linear-gradient(5deg, transparent 45%, var(--medium) 0 77.3%, transparent 0), linear-gradient(175.6deg, transparent 43%, var(--medium) 0 78%, transparent 0);
   transform-origin: top left;
   transform: rotateY(17deg);
@@ -614,17 +612,17 @@
 .example36 .dummy__rightArm-2 {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 1.5);
-  height: calc(var(--cell)* 4);
+  width: calc(var(--tiny-cell-size)* 1.5);
+  height: calc(var(--tiny-cell-size)* 4);
   background: linear-gradient(-187deg, transparent 40%, var(--medium-dark) 0 95.5%, transparent 0), linear-gradient(4deg, transparent 40%, var(--medium-dark) 0 97%, transparent 0);
   transform-origin: top left;
-  transform: translateZ(calc(var(--cell)* -2.3)) rotateY(20deg);
+  transform: translateZ(calc(var(--tiny-cell-size)* -2.3)) rotateY(20deg);
 }
 .example36 .dummy__rightArm-2::before {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 11.3);
-  height: calc(var(--cell)* 4);
+  width: calc(var(--tiny-cell-size)* 11.3);
+  height: calc(var(--tiny-cell-size)* 4);
   background: conic-gradient(from -100deg at 50% 50%, var(--medium-dark) 20deg, transparent 0), linear-gradient(5deg, transparent 45%, var(--medium-dark) 0 77.3%, transparent 0), linear-gradient(174.6deg, transparent 43%, var(--medium-dark) 0 77%, transparent 0);
   transform-origin: top left;
   transform: rotateY(-22.5deg);
@@ -632,177 +630,177 @@
 .example36 .dummy__rightArm-3 {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 12.9);
-  height: calc(var(--cell)* 3.2);
+  width: calc(var(--tiny-cell-size)* 12.9);
+  height: calc(var(--tiny-cell-size)* 3.2);
   background: conic-gradient(from -94deg at 75% 60%, var(--medium-dark) 12deg, transparent 0), linear-gradient(-353deg, transparent 49%, var(--medium-dark) 0 68.5%, transparent 0) 100% 0 / 88.5% 100% no-repeat, linear-gradient(-182.6deg, transparent 60%, var(--medium-dark) 0 84%, transparent 0) 100% 0 / 88.5% 100% no-repeat, linear-gradient(-159deg, transparent 40%, var(--medium-dark) 0 84%, transparent 0) 0 0 / 11.5% 100% no-repeat, linear-gradient(-9deg, transparent 40%, var(--medium-dark) 0 92%, transparent 0) 0 0 / 11.5% 100% no-repeat;
   transform-origin: top left;
-  transform: translateZ(calc(var(--cell)* 0.3)) rotateX(-90deg) rotateY(-5deg);
+  transform: translateZ(calc(var(--tiny-cell-size)* 0.3)) rotateX(-90deg) rotateY(-5deg);
 }
 .example36 .dummy__rightArm-4 {
-  top: calc(var(--cell)* 4);
+  top: calc(var(--tiny-cell-size)* 4);
   left: 0;
-  width: calc(var(--cell)* 12.9);
-  height: calc(var(--cell)* 3.2);
+  width: calc(var(--tiny-cell-size)* 12.9);
+  height: calc(var(--tiny-cell-size)* 3.2);
   background: conic-gradient(from -94deg at 75% 60%, var(--light) 12deg, transparent 0), linear-gradient(-353deg, transparent 49%, var(--light) 0 68.5%, transparent 0) 100% 0 / 88.5% 100% no-repeat, linear-gradient(-182.6deg, transparent 60%, var(--light) 0 84%, transparent 0) 100% 0 / 88.5% 100% no-repeat, linear-gradient(-159deg, transparent 40%, var(--light) 0 84%, transparent 0) 0 0 / 11.5% 100% no-repeat, linear-gradient(-9deg, transparent 40%, var(--light) 0 92%, transparent 0) 0 0 / 11.5% 100% no-repeat;
   transform-origin: top left;
-  transform: translatez(calc(var(--cell)* 0.3)) rotateX(-90deg) rotateY(5deg);
+  transform: translatez(calc(var(--tiny-cell-size)* 0.3)) rotateX(-90deg) rotateY(5deg);
 }
 
 
 
 /* RIGHT HAND */
 .example36 .dummy__rightHand {
-  top: calc(var(--cell)* 1.1);
-  left: calc(var(--cell)* 12.7);
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 1.8);
+  top: calc(var(--tiny-cell-size)* 1.1);
+  left: calc(var(--tiny-cell-size)* 12.7);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 1.8);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* -1.1);
+  translate: 0 0 calc(var(--tiny-cell-size)* -1.1);
   rotate: y 90deg;
 }
 .example36 .dummy__rightHand::before {
-  top: calc(var(--cell)* -0.8);
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 8.2);
-  height: calc(var(--cell)* 2.9);
-  background: linear-gradient(364.5deg, transparent 40%, var(--medium) 0 89%, transparent 0) calc(var(--cell)* 1.9) 0 / 47% 100% no-repeat, linear-gradient(375deg, transparent 40%, var(--medium) 0 72%, transparent 0) 100% 0 / 30% 100% no-repeat, linear-gradient(177deg, transparent 40%, var(--medium) 0 94%, transparent 0) 100% 0 / 57% 100% no-repeat, linear-gradient(185deg, transparent 40%, var(--medium) 0 92%, transparent 0) 0 0 / 44% 100% no-repeat, linear-gradient(-24deg, transparent 40%, var(--medium) 0 76%, transparent 0) 0 0 / 24% 100% no-repeat;
+  top: calc(var(--tiny-cell-size)* -0.8);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 8.2);
+  height: calc(var(--tiny-cell-size)* 2.9);
+  background: linear-gradient(364.5deg, transparent 40%, var(--medium) 0 89%, transparent 0) calc(var(--tiny-cell-size)* 1.9) 0 / 47% 100% no-repeat, linear-gradient(375deg, transparent 40%, var(--medium) 0 72%, transparent 0) 100% 0 / 30% 100% no-repeat, linear-gradient(177deg, transparent 40%, var(--medium) 0 94%, transparent 0) 100% 0 / 57% 100% no-repeat, linear-gradient(185deg, transparent 40%, var(--medium) 0 92%, transparent 0) 0 0 / 44% 100% no-repeat, linear-gradient(-24deg, transparent 40%, var(--medium) 0 76%, transparent 0) 0 0 / 24% 100% no-repeat;
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: y -87deg;
 }
 .example36 .dummy__rightHand::after {
-  top: calc(var(--cell)* -0.8);
+  top: calc(var(--tiny-cell-size)* -0.8);
   left: 100%;
-  width: calc(var(--cell)* 8.2);
-  height: calc(var(--cell)* 2.9);
-  background: linear-gradient(365deg, transparent 40%, var(--medium-dark) 0 89%, transparent 0) calc(var(--cell)* 1.9) 0 / 47% 100% no-repeat, linear-gradient(375deg, transparent 40%, var(--medium-dark) 0 72%, transparent 0) 100% 0 / 30% 100% no-repeat, linear-gradient(177deg, transparent 40%, var(--medium-dark) 0 94%, transparent 0) 100% 0 / 57% 100% no-repeat, linear-gradient(185deg, transparent 40%, var(--medium-dark) 0 92%, transparent 0) 0 0 / 44% 100% no-repeat, linear-gradient(-24deg, transparent 40%, var(--medium-dark) 0 76%, transparent 0) 0 0 / 24% 100% no-repeat;
+  width: calc(var(--tiny-cell-size)* 8.2);
+  height: calc(var(--tiny-cell-size)* 2.9);
+  background: linear-gradient(365deg, transparent 40%, var(--medium-dark) 0 89%, transparent 0) calc(var(--tiny-cell-size)* 1.9) 0 / 47% 100% no-repeat, linear-gradient(375deg, transparent 40%, var(--medium-dark) 0 72%, transparent 0) 100% 0 / 30% 100% no-repeat, linear-gradient(177deg, transparent 40%, var(--medium-dark) 0 94%, transparent 0) 100% 0 / 57% 100% no-repeat, linear-gradient(185deg, transparent 40%, var(--medium-dark) 0 92%, transparent 0) 0 0 / 44% 100% no-repeat, linear-gradient(-24deg, transparent 40%, var(--medium-dark) 0 76%, transparent 0) 0 0 / 24% 100% no-repeat;
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: y -92deg;
 }
 .example36 .dummy__rightHand-1 {
-  top: calc(var(--cell)* -0.8);
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 3.7);
+  top: calc(var(--tiny-cell-size)* -0.8);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 3.7);
   background: linear-gradient(92deg, transparent 40%, var(--medium-dark) 0 85%, transparent 0), linear-gradient(-93deg, transparent 40%, var(--medium-dark) 0 77%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 2);
+  translate: 0 0 calc(var(--tiny-cell-size)* 2);
   rotate: x 85deg;
 }
 .example36 .dummy__rightHand-1::before {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 2.1);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 2.1);
   background: linear-gradient(448deg, transparent 40%, var(--medium-dark) 0 95%, transparent 0), linear-gradient(273deg, transparent 40%, var(--medium-dark) 0 90%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: x 209deg;
 }
 .example36 .dummy__rightHand-1::after {
   top: 100%;
   left: 0;
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 2.55);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 2.55);
   background: linear-gradient(92deg, transparent 51%, var(--medium-dark) 0 77%, transparent 0), linear-gradient(-93deg, transparent 40%, var(--medium-dark) 0 68%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: x 350deg;
 }
 .example36 .dummy__rightHand-2 {
-  top: calc(var(--cell)* 1.9);
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 3.7);
+  top: calc(var(--tiny-cell-size)* 1.9);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 3.7);
   background: linear-gradient(92deg, transparent 40%, green 0 90%, transparent 0), linear-gradient(-93deg, transparent 40%, green 0 86%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: x 87deg;
 }
 .example36 .dummy__rightHand-2::before {
   top: 100%;
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 4.5);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 4.5);
   background: linear-gradient(267deg, transparent 36%, var(--light) 0 70%, transparent 0), linear-gradient(92deg, transparent 50%, var(--light) 0 79%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: x 5deg;
 }
 .example36 .dummy__rightHand-2::after {
-  top: calc(var(--cell)* 8.18);
-  left: calc(var(--cell)* 0.5);
-  width: calc(var(--cell)* 0.5);
-  height: calc(var(--cell)* 1.7);
+  top: calc(var(--tiny-cell-size)* 8.18);
+  left: calc(var(--tiny-cell-size)* 0.5);
+  width: calc(var(--tiny-cell-size)* 0.5);
+  height: calc(var(--tiny-cell-size)* 1.7);
   background: var(--medium);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0.4);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0.4);
   rotate: x 93deg;
 }
 .example36 .dummy__rightHand-3 {
-  top: calc(var(--cell)* 1.9);
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 3);
+  top: calc(var(--tiny-cell-size)* 1.9);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 3);
   background: conic-gradient(from -8deg at 50% 57%, var(--light) 20deg, transparent 0), linear-gradient(263deg, transparent 51%, var(--light) 0 73%, transparent 0), linear-gradient(95deg, transparent 51%, var(--light) 0 78%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: x 69deg;
 }
 .example36 .dummy__rightHand-3::before {
   top: 100%;
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 1.2);
-  height: calc(var(--cell)* 2.45);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 1.2);
+  height: calc(var(--tiny-cell-size)* 2.45);
   background: linear-gradient(-87deg, transparent 45%, var(--light) 0 68%, transparent 0), linear-gradient(88deg, transparent 45%, var(--light) 0 75%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   rotate: x 30deg;
 }
 .example36 .dummy__rightHand-3::after {
-  top: calc(var(--cell)* 5.1);
-  left: calc(var(--cell)* 0.1);
-  width: var(--cell);
-  height: calc(var(--cell)* 0.55);
+  top: calc(var(--tiny-cell-size)* 5.1);
+  left: calc(var(--tiny-cell-size)* 0.1);
+  width: var(--tiny-cell-size);
+  height: calc(var(--tiny-cell-size)* 0.55);
   background: linear-gradient(89deg, transparent 40%, var(--medium) 0 93%, transparent 0), linear-gradient(289deg, transparent 40%, var(--medium) 0 85%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 1.2);
+  translate: 0 0 calc(var(--tiny-cell-size)* 1.2);
   rotate: x 110deg;
 }
 .example36 .dummy__rightHand-4 {
-  top: calc(var(--cell)* 1.8);
-  left: calc(var(--cell)* 0);
-  width: calc(var(--cell)* 5.2);
-  height: calc(var(--cell)* 1.3);
+  top: calc(var(--tiny-cell-size)* 1.8);
+  left: calc(var(--tiny-cell-size)* 0);
+  width: calc(var(--tiny-cell-size)* 5.2);
+  height: calc(var(--tiny-cell-size)* 1.3);
   background: linear-gradient(170deg, var(--medium) 73%, transparent 0) 100% 0 / 46% 100% no-repeat, linear-gradient(202deg, var(--medium) 51%, transparent 0) 0 0 / 54% 100% no-repeat;
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* 0);
+  translate: 0 0 calc(var(--tiny-cell-size)* 0);
   transform: rotateY(-90deg) rotateX(-20deg);
 }
 .example36 .dummy__rightHand-4::before {
-  top: calc(var(--cell)* 0.5);
+  top: calc(var(--tiny-cell-size)* 0.5);
   left: 0;
-  width: calc(var(--cell)* 5.2);
-  height: calc(var(--cell)* 1.4);
+  width: calc(var(--tiny-cell-size)* 5.2);
+  height: calc(var(--tiny-cell-size)* 1.4);
   background: linear-gradient(171deg, var(--medium-dark) 65%, transparent 0) 100% 0 / 46% 100% no-repeat, linear-gradient(201deg, var(--medium-dark) 47%, transparent 0) 0 0 / 54% 100% no-repeat;
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* -1.1);
+  translate: 0 0 calc(var(--tiny-cell-size)* -1.1);
   transform: rotateX(35deg);
 }
 
 /* HIPS */
 .example36 .dummy__hips {
   top: 0; left: 0;
-  width: calc(var(--cell)* 17); height: calc(var(--cell)* 12);
+  width: calc(var(--tiny-cell-size)* 17); height: calc(var(--tiny-cell-size)* 12);
   transform-origin: center center;
-  translate: calc(var(--cell)* -8.5) calc(var(--cell)* -7) calc(var(--cell)* 0);
+  translate: calc(var(--tiny-cell-size)* -8.5) calc(var(--tiny-cell-size)* -7) calc(var(--tiny-cell-size)* 0);
 }
 .example36 .dummy__hips-1 {
-  top: calc(var(--cell)* 0);
-  left: calc(var(--cell)* 3.8);
-  width: calc(var(--cell)* 8);
-  height: calc(var(--cell)* 12);
+  top: calc(var(--tiny-cell-size)* 0);
+  left: calc(var(--tiny-cell-size)* 3.8);
+  width: calc(var(--tiny-cell-size)* 8);
+  height: calc(var(--tiny-cell-size)* 12);
   background: linear-gradient(-25deg, transparent 40%, var(--medium) 0 80.6%, transparent 0), linear-gradient(187deg, transparent 40%, var(--medium) 0 92.6%, transparent 0);
   transform-origin: top left;
   rotate: y 120deg;
@@ -810,17 +808,17 @@
 .example36 .dummy__hips-1::before {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 6.5);
-  height: calc(var(--cell)* 12);
+  width: calc(var(--tiny-cell-size)* 6.5);
+  height: calc(var(--tiny-cell-size)* 12);
   background: linear-gradient(38deg, transparent 40%, var(--medium) 0 78.2%, transparent 0) 100% 0 / 67% 100% no-repeat, linear-gradient(0deg, transparent 40%, var(--medium) 0 100%) 0 0 / 34% 100% no-repeat, linear-gradient(-185deg, transparent 40%, var(--medium) 0 94.5%, transparent 0);
   transform-origin: top left;
   rotate: y -38deg;
 }
 .example36 .dummy__hips-2 {
-  top: calc(var(--cell)* 0);
-  left: calc(var(--cell)* 13.3);
-  width: calc(var(--cell)* 8);
-  height: calc(var(--cell)* 12);
+  top: calc(var(--tiny-cell-size)* 0);
+  left: calc(var(--tiny-cell-size)* 13.3);
+  width: calc(var(--tiny-cell-size)* 8);
+  height: calc(var(--tiny-cell-size)* 12);
   background: linear-gradient(-25deg, transparent 40%, var(--medium) 0 80.8%, transparent 0), linear-gradient(187deg, transparent 40%, var(--medium) 0 92.5%, transparent 0);
   transform-origin: top left;
   rotate: y 60deg;
@@ -828,53 +826,53 @@
 .example36 .dummy__hips-2::before {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 6.5);
-  height: calc(var(--cell)* 12);
+  width: calc(var(--tiny-cell-size)* 6.5);
+  height: calc(var(--tiny-cell-size)* 12);
   background: linear-gradient(38deg, transparent 40%, var(--medium) 0 78.3%, transparent 0) 100% 0 / 65% 100% no-repeat, linear-gradient(0deg, transparent 40%, var(--medium) 0 100%) 0 0 / 36% 100% no-repeat, linear-gradient(173deg, transparent 40%, var(--medium) 0 94.4%, transparent 0);
   transform-origin: top left;
   rotate: y 38deg;
 }
 .example36 .dummy__hips-3 {
-  top: calc(var(--cell)* 11);
-  left: calc(var(--cell)* -0.2);
-  width: calc(var(--cell)* 17.5);
-  height: calc(var(--cell)* 7);
+  top: calc(var(--tiny-cell-size)* 11);
+  left: calc(var(--tiny-cell-size)* -0.2);
+  width: calc(var(--tiny-cell-size)* 17.5);
+  height: calc(var(--tiny-cell-size)* 7);
   background: linear-gradient(60deg, transparent 40%, var(--light) 0 81.3%, transparent 0), linear-gradient(-60deg, transparent 40%, var(--light) 0 81.3%, transparent 0);
   transform-origin: top left;
   rotate: x -82deg;
 }
 .example36 .dummy__hips-3::before {
   top: 100%;
-  left: calc(var(--cell)* -0.2);
-  width: calc(var(--cell)* 17.7);
-  height: calc(var(--cell)* 4.6);
+  left: calc(var(--tiny-cell-size)* -0.2);
+  width: calc(var(--tiny-cell-size)* 17.7);
+  height: calc(var(--tiny-cell-size)* 4.6);
   background: linear-gradient(98.1deg, transparent 40%, var(--light) 0 96.1%, transparent 0), linear-gradient(-98deg, transparent 40%, var(--light) 0 95.6%, transparent 0);
   transform-origin: top left;
   rotate: x -17deg;
 }
 .example36 .dummy__hips-4 {
-  top: calc(var(--cell)* 3);
-  left: calc(var(--cell)* -0.2);
-  width: calc(var(--cell)* 17.5);
-  height: calc(var(--cell)* 6.4);
+  top: calc(var(--tiny-cell-size)* 3);
+  left: calc(var(--tiny-cell-size)* -0.2);
+  width: calc(var(--tiny-cell-size)* 17.5);
+  height: calc(var(--tiny-cell-size)* 6.4);
   background: linear-gradient(-63deg, transparent 40%, var(--medium-dark) 0 80.6%, transparent 0), linear-gradient(63deg, transparent 40%, var(--medium-dark) 0 80.6%, transparent 0);
   transform-origin: top left;
   rotate: x -118deg;
 }
 .example36 .dummy__hips-4 > div {
   top: 100%;
-  left: calc(var(--cell)* -0.2);
-  width: calc(var(--cell)* 17.8);
-  height: calc(var(--cell)* 3.5);
+  left: calc(var(--tiny-cell-size)* -0.2);
+  width: calc(var(--tiny-cell-size)* 17.8);
+  height: calc(var(--tiny-cell-size)* 3.5);
   background: linear-gradient(266deg, transparent 40%, var(--medium-dark) 0 97.8%, transparent 0) 0 100% / 100% 64% no-repeat, linear-gradient(95deg, transparent 40%, var(--medium-dark) 0 98.5%, transparent 0) 0 100% / 100% 64% no-repeat, linear-gradient(300deg, transparent 40%, var(--medium-dark) 0 94.8%, transparent 0) 0 0 / 100% 36% no-repeat, linear-gradient(60deg, transparent 40%, var(--medium-dark) 0 95.5%, transparent 0) 0 0 / 100% 36% no-repeat;
   transform-origin: top left;
   rotate: x 28deg;
 }
 .example36 .dummy__hips-4 > div::before {
   top: 100%;
-  left: calc(var(--cell)* -0.2);
-  width: calc(var(--cell)* 17.9);
-  height: calc(var(--cell)* 6.5);
+  left: calc(var(--tiny-cell-size)* -0.2);
+  width: calc(var(--tiny-cell-size)* 17.9);
+  height: calc(var(--tiny-cell-size)* 6.5);
   background: linear-gradient(0deg, transparent 72%, var(--medium-dark) 0) center 0 / 80% 100% no-repeat, linear-gradient(-92deg, transparent 20%, var(--medium-dark) 0 43%, transparent 0), linear-gradient(92deg, transparent 20%, var(--medium-dark) 0 45%, transparent 0), linear-gradient(263deg, transparent 58%, var(--medium-dark) 0 92.6%, transparent 0), linear-gradient(97deg, transparent 59%, var(--medium-dark) 0 94.5%, transparent 0);
   transform-origin: top left;
   rotate: x 38deg;
@@ -885,19 +883,19 @@
 
 /* LEFT LEG */
 .example36 .dummy__leftLeg {
-  top: calc(var(--cell)* 2);
-  right: calc(var(--cell)* 9.2);
-  width: calc(var(--cell)* 8);
-  height: calc(var(--cell)* 10);
+  top: calc(var(--tiny-cell-size)* 2);
+  right: calc(var(--tiny-cell-size)* 9.2);
+  width: calc(var(--tiny-cell-size)* 8);
+  height: calc(var(--tiny-cell-size)* 10);
   background: var(--dark);
   transform-origin: center center;
-  translate: 0 0 calc(var(--cell)* -6.9);
+  translate: 0 0 calc(var(--tiny-cell-size)* -6.9);
 }
 .example36 .dummy__leftLeg::before {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 8);
-  height: calc(var(--cell)* 21);
+  width: calc(var(--tiny-cell-size)* 8);
+  height: calc(var(--tiny-cell-size)* 21);
   background: linear-gradient(-97.7deg, transparent 40%, var(--medium-dark) 0 73.3%, transparent 0), linear-gradient(92.9deg, transparent 50%, var(--medium-dark) 0 88.1%, transparent 0);
   transform-origin: top left;
   rotate: x -79deg;
@@ -905,8 +903,8 @@
 .example36 .dummy__leftLeg::after {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 20.6);
-  height: calc(var(--cell)* 10);
+  width: calc(var(--tiny-cell-size)* 20.6);
+  height: calc(var(--tiny-cell-size)* 10);
   background: conic-gradient(from -115deg at 50% 50%, var(--medium) 50deg, transparent 0), linear-gradient(11deg, transparent 50%, var(--medium) 0 71%, transparent 0), linear-gradient(176deg, transparent 50%, var(--medium) 0 87%, transparent 0);
   transform-origin: top left;
   rotate: y 82deg;
@@ -914,45 +912,45 @@
 .example36 .dummy__leftLeg-helper {
   width: 100%;
   height: 100%;
-  translate: 0 0 calc(var(--cell)* -20.5);
+  translate: 0 0 calc(var(--tiny-cell-size)* -20.5);
 }
 .example36 .dummy__leftLeg-helper::before {
   top: 0;
   right: 0;
-  width: calc(var(--cell)* 20.8);
-  height: calc(var(--cell)* 10);
+  width: calc(var(--tiny-cell-size)* 20.8);
+  height: calc(var(--tiny-cell-size)* 10);
   background: linear-gradient(184deg, transparent 47%, var(--medium) 0 87.6%, transparent 0), linear-gradient(-11deg, transparent 40%, var(--medium) 0 71.3%, transparent 0);
   transform-origin: right center;
   rotate: y 273deg;
-  translate: 0 0 calc(var(--cell)* 20.5);
+  translate: 0 0 calc(var(--tiny-cell-size)* 20.5);
 }
 .example36 .dummy__leftLeg-helper::after {
   bottom: 0;
   left: 0;
-  width: calc(var(--cell)* 8);
-  height: calc(var(--cell)* 20.5);
+  width: calc(var(--tiny-cell-size)* 8);
+  height: calc(var(--tiny-cell-size)* 20.5);
   background: conic-gradient(from 170deg at 50% 50%, var(--light) 20deg, transparent 0), linear-gradient(-82deg, transparent 47%, var(--light) 0 73.3%, transparent 0), linear-gradient(87deg, transparent 46%, var(--light) 0 88.1%, transparent 0);
   transform-origin: bottom left;
   rotate: x -274deg;
-  translate: 0 0 calc(var(--cell)* 20.5);
+  translate: 0 0 calc(var(--tiny-cell-size)* 20.5);
 }
 
 
 
 /* LEFT SHIN */
 .example36 .dummy__leftShin {
-  top: calc(var(--cell)* 4);
-  right: calc(var(--cell)* 1.1);
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 4.5);
+  top: calc(var(--tiny-cell-size)* 4);
+  right: calc(var(--tiny-cell-size)* 1.1);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: calc(var(--tiny-cell-size)* 4.5);
   transform-origin: bottom center;
-  translate: 0 0 calc(var(--cell)* -20.4);
+  translate: 0 0 calc(var(--tiny-cell-size)* -20.4);
 }
 .example36 .dummy__leftShin-1 {
   top: 0;
-  right: calc(var(--cell)* -0.6);
-  width: calc(var(--cell)* 4.6);
-  height: calc(var(--cell)* 4.2);
+  right: calc(var(--tiny-cell-size)* -0.6);
+  width: calc(var(--tiny-cell-size)* 4.6);
+  height: calc(var(--tiny-cell-size)* 4.2);
   background: linear-gradient(84deg, var(--medium-dark) 88%, transparent 0);
   transform-origin: top center;
   rotate: x -104deg;
@@ -960,35 +958,35 @@
 .example36 .dummy__leftShin-1::before {
   top: 100%;
   right: 0;
-  width: calc(var(--cell)* 4.6);
-  height: calc(var(--cell)* 19.2);
+  width: calc(var(--tiny-cell-size)* 4.6);
+  height: calc(var(--tiny-cell-size)* 19.2);
   background: conic-gradient(from -11deg at 50% 50%, var(--medium-dark) 20deg, transparent 0), linear-gradient(-94deg, transparent 50%, var(--medium-dark) 0 77%, transparent 0), linear-gradient(93deg, transparent 50%, var(--medium-dark) 0 79%, transparent 0);
   transform-origin: top center;
   rotate: x 20deg;
 }
 .example36 .dummy__leftShin-2 {
   top: 100%;
-  right: calc(var(--cell)* -0.1);
-  width: calc(var(--cell)* 4.6);
-  height: calc(var(--cell)* 1.2);
+  right: calc(var(--tiny-cell-size)* -0.1);
+  width: calc(var(--tiny-cell-size)* 4.6);
+  height: calc(var(--tiny-cell-size)* 1.2);
   background: linear-gradient(89deg, transparent 11%, var(--light) 0 60%, transparent 0), linear-gradient(-95deg, transparent 2%, var(--light) 0 60%, transparent 0);
   transform-origin: top center;
   rotate: x -82deg;
 }
 .example36 .dummy__leftShin-2::before {
   top: 100%;
-  right: calc(var(--cell)* -0.5);
-  width: calc(var(--cell)* 4.6);
-  height: calc(var(--cell)* 22);
+  right: calc(var(--tiny-cell-size)* -0.5);
+  width: calc(var(--tiny-cell-size)* 4.6);
+  height: calc(var(--tiny-cell-size)* 22);
   background: linear-gradient(93deg, var(--light) 69%, transparent 0) 100% 100% / 50% 86% no-repeat, linear-gradient(-94deg, var(--light) 63%, transparent 0) 0 100% / 50% 86% no-repeat, linear-gradient(84deg, var(--light) 92%, transparent 0) 0 0 / 100% 14% no-repeat;
   transform-origin: top center;
   rotate: x -12deg;
 }
 .example36 .dummy__leftShin-3 {
-  top: calc(var(--cell)* -1);
-  right: calc(var(--cell)* -4.3);
-  width: calc(var(--cell)* 4.3);
-  height: calc(var(--cell)* 5.7);
+  top: calc(var(--tiny-cell-size)* -1);
+  right: calc(var(--tiny-cell-size)* -4.3);
+  width: calc(var(--tiny-cell-size)* 4.3);
+  height: calc(var(--tiny-cell-size)* 5.7);
   background: linear-gradient(11deg, transparent 40%, var(--medium) 0 98%, transparent 0) 100% 0 / 9% 100% no-repeat, linear-gradient(-184deg, transparent 40%, var(--medium) 0 96%, transparent 0) 100% 0 / 80% 100% no-repeat, linear-gradient(-172deg, transparent 40%, var(--medium) 0 97%, transparent 0) 0 0 / 21% 100% no-repeat, linear-gradient(-14deg, transparent 40%, var(--medium) 0 85%, transparent 0) 0 0 / 92% 100% no-repeat;
   transform-origin: top left;
   rotate: y 84deg;
@@ -996,17 +994,17 @@
 .example36 .dummy__leftShin-3::before {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 18.9);
-  height: calc(var(--cell)* 5.5);
+  width: calc(var(--tiny-cell-size)* 18.9);
+  height: calc(var(--tiny-cell-size)* 5.5);
   background: conic-gradient(from -100deg at 50% 50%, var(--medium) 20deg, transparent 0), linear-gradient(-184deg, transparent 50%, var(--medium) 0 80%, transparent 0), linear-gradient(6deg, transparent 50%, var(--medium) 0 72.5%, transparent 0);
   transform-origin: top left;
   rotate: y 9deg;
 }
 .example36 .dummy__leftShin-4 {
-  top: calc(var(--cell)* -1);
+  top: calc(var(--tiny-cell-size)* -1);
   left: 0;
-  width: calc(var(--cell)* 6.3);
-  height: calc(var(--cell)* 5.7);
+  width: calc(var(--tiny-cell-size)* 6.3);
+  height: calc(var(--tiny-cell-size)* 5.7);
   background: linear-gradient(7deg, transparent 40%, var(--medium) 0 95%, transparent 0) 100% 0 / 37% 100% no-repeat, linear-gradient(176deg, transparent 40%, var(--medium) 0 94%, transparent 0) 100% 0 / 81% 100% no-repeat, linear-gradient(188deg, transparent 40%, var(--medium) 0 97%, transparent 0) 0 0 / 19% 100% no-repeat, linear-gradient(-14deg, transparent 40%, var(--medium) 0 85%, transparent 0) 0 0 / 64% 100% no-repeat;
   transform-origin: top left;
   rotate: y 88deg;
@@ -1014,8 +1012,8 @@
 .example36 .dummy__leftShin-4::before {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 16.9);
-  height: calc(var(--cell)* 5.4);
+  width: calc(var(--tiny-cell-size)* 16.9);
+  height: calc(var(--tiny-cell-size)* 5.4);
   background: conic-gradient(from -98deg at 50% 50%, var(--medium) 20deg, transparent 0), linear-gradient(-184deg, transparent 51%, var(--medium) 0 81%, transparent 0), linear-gradient(6deg, transparent 44%, var(--medium) 0 71%, transparent 0);
   transform-origin: top left;
   rotate: y -2deg;
@@ -1025,45 +1023,45 @@
 
 /* LEFT FOOT */
 .example36 .dummy__leftFoot {
-  top: var(--cell);
-  right: calc(var(--cell)* 0.4);
-  width: calc(var(--cell)* 2.3);
-  height: calc(var(--cell)* 2.2);
+  top: var(--tiny-cell-size);
+  right: calc(var(--tiny-cell-size)* 0.4);
+  width: calc(var(--tiny-cell-size)* 2.3);
+  height: calc(var(--tiny-cell-size)* 2.2);
   transform-origin: top center;
-  translate: 0 0 calc(var(--cell)* -22);
+  translate: 0 0 calc(var(--tiny-cell-size)* -22);
 }
 .example36 .dummy__leftFoot::before {
   top: 0;
-  left: calc(var(--cell)* -0.8);
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 4);
+  left: calc(var(--tiny-cell-size)* -0.8);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: calc(var(--tiny-cell-size)* 4);
   background: linear-gradient(282deg, transparent 40%, var(--medium-dark) 0 83.3%, transparent 0), linear-gradient(77deg, transparent 40%, var(--medium-dark) 0 81.5%, transparent 0);
   transform-origin: top left;
   rotate: x -110deg;
 }
 .example36 .dummy__leftFoot::after {
   top: 100%;
-  left: calc(var(--cell)* -0.8);
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 4);
+  left: calc(var(--tiny-cell-size)* -0.8);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: calc(var(--tiny-cell-size)* 4);
   background: linear-gradient(276deg, transparent 40%, var(--light) 0 82%, transparent 0), linear-gradient(85deg, transparent 40%, var(--light) 0 81%, transparent 0);
   transform-origin: top left;
   rotate: x -29deg;
 }
 .example36 .dummy__leftFoot-1 {
-  top: calc(var(--cell)* -1.4);
-  left: calc(var(--cell)* -0.8);
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 7.1);
+  top: calc(var(--tiny-cell-size)* -1.4);
+  left: calc(var(--tiny-cell-size)* -0.8);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: calc(var(--tiny-cell-size)* 7.1);
   background: var(--dark);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* -3.7);
+  translate: 0 0 calc(var(--tiny-cell-size)* -3.7);
 }
 .example36 .dummy__leftFoot-1::before {
-  top: calc(var(--cell)* -0.2);
+  top: calc(var(--tiny-cell-size)* -0.2);
   left: 100%;
-  width: calc(var(--cell)* 3.7);
-  height: calc(var(--cell)* 7.3);
+  width: calc(var(--tiny-cell-size)* 3.7);
+  height: calc(var(--tiny-cell-size)* 7.3);
   background: conic-gradient(from -154deg at 70% 45%, var(--medium) 78deg, transparent 0), linear-gradient(20deg, transparent 53%, var(--medium) 0 81.5%, transparent 0), linear-gradient(121deg, transparent 55%, var(--medium) 0 76%, transparent 0);
   transform-origin: top left;
   rotate: y -103deg;
@@ -1071,27 +1069,27 @@
 .example36 .dummy__leftFoot-1::after {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 3.7);
+  width: calc(var(--tiny-cell-size)* 3.7);
   height: 100%;
   background: conic-gradient(from -150deg at 79% 42%, var(--medium) 83deg, transparent 0), linear-gradient(-240deg, transparent 57%, var(--medium) 0 76%, transparent 0), linear-gradient(20deg, transparent 57%, var(--medium) 0 83.6%, transparent 0);
   transform-origin: top left;
   rotate: y -77deg;
 }
 .example36 .dummy__leftFoot-2 {
-  top: calc(var(--cell)* 5.7);
-  left: calc(var(--cell)* -0.8);
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 3);
+  top: calc(var(--tiny-cell-size)* 5.7);
+  left: calc(var(--tiny-cell-size)* -0.8);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: calc(var(--tiny-cell-size)* 3);
   background: green;
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* -3.7);
+  translate: 0 0 calc(var(--tiny-cell-size)* -3.7);
   rotate: x 0deg;
 }
 .example36 .dummy__leftFoot-2::before {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 1.9);
-  height: calc(var(--cell)* 3);
+  width: calc(var(--tiny-cell-size)* 1.9);
+  height: calc(var(--tiny-cell-size)* 3);
   background: linear-gradient(104deg, var(--medium) 68%, transparent 0);
   transform-origin: top left;
   rotate: y -78deg;
@@ -1099,8 +1097,8 @@
 .example36 .dummy__leftFoot-2::after {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 1.9);
-  height: calc(var(--cell)* 3);
+  width: calc(var(--tiny-cell-size)* 1.9);
+  height: calc(var(--tiny-cell-size)* 3);
   background: linear-gradient(104deg, var(--medium) 67%, transparent 0);
   transform-origin: top left;
   rotate: y -102deg;
@@ -1108,18 +1106,18 @@
 .example36 .dummy__leftFoot-2 > div {
   top: 100%;
   left: 0;
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 3.1);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: calc(var(--tiny-cell-size)* 3.1);
   background: linear-gradient(268deg, transparent 40%, var(--light) 0 92%, transparent 0), linear-gradient(93deg, transparent 40%, var(--light) 0 91%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 var(--cell);
+  translate: 0 0 var(--tiny-cell-size);
   rotate: x 166deg;
 }
 .example36 .dummy__leftFoot-2 > div::before {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 4);
-  height: var(--cell);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: var(--tiny-cell-size);
   background: linear-gradient(282deg, transparent 40%, var(--light) 0 95%, transparent 0), linear-gradient(78deg, transparent 40%, var(--light) 0 95%, transparent 0);
   transform-origin: top left;
   rotate: x 105deg;
@@ -1128,19 +1126,19 @@
 
 /* RIGHT LEG */
 .example36 .dummy__rightLeg {
-  top: calc(var(--cell)* 2);
-  right: calc(var(--cell)* -0.3);
-  width: calc(var(--cell)* 8);
-  height: calc(var(--cell)* 10);
+  top: calc(var(--tiny-cell-size)* 2);
+  right: calc(var(--tiny-cell-size)* -0.3);
+  width: calc(var(--tiny-cell-size)* 8);
+  height: calc(var(--tiny-cell-size)* 10);
   background: var(--dark);
   transform-origin: center center;
-  translate: 0 0 calc(var(--cell)* -6.9);
+  translate: 0 0 calc(var(--tiny-cell-size)* -6.9);
 }
 .example36 .dummy__rightLeg::before {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 8);
-  height: calc(var(--cell)* 21);
+  width: calc(var(--tiny-cell-size)* 8);
+  height: calc(var(--tiny-cell-size)* 21);
   background: linear-gradient(-93deg, transparent 45%, var(--medium-dark) 0 88%, transparent 0), linear-gradient(97.9deg, transparent 40%, var(--medium-dark) 0 73.7%, transparent 0);
   transform-origin: top left;
   rotate: x -79deg;
@@ -1148,53 +1146,53 @@
 .example36 .dummy__rightLeg::after {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 20.6);
-  height: calc(var(--cell)* 10);
+  width: calc(var(--tiny-cell-size)* 20.6);
+  height: calc(var(--tiny-cell-size)* 10);
   background: conic-gradient(from -115deg at 50% 50%, var(--medium) 50deg, transparent 0), linear-gradient(11deg, transparent 50%, var(--medium) 0 71%, transparent 0), linear-gradient(176deg, transparent 50%, var(--medium) 0 87%, transparent 0);
   transform-origin: top left;
   rotate: y 87deg;
 }
 .example36 .dummy__rightLeg-helper {
   width: 100%; height: 100%;
-  translate: 0 0 calc(var(--cell)* -20.5);
+  translate: 0 0 calc(var(--tiny-cell-size)* -20.5);
 }
 .example36 .dummy__rightLeg-helper::before {
   top: 0;
   right: 0;
-  width: calc(var(--cell)* 20.8);
-  height: calc(var(--cell)* 10);
+  width: calc(var(--tiny-cell-size)* 20.8);
+  height: calc(var(--tiny-cell-size)* 10);
   background: linear-gradient(184deg, transparent 47%, var(--medium) 0 87.6%, transparent 0), linear-gradient(-11deg, transparent 40%, var(--medium) 0 71.3%, transparent 0);
   transform-origin: right center;
   rotate: y 278deg;
-  translate: 0 0 calc(var(--cell)* 20.5);
+  translate: 0 0 calc(var(--tiny-cell-size)* 20.5);
 }
 .example36 .dummy__rightLeg-helper::after {
   bottom: 0;
   left: 0;
-  width: calc(var(--cell)* 8);
-  height: calc(var(--cell)* 20.5);
+  width: calc(var(--tiny-cell-size)* 8);
+  height: calc(var(--tiny-cell-size)* 20.5);
   background: conic-gradient(from 170deg at 50% 50%, var(--light) 20deg, transparent 0), linear-gradient(-87deg, transparent 47%, var(--light) 0 88.2%, transparent 0), linear-gradient(82deg, transparent 40%, var(--light) 0 73.5%, transparent 0);
   transform-origin: bottom left;
   rotate: x -274deg;
-  translate: 0 0 calc(var(--cell)* 20.5);
+  translate: 0 0 calc(var(--tiny-cell-size)* 20.5);
 }
 
 
 
 /* RIGHT SHIN */
 .example36 .dummy__rightShin {
-  top: calc(var(--cell)* 4);
-  right: calc(var(--cell)* 2.9);
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 4.5);
+  top: calc(var(--tiny-cell-size)* 4);
+  right: calc(var(--tiny-cell-size)* 2.9);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: calc(var(--tiny-cell-size)* 4.5);
   transform-origin: bottom center;
-  translate: 0 0 calc(var(--cell)* -20.4);
+  translate: 0 0 calc(var(--tiny-cell-size)* -20.4);
 }
 .example36 .dummy__rightShin-1 {
   top: 0;
-  right: calc(var(--cell)* -0.1);
-  width: calc(var(--cell)* 4.6);
-  height: calc(var(--cell)* 4.2);
+  right: calc(var(--tiny-cell-size)* -0.1);
+  width: calc(var(--tiny-cell-size)* 4.6);
+  height: calc(var(--tiny-cell-size)* 4.2);
   background: linear-gradient(277deg, var(--medium-dark) 90%, transparent 0);
   transform-origin: top center;
   rotate: x -104deg;
@@ -1202,17 +1200,17 @@
 .example36 .dummy__rightShin-1::before {
   top: 100%;
   right: 0;
-  width: calc(var(--cell)* 4.6);
-  height: calc(var(--cell)* 19.2);
+  width: calc(var(--tiny-cell-size)* 4.6);
+  height: calc(var(--tiny-cell-size)* 19.2);
   background: conic-gradient(from -11deg at 50% 50%, var(--medium-dark) 20deg, transparent 0), linear-gradient(-94deg, transparent 50%, var(--medium-dark) 0 77%, transparent 0), linear-gradient(93deg, transparent 50%, var(--medium-dark) 0 82%, transparent 0);
   transform-origin: top center;
   rotate: x 20deg;
 }
 .example36 .dummy__rightShin-2 {
   top: 100%;
-  right: calc(var(--cell)* -0.1);
-  width: calc(var(--cell)* 4.6);
-  height: calc(var(--cell)* 1.2);
+  right: calc(var(--tiny-cell-size)* -0.1);
+  width: calc(var(--tiny-cell-size)* 4.6);
+  height: calc(var(--tiny-cell-size)* 1.2);
   background: linear-gradient(89deg, transparent 40%, var(--light) 0 99%, transparent 0), linear-gradient(-83deg, transparent 40%, var(--light) 0 89%, transparent 0);
   transform-origin: top center;
   rotate: x -82deg;
@@ -1220,17 +1218,17 @@
 .example36 .dummy__rightShin-2::before {
   top: 100%;
   right: 0;
-  width: calc(var(--cell)* 4.6);
-  height: calc(var(--cell)* 22);
+  width: calc(var(--tiny-cell-size)* 4.6);
+  height: calc(var(--tiny-cell-size)* 22);
   background: linear-gradient(93deg, var(--light) 69%, transparent 0) 100% 100% / 50% 86% no-repeat, linear-gradient(-94deg, var(--light) 63%, transparent 0) 0 100% / 50% 86% no-repeat, linear-gradient(-83deg, var(--light) 92%, transparent 0) 0 0 / 100% 14% no-repeat;
   transform-origin: top center;
   rotate: x -12deg;
 }
 .example36 .dummy__rightShin-3 {
-  top: calc(var(--cell)* -1);
-  right: calc(var(--cell)* -0.3);
-  width: calc(var(--cell)* 4.3);
-  height: calc(var(--cell)* 5.7);
+  top: calc(var(--tiny-cell-size)* -1);
+  right: calc(var(--tiny-cell-size)* -0.3);
+  width: calc(var(--tiny-cell-size)* 4.3);
+  height: calc(var(--tiny-cell-size)* 5.7);
   background: linear-gradient(11deg, transparent 40%, var(--medium) 0 98%, transparent 0) 100% 0 / 9% 100% no-repeat, linear-gradient(-184deg, transparent 40%, var(--medium) 0 96%, transparent 0) 100% 0 / 80% 100% no-repeat, linear-gradient(-172deg, transparent 40%, var(--medium) 0 97%, transparent 0) 0 0 / 21% 100% no-repeat, linear-gradient(-14deg, transparent 40%, var(--medium) 0 85%, transparent 0) 0 0 / 92% 100% no-repeat;
   transform-origin: top left;
   rotate: y 97deg;
@@ -1238,17 +1236,17 @@
 .example36 .dummy__rightShin-3::before {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 18.9);
-  height: calc(var(--cell)* 5.5);
+  width: calc(var(--tiny-cell-size)* 18.9);
+  height: calc(var(--tiny-cell-size)* 5.5);
   background: conic-gradient(from -100deg at 50% 50%, var(--medium) 20deg, transparent 0), linear-gradient(-184deg, transparent 50%, var(--medium) 0 80%, transparent 0), linear-gradient(6deg, transparent 50%, var(--medium) 0 72.5%, transparent 0);
   transform-origin: top left;
   rotate: y -11deg;
 }
 .example36 .dummy__rightShin-4 {
-  top: calc(var(--cell)* -1);
+  top: calc(var(--tiny-cell-size)* -1);
   left: 100%;
-  width: calc(var(--cell)* 6.3);
-  height: calc(var(--cell)* 5.7);
+  width: calc(var(--tiny-cell-size)* 6.3);
+  height: calc(var(--tiny-cell-size)* 5.7);
   background: linear-gradient(7deg, transparent 40%, var(--medium) 0 95%, transparent 0) 100% 0 / 37% 100% no-repeat, linear-gradient(176deg, transparent 40%, var(--medium) 0 94%, transparent 0) 100% 0 / 81% 100% no-repeat, linear-gradient(188deg, transparent 40%, var(--medium) 0 97%, transparent 0) 0 0 / 19% 100% no-repeat, linear-gradient(-14deg, transparent 40%, var(--medium) 0 85%, transparent 0) 0 0 / 64% 100% no-repeat;
   transform-origin: top left;
   rotate: y 91deg;
@@ -1256,8 +1254,8 @@
 .example36 .dummy__rightShin-4::before {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 16.9);
-  height: calc(var(--cell)* 5.4);
+  width: calc(var(--tiny-cell-size)* 16.9);
+  height: calc(var(--tiny-cell-size)* 5.4);
   background: conic-gradient(from -98deg at 50% 50%, var(--medium) 20deg, transparent 0), linear-gradient(-184deg, transparent 51%, var(--medium) 0 81%, transparent 0), linear-gradient(6deg, transparent 44%, var(--medium) 0 71%, transparent 0);
   transform-origin: top left;
   rotate: y 2deg;
@@ -1267,45 +1265,45 @@
 
 /* RIGHT FOOT */
 .example36 .dummy__rightFoot {
-  top: var(--cell);
-  right: calc(var(--cell)* 0.9);
-  width: calc(var(--cell)* 2.3);
-  height: calc(var(--cell)* 2.2);
+  top: var(--tiny-cell-size);
+  right: calc(var(--tiny-cell-size)* 0.9);
+  width: calc(var(--tiny-cell-size)* 2.3);
+  height: calc(var(--tiny-cell-size)* 2.2);
   transform-origin: top center;
-  translate: 0 0 calc(var(--cell)* -22);
+  translate: 0 0 calc(var(--tiny-cell-size)* -22);
 }
 .example36 .dummy__rightFoot::before {
   top: 0;
-  left: calc(var(--cell)* -0.8);
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 4);
+  left: calc(var(--tiny-cell-size)* -0.8);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: calc(var(--tiny-cell-size)* 4);
   background: linear-gradient(282deg, transparent 40%, var(--medium-dark) 0 83.3%, transparent 0), linear-gradient(77deg, transparent 40%, var(--medium-dark) 0 81.5%, transparent 0);
   transform-origin: top left;
   rotate: x -110deg;
 }
 .example36 .dummy__rightFoot::after {
   top: 100%;
-  left: calc(var(--cell)* -0.8);
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 4);
+  left: calc(var(--tiny-cell-size)* -0.8);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: calc(var(--tiny-cell-size)* 4);
   background: linear-gradient(276deg, transparent 40%, var(--light) 0 82%, transparent 0), linear-gradient(85deg, transparent 40%, var(--light) 0 81%, transparent 0);
   transform-origin: top left;
   rotate: x -29deg;
 }
 .example36 .dummy__rightFoot-1 {
-  top: calc(var(--cell)* -1.4);
-  left: calc(var(--cell)* -0.8);
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 7.1);
+  top: calc(var(--tiny-cell-size)* -1.4);
+  left: calc(var(--tiny-cell-size)* -0.8);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: calc(var(--tiny-cell-size)* 7.1);
   background: var(--dark);
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* -3.7);
+  translate: 0 0 calc(var(--tiny-cell-size)* -3.7);
 }
 .example36 .dummy__rightFoot-1::before {
-  top: calc(var(--cell)* -0.2);
+  top: calc(var(--tiny-cell-size)* -0.2);
   left: 0;
-  width: calc(var(--cell)* 3.7);
-  height: calc(var(--cell)* 7.3);
+  width: calc(var(--tiny-cell-size)* 3.7);
+  height: calc(var(--tiny-cell-size)* 7.3);
   background: conic-gradient(from -154deg at 70% 45%, var(--medium) 78deg, transparent 0), linear-gradient(20deg, transparent 53%, var(--medium) 0 81.5%, transparent 0), linear-gradient(121deg, transparent 55%, var(--medium) 0 76%, transparent 0);
   transform-origin: top left;
   rotate: y -78deg;
@@ -1313,27 +1311,27 @@
 .example36 .dummy__rightFoot-1::after {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 3.7);
+  width: calc(var(--tiny-cell-size)* 3.7);
   height: 100%;
   background: conic-gradient(from -150deg at 79% 42%, var(--medium) 83deg, transparent 0), linear-gradient(-240deg, transparent 57%, var(--medium) 0 76%, transparent 0), linear-gradient(20deg, transparent 57%, var(--medium) 0 83.6%, transparent 0);
   transform-origin: top left;
   rotate: y -104deg;
 }
 .example36 .dummy__rightFoot-2 {
-  top: calc(var(--cell)* 5.7);
-  left: calc(var(--cell)* -0.8);
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 3);
+  top: calc(var(--tiny-cell-size)* 5.7);
+  left: calc(var(--tiny-cell-size)* -0.8);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: calc(var(--tiny-cell-size)* 3);
   background: green;
   transform-origin: top left;
-  translate: 0 0 calc(var(--cell)* -3.7);
+  translate: 0 0 calc(var(--tiny-cell-size)* -3.7);
   rotate: x 0deg;
 }
 .example36 .dummy__rightFoot-2::before {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 1.9);
-  height: calc(var(--cell)* 3);
+  width: calc(var(--tiny-cell-size)* 1.9);
+  height: calc(var(--tiny-cell-size)* 3);
   background: linear-gradient(105deg, var(--medium) 66%, transparent 0);
   transform-origin: top left;
   rotate: y -78deg;
@@ -1341,8 +1339,8 @@
 .example36 .dummy__rightFoot-2::after {
   top: 0;
   left: 100%;
-  width: calc(var(--cell)* 1.9);
-  height: calc(var(--cell)* 3);
+  width: calc(var(--tiny-cell-size)* 1.9);
+  height: calc(var(--tiny-cell-size)* 3);
   background: linear-gradient(104deg, var(--medium) 67%, transparent 0);
   transform-origin: top left;
   rotate: y -103deg;
@@ -1350,18 +1348,18 @@
 .example36 .dummy__rightFoot-2 > div {
   top: 100%;
   left: 0;
-  width: calc(var(--cell)* 4);
-  height: calc(var(--cell)* 3.1);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: calc(var(--tiny-cell-size)* 3.1);
   background: linear-gradient(268deg, transparent 40%, var(--light) 0 92%, transparent 0), linear-gradient(93deg, transparent 40%, var(--light) 0 90%, transparent 0);
   transform-origin: top left;
-  translate: 0 0 var(--cell);
+  translate: 0 0 var(--tiny-cell-size);
   rotate: x 166deg;
 }
 .example36 .dummy__rightFoot-2 > div::before {
   top: 0;
   left: 0;
-  width: calc(var(--cell)* 4);
-  height: var(--cell);
+  width: calc(var(--tiny-cell-size)* 4);
+  height: var(--tiny-cell-size);
   background: linear-gradient(283deg, transparent 40%, var(--light) 0 94%, transparent 0), linear-gradient(77deg, transparent 40%, var(--light) 0 94%, transparent 0);
   transform-origin: top left;
   rotate: x 105deg;

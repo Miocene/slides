@@ -1,6 +1,6 @@
 .example14 {
   transform-style: preserve-3d;
-  width: var(--slide-width); height: var(--slide-height);
+  width: var(--slide-width); height: var(--b-slide-height);
 }
 
 .example14 *, .example14 *::before, .example14 *::after {

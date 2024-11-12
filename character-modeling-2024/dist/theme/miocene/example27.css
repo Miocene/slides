@@ -1,10 +1,10 @@
 .example27 {
-  height: var(--slide-height);
+  height: var(--b-slide-height);
   
 }
 .example27 .block {
   top: 0.5em; left: 50%;
-  font-size: calc(var(--slide-height) / 6);
+  font-size: calc(var(--b-slide-height) / 6);
   translate: -50%;
 }
 .example27 .block div {
